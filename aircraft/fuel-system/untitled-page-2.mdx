@@ -1,0 +1,64 @@
+---
+title: "Engine Feed System"
+---
+
+The engine feed system supplies fuel from the feeder tanks to the engines under all normal and abnormal operating conditions.
+
+### Feeder Tanks
+
+Three feeder tanks are installed in the rear fuselage, one per engine.
+
+| Feeder Tank        | Maximum Capacity |
+| :----------------- | :--------------- |
+| Left Feeder Tank   | **≈ 1,400 lb**   |
+| Center Feeder Tank | **≈ 2,460 lb**   |
+| Right Feeder Tank  | **≈ 1,400 lb**   |
+
+During flight, feeder tanks are automatically regulated to a nominal quantity of **609 lb**.
+
+### Feeder Tank Regulation
+
+- If feeder tank quantity exceeds 609 lb, transfer from the forward tanks is inhibited until the quantity decreases to the regulation level
+- If feeder tank quantity drops below 609 lb, fuel is transferred from the associated forward tanks
+- When remaining fuel is insufficient, feeder tank quantity decreases normally
+
+This regulation ensures a constant fuel head for engine supply.
+
+---
+
+### Booster Pumps
+
+Each feeder tank contains a **booster pump** that supplies positive-pressure fuel to the engine-driven fuel pump.
+
+- Engines depend on their associated feeder tank booster pump for normal operation
+- Low pressure downstream of a booster pump triggers the corresponding **FUEL** warning indication
+
+---
+
+### Crossfeed Valves
+
+**Crossfeed valves** allow one feeder tank to supply more than one engine.
+
+- Normally closed
+- Used following a booster pump or feeder tank failure
+- Permit continued engine operation using a single feeder tank if required
+
+---
+
+### Fuel Quantity Gauges
+
+Each fuel quantity gauge is equipped with a selector switch with two positions:
+
+#### REAR
+
+- Displays **feeder tank quantity only**
+- Normal operating position
+
+#### TOT
+
+- Displays **total fuel quantity** for the selected subsystem
+- Includes:
+  - Wing or center tank fuel
+  - Associated feeder tank fuel
+
+When the forward tank for a subsystem is empty, selecting **REAR** or **TOT** will indicate approximately **609 lb**, representing feeder tank fuel only.
