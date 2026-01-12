@@ -25,7 +25,7 @@
     },
     "products": [
       {
-        "product": "Test 1",
+        "product": "Default",
         "tabs": [
           {
             "tab": "Guides",
@@ -87,9 +87,20 @@
         ]
       },
       {
-        "product": "Test 2",
-        "pages": [
-          "test-2/test"
+        "product": "Aircraft",
+        "icon": "plane-departure",
+        "tabs": [
+          {
+            "tab": "Falcon 50",
+            "groups": [
+              {
+                "group": "Fuel System",
+                "pages": [
+                  "aircraft/falcon-50/fuel-system/overview"
+                ]
+              }
+            ]
+          }
         ]
       }
     ]
