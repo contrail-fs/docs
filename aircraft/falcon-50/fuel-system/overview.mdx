@@ -1,4 +1,82 @@
 ---
-title: 'Overview'
+title: "Overview"
+description: "The Falcon 50 fuel system supplies all three engines through a feeder-tank architecture with automatic quantity regulation, multiple transfer paths, and built-in redundancy. Engines are never supplied directly from wing or center tanks."
 ---
 
+The Falcon 50 fuel system supplies all three engines through a **feeder-tank architecture** with automatic quantity regulation, multiple transfer paths, and built-in redundancy. Engines are never supplied directly from wing or center tanks.
+
+The system is arranged as **three normally independent subsystems**: **left, center, and right**.
+
+## System Architecture (At a Glance)
+
+### Storage → Regulation → Engine Feed
+
+1. **Forward Tanks (Storage)**
+   - Left Wing Tank (3,748 lb)
+   - Center Tank (2,749 lb)
+   - Right Wing Tank (3,748 lb)
+2. **Feeder Tanks (Regulated Supply)**
+   - Left Feeder Tank (max ≈ 1,400 lb)
+   - Center Feeder Tank (max ≈ 2,460 lb)
+   - Right Feeder Tank (max ≈ 1,400 lb)
+   - In-flight regulation level: **609 lb**
+3. **Engine Feed**
+   - Each engine is supplied exclusively from its associated feeder tank via a **booster pump**.
+
+**Total usable fuel:** **15,513.8 lb**
+
+## Fuel Transfer and Pressurization
+
+### Differential Pressure Transfer
+
+- Wing and center tanks are pressurized by **low-pressure bleed air from Engine 1 and Engine 2**.
+- Fuel flows toward the feeder tanks due to **differential pressure**, independent of transfer pump operation.
+- Wing tanks are maintained at higher pressure than feeder tanks to assist transfer and prevent cavitation.
+
+### Transfer Pumps (XFR Pumps)
+
+- Electrically driven **transfer pumps** provide the primary means of moving fuel from forward tanks toward feeder tanks.
+- Fuel can flow through the transfer system even when transfer pumps are not operating.
+- Transfer pumps are normally switched OFF once the associated forward tank is empty.
+
+## Wing Fuel Management
+
+### Wing Jet Pumps
+
+- Two **wing jet pumps** transfer fuel from **outboard wing sections to inboard wing sections**.
+- Operate on the **venturi principle**.
+- Powered by excess fuel flow and pressure from:
+  - Transfer Pump No. 1 (left wing)
+  - Transfer Pump No. 3 (right wing)
+- Jet pumps operate whenever the associated transfer pump is operating.
+- In the event of transfer pump failure, fuel continues to move inboard by **gravity through flapper valves**.
+
+This ensures outboard (more aft) fuel is burned first, maintaining a forward center of gravity.
+
+## Feeder Tank Regulation
+
+- Each feeder tank is automatically maintained at **609 lb** during flight.
+- If feeder quantity exceeds regulation level, transfer from forward tanks is inhibited until the quantity decreases to regulation.
+- If feeder quantity drops below regulation, fuel is transferred from the associated forward tanks.
+- When remaining fuel is insufficient, feeder tank quantity decreases normally.
+
+## Interconnect and Crossfeed Capability
+
+### Transfer Interconnect Valves
+
+- Allow fuel from any forward tank to be routed to any feeder tank.
+- Used for fuel management in abnormal or imbalance conditions.
+- Check valves prevent unintended lateral fuel transfer between wing tanks.
+
+### Crossfeed Valves
+
+- Allow one feeder tank to supply more than one engine.
+- Normally closed.
+- Used following booster pump or feeder tank failures.
+
+## Cockpit Indications
+
+- **Fuel Quantity Gauges**
+  - **REAR:** feeder tank quantity only (normal position)
+  - **TOT:** total fuel for the selected subsystem (forward tank + feeder tank)
+- When a forward tank is empty, **609 lb** will continue to be indicated, representing feeder tank fuel.
