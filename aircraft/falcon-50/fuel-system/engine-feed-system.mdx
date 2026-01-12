@@ -4,61 +4,82 @@ title: "Engine Feed System"
 
 The engine feed system supplies fuel from the feeder tanks to the engines under all normal and abnormal operating conditions.
 
-### Feeder Tanks
+## Feeder Tanks
 
 Three feeder tanks are installed in the rear fuselage, one per engine.
 
-| Feeder Tank        | Maximum Capacity |
-| :----------------- | :--------------- |
-| Left Feeder Tank   | **≈ 1,400 lb**   |
-| Center Feeder Tank | **≈ 2,460 lb**   |
-| Right Feeder Tank  | **≈ 1,400 lb**   |
+| Feeder Tank | Maximum Capacity |
+|------------|------------------|
+| Left Feeder Tank | **≈ 1,400 lb** |
+| Center Feeder Tank | **≈ 2,460 lb** |
+| Right Feeder Tank | **≈ 1,400 lb** |
 
 During flight, feeder tanks are automatically regulated to a nominal quantity of **609 lb**.
 
-### Feeder Tank Regulation
+## Feeder Tank Regulation
 
-- If feeder tank quantity exceeds 609 lb, transfer from the forward tanks is inhibited until the quantity decreases to the regulation level
-- If feeder tank quantity drops below 609 lb, fuel is transferred from the associated forward tanks
-- When remaining fuel is insufficient, feeder tank quantity decreases normally
+The fuel system automatically maintains each feeder tank at **609 lb** during flight through a regulation system.
+
+**Regulation logic:**
+
+- **Above regulation level:** Transfer from forward tanks is inhibited until quantity decreases to 609 lb
+- **Below regulation level:** Fuel is automatically transferred from the associated forward tanks
+- **Insufficient fuel:** When remaining fuel is insufficient to maintain regulation, feeder tank quantity decreases normally
 
 This regulation ensures a constant fuel head for engine supply.
 
----
+<Note>
+The 609 lb regulation level provides a buffer of fuel in each feeder tank, ensuring continuous engine feed even during transfer pump cycling or brief interruptions in fuel transfer.
+</Note>
 
-### Booster Pumps
+## Booster Pumps
 
 Each feeder tank contains a **booster pump** that supplies positive-pressure fuel to the engine-driven fuel pump.
 
 - Engines depend on their associated feeder tank booster pump for normal operation
 - Low pressure downstream of a booster pump triggers the corresponding **FUEL** warning indication
 
----
+<Warning>
+Booster pump failure results in loss of positive pressure fuel supply to the engine. The FUEL warning will illuminate, and crossfeed may be required to maintain engine operation.
+</Warning>
 
-### Crossfeed Valves
+## Crossfeed Valves
 
 **Crossfeed valves** allow one feeder tank to supply more than one engine.
 
-- Normally closed
+- Normally closed during standard operations
 - Used following a booster pump or feeder tank failure
 - Permit continued engine operation using a single feeder tank if required
 
----
+<Warning>
+Crossfeed operations should only be used during abnormal conditions. Monitor fuel quantities closely when using crossfeed, as a single feeder tank will supply multiple engines.
+</Warning>
 
-### Fuel Quantity Gauges
+## Fuel Quantity Gauges
 
 Each fuel quantity gauge is equipped with a selector switch with two positions:
 
-#### REAR
+| Gauge Position | Display | Description |
+|----------------|---------|-------------|
+| **REAR** | Feeder tank quantity only | Normal operating position. Shows only the feeder tank quantity. |
+| **TOT** | Total subsystem fuel | Shows forward tank + feeder tank for the selected subsystem (left, center, or right). |
 
-- Displays **feeder tank quantity only**
-- Normal operating position
-
-#### TOT
-
-- Displays **total fuel quantity** for the selected subsystem
-- Includes:
-  - Wing or center tank fuel
-  - Associated feeder tank fuel
-
+<Note>
 When the forward tank for a subsystem is empty, selecting **REAR** or **TOT** will indicate approximately **609 lb**, representing feeder tank fuel only.
+</Note>
+
+## Related Documentation
+
+<CardGroup cols={3}>
+<Card title="Overview" icon="book" href="/aircraft/falcon-50/fuel-system/overview">
+Understand the complete fuel system architecture and flow.
+</Card>
+
+<Card title="Forward Tanks" icon="database" href="/aircraft/falcon-50/fuel-system/forward-tanks">
+Learn about the fuel storage tanks and their capacities.
+</Card>
+
+<Card title="Fuel Transfer System" icon="arrows-rotate" href="/aircraft/falcon-50/fuel-system/fuel-transfer-system">
+Understand how fuel moves from forward tanks to feeder tanks.
+</Card>
+</CardGroup>

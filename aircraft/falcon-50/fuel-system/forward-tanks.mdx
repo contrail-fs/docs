@@ -1,13 +1,8 @@
 ---
 title: "Forward Tanks"
-description: "The Falcon 50 forward fuel tanks provide fuel storage only. They do not supply fuel directly to engines but transfer fuel to feeder tanks through pressurization and transfer pumps."
 ---
 
-The Falcon 50 forward fuel tanks provide **fuel storage only**. They serve as the primary fuel reservoirs and do not supply fuel directly to the engines.
-
-<Warning>
-Forward tanks never supply engines directly. All engine feed occurs exclusively through feeder tanks, which receive fuel from the forward tanks via the transfer system.
-</Warning>
+The Falcon 50 forward fuel tanks provide **fuel storage only**. They serve as the primary fuel reservoirs and do not supply fuel directly to the engines. All engine feed occurs exclusively through feeder tanks, which receive fuel from the forward tanks via the transfer system.
 
 ## Tank Arrangement and Capacities
 
@@ -29,30 +24,22 @@ Each wing tank is subdivided into **outboard** and **inboard** sections by inter
 
 Fuel within each wing tank is managed to ensure that fuel from the **outboard (more aft) sections** is consumed first. This design supports a more forward center of gravity throughout the flight.
 
-### Distribution Mechanism
-
 This redistribution is achieved using:
 
-- **Wing jet pumps** — Transfer fuel from outboard to inboard sections using venturi principles
+- **Wing jet pumps** — Transfer fuel from outboard to inboard sections using venturi principles, powered by excess fuel flow from the transfer pumps
 - **Passive gravity features** — Flapper valves allow gravity-fed fuel movement when jet pumps are inoperative
-
-<Info>
-The wing jet pumps are powered by excess fuel flow from the transfer pumps. For detailed information on jet pump operation, see the [Fuel Transfer System](/aircraft/falcon-50/fuel-system/fuel-transfer-system) section.
-</Info>
 
 <Tip>
 The outboard-first consumption pattern ensures that as fuel burns, the aircraft's center of gravity shifts forward, improving longitudinal stability and handling characteristics.
 </Tip>
 
+For detailed information on jet pump operation, see the [Fuel Transfer System](/aircraft/falcon-50/fuel-system/fuel-transfer-system) section.
+
 ## Tank Pressurization
 
-All forward tanks are pressurized by **low-pressure bleed air from Engine 1 and Engine 2**.
+All forward tanks are pressurized by **low-pressure bleed air from Engine 1 and Engine 2**. Pressurization occurs automatically when either engine is operating.
 
-### Pressurization System
-
-- **Automatic operation:** Pressurization occurs automatically when either engine is operating
-- **Pressure differential:** Forward tanks are maintained at a **higher pressure than the feeder tanks**
-- **Transfer mechanism:** This pressure differential enables fuel transfer toward the feeder tanks by **differential pressure**, independent of transfer pump operation
+Forward tanks are maintained at a **higher pressure than the feeder tanks**, enabling fuel transfer toward the feeder tanks by **differential pressure**, independent of transfer pump operation.
 
 <Info>
 The pressurization system provides a backup transfer mechanism. Even if transfer pumps fail, fuel will continue to flow from forward tanks to feeder tanks as long as engine bleed air pressurization is maintained.
@@ -66,4 +53,18 @@ Forward tanks are connected to the fuel transfer system, which moves fuel to the
 - **Differential pressure** provides a secondary transfer path that operates independently of pump operation
 - **Interconnect valves** allow fuel from any forward tank to be routed to any feeder tank when needed
 
-For complete details on the transfer system operation, see the [Fuel Transfer System](/aircraft/falcon-50/fuel-system/fuel-transfer-system) documentation.
+## Related Documentation
+
+<CardGroup cols={3}>
+<Card title="Overview" icon="book" href="/aircraft/falcon-50/fuel-system/overview">
+Understand the complete fuel system architecture and flow.
+</Card>
+
+<Card title="Fuel Transfer System" icon="arrows-rotate" href="/aircraft/falcon-50/fuel-system/fuel-transfer-system">
+Explore how fuel moves from forward tanks to feeder tanks.
+</Card>
+
+<Card title="Engine Feed System" icon="gear" href="/aircraft/falcon-50/fuel-system/engine-feed-system">
+Learn how feeder tanks supply fuel to the engines.
+</Card>
+</CardGroup>
