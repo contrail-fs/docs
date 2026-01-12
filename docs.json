@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Contrail Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#F4D134",
+    "light": "#DEB223",
+    "dark": "#F4D134"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/images/Logo-Yellow.svg",
   "navigation": {
     "tabs": [
       {
@@ -84,8 +84,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/contrail-logo-light.svg",
+    "dark": "/images/contrail-logo-dark.svg"
   },
   "navbar": {
     "links": [
