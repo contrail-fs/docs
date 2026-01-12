@@ -87,7 +87,10 @@
         ]
       },
       {
-        "product": "Test 2"
+        "product": "Test 2",
+        "pages": [
+          "test-2/test"
+        ]
       }
     ]
   },
