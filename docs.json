@@ -94,13 +94,19 @@
             "tab": "Falcon 50",
             "groups": [
               {
-                "group": "Fuel System",
+                "group": "Systems",
+                "expanded": false,
                 "pages": [
-                  "aircraft/falcon-50/fuel-system/overview",
-                  "aircraft/falcon-50/fuel-system/fuel-gauges",
-                  "aircraft/falcon-50/fuel-system/forward-tanks",
-                  "aircraft/falcon-50/fuel-system/fuel-transfer-system",
-                  "aircraft/falcon-50/fuel-system/engine-feed-system"
+                  {
+                    "group": "Fuel System",
+                    "pages": [
+                      "aircraft/falcon-50/systems/fuel-system/overview",
+                      "aircraft/falcon-50/systems/fuel-system/fuel-gauges",
+                      "aircraft/falcon-50/systems/fuel-system/forward-tanks",
+                      "aircraft/falcon-50/systems/fuel-system/fuel-transfer-system",
+                      "aircraft/falcon-50/systems/fuel-system/engine-feed-system"
+                    ]
+                  }
                 ]
               }
             ]
