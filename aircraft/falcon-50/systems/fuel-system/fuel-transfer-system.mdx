@@ -2,60 +2,30 @@
 title: "Fuel Transfer System"
 ---
 
-The fuel transfer system moves fuel from the forward tanks to the feeder tanks and manages fuel distribution within the wing tanks.
+The fuel transfer system moves fuel from the forward tanks to the feeder tanks and manages fuel distribution within the wing tanks. Two complementary transfer paths — electrically driven pumps and tank pressurization differential — work in parallel for redundancy.
 
-## Differential Pressure Transfer
+## Transfer Mechanisms
 
-Fuel flows from the forward tanks toward the feeder tanks due to **differential pressure created by tank pressurization**.
+Each subsystem is equipped with an electrically driven **transfer pump** in its forward tank. The transfer pumps provide the primary means of moving fuel from forward tanks toward feeder tanks, and they also supply the excess fuel flow and pressure that drives the wing jet pumps. Transfer pumps are normally switched off once the associated forward tank is empty.
 
-- This transfer path exists **independently of transfer pump operation**
-- Fuel can flow through the transfer system even when transfer pumps are OFF or inoperative
+In parallel, fuel flows from the forward tanks toward the feeder tanks under **differential pressure** created by tank pressurization, with no dependence on the transfer pumps. Fuel can therefore continue to reach the feeder tanks even when the transfer pumps are off or have failed.
 
 <Tip>
-This design ensures continued feeder tank replenishment without sole reliance on electrical pumps. Even if transfer pumps fail, fuel will continue to flow toward feeder tanks as long as pressurization is maintained.
+This dual-path design ensures continued feeder tank replenishment without sole reliance on electrical pumps. Even after a transfer pump failure, fuel continues to flow toward the feeder tanks as long as pressurization is maintained.
 </Tip>
-
-## Transfer Pumps (XFR Pumps)
-
-Each subsystem is equipped with an electrically driven **transfer pump**.
-
-Transfer pumps:
-
-- Provide the primary means of transferring fuel from forward tanks toward feeder tanks
-- Supply excess fuel flow and pressure used by the wing jet pumps
-- Permit fuel flow through the transfer system when not operating
-
-<Note>
-Transfer pumps are normally switched OFF once the associated forward tank is empty. They are located in the forward tanks and pump fuel toward their respective feeder tanks.
-</Note>
 
 ## Wing Jet Pumps
 
-Two **wing jet pumps** are installed, one in each wing. These venturi-type pumps transfer fuel from the **outboard wing section to the inboard wing section**, ensuring outboard fuel is burned first to support center-of-gravity management.
+Two wing jet pumps are installed, one in each wing. These venturi-type pumps transfer fuel from the **outboard wing section to the inboard wing section** so that outboard fuel is burned first, supporting center-of-gravity management.
 
-**Power source:**
-- Left wing jet pump: Powered by excess fuel flow and pressure from **Transfer Pump No. 1**
-- Right wing jet pump: Powered by excess fuel flow and pressure from **Transfer Pump No. 3**
-
-**Operation:**
-- Jet pumps operate whenever their associated transfer pump is operating
-- Jet pumps do **not** feed the feeder tanks directly
-
-**Failure mode:**
-- If a transfer pump fails, fuel continues to move from the outboard to the inboard wing section by **gravity through flapper valves**
-
-This design ensures outboard (more aft) fuel is burned first, maintaining a forward center of gravity throughout the flight.
+The left wing jet pump is powered by excess fuel flow and pressure from **Transfer Pump No. 1**, and the right wing jet pump by **Transfer Pump No. 3**. The jet pumps run whenever their associated transfer pump runs, and they do not feed the feeder tanks directly. If the transfer pump fails, fuel continues to move from outboard to inboard sections by gravity through flapper valves.
 
 ## Transfer Interconnect Valves
 
-Two **transfer interconnect valves** allow fuel from any forward tank to be routed to any feeder tank as required.
-
-- Controlled from the overhead fuel panel
-- Used for fuel management in abnormal or imbalance conditions
-- Check valves prevent unintended lateral fuel transfer between wing tanks
+Two transfer interconnect valves, controlled from the overhead fuel panel, allow fuel from any forward tank to be routed to any feeder tank as required. Check valves in the system prevent unintended lateral fuel transfer between wing tanks.
 
 <Tip>
-Use interconnect valves to balance fuel distribution or route fuel from a full tank to a feeder tank when its associated forward tank is empty.
+Use the interconnect valves to balance fuel distribution or to route fuel from a full tank to a feeder tank when its own associated forward tank is empty.
 </Tip>
 
 ## Related Documentation

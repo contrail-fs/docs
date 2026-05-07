@@ -2,31 +2,17 @@
 title: "Engine Feed System"
 ---
 
-The engine feed system supplies fuel from the feeder tanks to the engines under all normal and abnormal operating conditions.
+The engine feed system supplies fuel from the feeder tanks to the engines under all normal and abnormal operating conditions. Each engine has a dedicated feeder tank, with crossfeed available for emergency configurations.
 
 ## Feeder Tanks
 
-Three feeder tanks are installed in the rear fuselage, one per engine.
+Three feeder tanks are installed in the rear fuselage, one per engine. The fuel system automatically maintains each feeder tank at a nominal **609 lb** during flight: above this regulation level, transfer from the forward tanks is inhibited until quantity decreases to 609 lb; below it, fuel is automatically drawn from the associated forward tank. When remaining fuel is insufficient to maintain regulation, the feeder tank quantity decreases normally.
 
 | Feeder Tank | Maximum Capacity |
-|------------|------------------|
-| Left Feeder Tank | **≈ 1,400 lb** |
-| Center Feeder Tank | **≈ 2,460 lb** |
-| Right Feeder Tank | **≈ 1,400 lb** |
-
-During flight, feeder tanks are automatically regulated to a nominal quantity of **609 lb**.
-
-## Feeder Tank Regulation
-
-The fuel system automatically maintains each feeder tank at **609 lb** during flight through a regulation system.
-
-**Regulation logic:**
-
-- **Above regulation level:** Transfer from forward tanks is inhibited until quantity decreases to 609 lb
-- **Below regulation level:** Fuel is automatically transferred from the associated forward tanks
-- **Insufficient fuel:** When remaining fuel is insufficient to maintain regulation, feeder tank quantity decreases normally
-
-This regulation ensures a constant fuel head for engine supply.
+|-------------|------------------|
+| **Left Feeder Tank** | ≈ 1,400 lb |
+| **Center Feeder Tank** | ≈ 2,460 lb |
+| **Right Feeder Tank** | ≈ 1,400 lb |
 
 <Note>
 The 609 lb regulation level provides a buffer of fuel in each feeder tank, ensuring continuous engine feed even during transfer pump cycling or brief interruptions in fuel transfer.
@@ -34,25 +20,18 @@ The 609 lb regulation level provides a buffer of fuel in each feeder tank, ensur
 
 ## Booster Pumps
 
-Each feeder tank contains a **booster pump** that supplies positive-pressure fuel to the engine-driven fuel pump.
-
-- Engines depend on their associated feeder tank booster pump for normal operation
-- Low pressure downstream of a booster pump triggers the corresponding **FUEL** warning indication
+Each feeder tank contains a **booster pump** that supplies positive-pressure fuel to its engine-driven fuel pump. Engines depend on this booster pump for normal operation; if pressure downstream of a booster pump drops, the corresponding **FUEL** warning illuminates.
 
 <Warning>
-Booster pump failure results in loss of positive pressure fuel supply to the engine. The FUEL warning will illuminate, and crossfeed may be required to maintain engine operation.
+Booster pump failure results in loss of positive-pressure fuel supply to the engine. The FUEL warning will illuminate, and crossfeed may be required to maintain engine operation.
 </Warning>
 
 ## Crossfeed Valves
 
-**Crossfeed valves** allow one feeder tank to supply more than one engine.
-
-- Normally closed during standard operations
-- Used following a booster pump or feeder tank failure
-- Permit continued engine operation using a single feeder tank if required
+Crossfeed valves allow one feeder tank to supply more than one engine. They are normally closed during standard operations and are used following a booster pump or feeder tank failure to permit continued engine operation from a single feeder tank.
 
 <Warning>
-Crossfeed operations should only be used during abnormal conditions. Monitor fuel quantities closely when using crossfeed, as a single feeder tank will supply multiple engines.
+Crossfeed operations should only be used during abnormal conditions. Monitor fuel quantities closely when using crossfeed, as a single feeder tank will then supply multiple engines.
 </Warning>
 
 ## Related Documentation
