@@ -2,51 +2,30 @@
 title: "Ground Power"
 ---
 
-The Falcon 50 electrical system can be powered by an external **Ground Power Unit (GPU)** when connected to the aircraft. Ground power is used primarily to preserve battery charge during extended ground operations, although the APU is the more common ground power source on the Falcon 50.
+The Falcon 50 electrical system can be powered by an external **Ground Power Unit (GPU)** when connected to the aircraft. Use of an external GPU is **atypical** for the Falcon 50 — the APU is normally used to provide electrical power on the ground, with the GPU reserved for situations where the APU is unavailable or maintenance procedures explicitly require it.
 
-<Note>
-Use of an external GPU is **atypical** for the Falcon 50. The APU is normally used to provide electrical power on the ground.
-</Note>
+## Connection and Operation
 
-## GPU Specifications and Connection
+A 28-volt DC ground power unit is connected to the receptacle behind the left wing. Once physically connected, ground power is enabled from the cockpit using the **power selector switch on the overhead panel**.
 
 | Property | Value |
 |----------|-------|
 | **Voltage** | 28 volts DC |
 | **Connection point** | Behind the left wing |
 
-A **28-volt DC ground power unit** can be connected to the receptacle behind the left wing. Once physically connected, ground power is enabled from the cockpit using the overhead panel.
-
-## Cockpit Controls
-
-The **power selector switch on the overhead panel** allows the pilot to enable external power to the aircraft.
-
-When external power is enabled:
-
-- Power is supplied directly to the **Left Hand bus**
-- The **Right Hand bus** can be powered through external power by closing the **main bus tie switch**
+When external power is enabled, it is supplied directly to the **Left Hand bus**. To extend coverage to the **Right Hand bus** and its downstream Primary B and Auxiliary D busses, close the main bus tie switch on the overhead panel.
 
 <Tip>
-If you need full electrical coverage on the ground from a single GPU, close the main bus tie to extend external power to the Right Hand bus and its downstream Primary B and Auxiliary D busses.
+If you need full electrical coverage on the ground from a single GPU, close the main bus tie to extend external power to the Right Hand bus.
 </Tip>
 
 ## Battery Isolation
 
-The **batteries are automatically isolated** from the electrical system whenever external power is in use. This prevents the GPU from charging or interacting with the batteries through the main bus structure.
+The batteries are automatically isolated from the electrical system whenever external power is in use. This prevents the GPU from charging or interacting with the batteries through the main bus structure.
 
 <Warning>
 After disconnecting ground power, verify that **BAT1** and **BAT2** are connected if continued aircraft electrical operation is required. The batteries do not automatically rejoin the bus structure when ground power is removed.
 </Warning>
-
-## Typical Use Cases
-
-External power is typically used when:
-
-- The APU is unavailable or being maintained
-- Long ground operations need to preserve battery charge
-- Maintenance procedures explicitly require ground power
-
-In all other cases, the **APU generator** is the preferred ground power source.
 
 ## Related Documentation
 
