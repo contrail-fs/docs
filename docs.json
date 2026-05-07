@@ -106,6 +106,16 @@
                       "aircraft/falcon-50/systems/fuel-system/fuel-transfer-system",
                       "aircraft/falcon-50/systems/fuel-system/engine-feed-system"
                     ]
+                  },
+                  {
+                    "group": "Electrical System",
+                    "pages": [
+                      "aircraft/falcon-50/systems/electrical-system/overview",
+                      "aircraft/falcon-50/systems/electrical-system/dc-power",
+                      "aircraft/falcon-50/systems/electrical-system/ac-power",
+                      "aircraft/falcon-50/systems/electrical-system/ground-power",
+                      "aircraft/falcon-50/systems/electrical-system/battery-temperature"
+                    ]
                   }
                 ]
               }

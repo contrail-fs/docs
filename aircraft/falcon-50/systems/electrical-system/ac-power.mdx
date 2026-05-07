@@ -1,0 +1,69 @@
+---
+title: "AC Power"
+---
+
+The Falcon 50 AC power system supplies **115-volt 400 Hz** alternating current to the avionics and other instruments. AC is produced by inverters that convert 28.5-volt DC into AC, which means the AC system is fully dependent on a healthy DC supply.
+
+## Inverter Configuration
+
+Three inverters are installed in the aircraft:
+
+| Inverter | Power Source | Function |
+|----------|--------------|----------|
+| **Pilot inverter** | A bus | Supplies AC power to the pilot's instruments and avionics |
+| **Copilot inverter** | B bus | Supplies AC power to the copilot's instruments and avionics |
+| **Standby inverter** | — | Backup unit, replaces the pilot or copilot inverter on failure (not simulated) |
+
+<Note>
+Because the pilot and copilot inverters are powered from independent DC busses (A and B), an electrical fault on either side of the DC system affects only one AC bus. The opposite AC bus continues to operate normally.
+</Note>
+
+## Standby Inverter
+
+The standby inverter provides a backup AC source that can replace either the pilot or copilot inverter following a primary inverter failure. This preserves AC power to the affected pilot's flight instruments after a single inverter failure.
+
+<Warning>
+The standby inverter is **not simulated** in this product. AC power is always supplied by the pilot and copilot inverters in their normal configuration.
+</Warning>
+
+## Indications
+
+### AC Voltmeter
+
+A **voltmeter on the overhead panel** indicates AC bus voltage. Two pushbuttons next to the voltmeter allow the pilot to select which AC bus is displayed:
+
+- Pilot AC bus voltage
+- Copilot AC bus voltage
+
+<Tip>
+Check both AC bus voltages during the cockpit power-up flow. A reading outside the normal 115 VAC range indicates an inverter or DC source issue that should be resolved before flight.
+</Tip>
+
+## Power Source Dependencies
+
+Because each inverter draws its DC input from a primary distribution bus, AC power availability mirrors the state of the DC system:
+
+- **Loss of A bus** → loss of pilot inverter → loss of pilot AC bus
+- **Loss of B bus** → loss of copilot inverter → loss of copilot AC bus
+
+Restoring the upstream DC bus (for example, by closing a bus tie) restores the corresponding AC bus.
+
+## Related Documentation
+
+<CardGroup cols={2}>
+<Card title="Overview" icon="book" href="/aircraft/falcon-50/systems/electrical-system/overview">
+Understand the complete electrical system architecture.
+</Card>
+
+<Card title="DC Power" icon="bolt" href="/aircraft/falcon-50/systems/electrical-system/dc-power">
+Learn about the DC bus architecture, generators, and batteries.
+</Card>
+
+<Card title="Ground Power" icon="plug" href="/aircraft/falcon-50/systems/electrical-system/ground-power">
+Learn how to connect and use external power on the ground.
+</Card>
+
+<Card title="Battery Temperature" icon="temperature-high" href="/aircraft/falcon-50/systems/electrical-system/battery-temperature">
+Monitor battery temperature and respond to overheat indications.
+</Card>
+</CardGroup>

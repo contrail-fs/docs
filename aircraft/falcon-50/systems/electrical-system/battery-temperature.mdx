@@ -1,0 +1,76 @@
+---
+title: "Battery Temperature"
+---
+
+A dedicated **battery temperature monitoring system** continuously monitors the temperature of both batteries and alerts the pilots in the event of an overheat. Battery overheats can be caused by overcharging, internal cell failure, or excessive electrical loads, and require prompt pilot action.
+
+## Indicator Location
+
+The **battery temperature gauge** is located on the main panel **below the copilot flight displays**. The gauge provides:
+
+- A continuous temperature reading for each battery
+- **WARM** and **HOT** annunciator lights
+- A **TEST** button for verifying the warning lights
+- A **LESS 50** pushbutton for reading off-scale values
+
+## Temperature Thresholds
+
+| Indication | Trigger Temperature | Annunciation |
+|------------|--------------------|---------------|
+| **WARM** light | 120 °F | Illuminates on the battery temperature gauge |
+| **HOT** light | 150 °F | Illuminates on the battery temperature gauge |
+| **HOT BAT** warning | 150 °F | Illuminates on the warning panel |
+
+<Warning>
+A **HOT BAT** warning indicates a battery has reached **150 °F** and may be approaching thermal runaway. Take immediate action in accordance with the published abnormal procedures, including isolating the affected battery from the bus.
+</Warning>
+
+## Controls
+
+### TEST Button
+
+The **TEST** button verifies the operation of the WARM and HOT warning lights. Use it during preflight checks to confirm the indicators function correctly before flight.
+
+<Tip>
+Press the TEST button as part of the cockpit power-up flow. Both the WARM and HOT lights should illuminate while the button is pressed and extinguish when released.
+</Tip>
+
+### LESS 50 Pushbutton
+
+If a battery temperature exceeds the upper end of the gauge scale, the **LESS 50** pushbutton allows the pilot to read the off-scale value.
+
+When the LESS 50 pushbutton is pressed:
+
+- The gauge reading shifts down by 50 °F
+- **Subtract 50 °F from the indicated value** to obtain the actual battery temperature
+
+<Note>
+Example: With LESS 50 pressed, if the gauge indicates **130 °F**, the actual battery temperature is **180 °F**. This feature ensures the pilot can always read the true temperature, even during severe overheat conditions.
+</Note>
+
+## Pilot Response
+
+| Indication | Action |
+|------------|--------|
+| **WARM** | Monitor closely. Reduce electrical loads if possible. |
+| **HOT / HOT BAT** | Refer to the abnormal procedures. Isolate the affected battery. |
+
+## Related Documentation
+
+<CardGroup cols={2}>
+<Card title="Overview" icon="book" href="/aircraft/falcon-50/systems/electrical-system/overview">
+Understand the complete electrical system architecture.
+</Card>
+
+<Card title="DC Power" icon="bolt" href="/aircraft/falcon-50/systems/electrical-system/dc-power">
+Learn about the DC bus architecture, generators, and batteries.
+</Card>
+
+<Card title="AC Power" icon="wave-square" href="/aircraft/falcon-50/systems/electrical-system/ac-power">
+Understand how the inverters supply 115 VAC 400 Hz power.
+</Card>
+
+<Card title="Ground Power" icon="plug" href="/aircraft/falcon-50/systems/electrical-system/ground-power">
+Learn how to connect and use external power on the ground.
+</Card>
+</CardGroup>

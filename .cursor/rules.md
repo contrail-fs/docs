@@ -45,6 +45,8 @@ This documentation is a user manual for the "Falcon 50" project for Microsoft Fl
 
 ### Callout components
 
+Use callouts only when necessary. The docs shouldn't be cluttered with them — reserve callouts for information that genuinely needs to stand out from the surrounding prose. Prefer `<Note>` over `<Info>` for general supplementary information.
+
 #### Note - Additional helpful information
 
 <Note>

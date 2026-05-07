@@ -1,0 +1,20 @@
+# **WARNING**
+
+<span id="page-9-0"></span>THE EFIS-85C(14)/86C(14) ELECTRONIC FLIGHT INSTRUMENT SYSTEMS AND RELATED COMPONENTS EXHIBIT A VERY HIGH DEGREE OF FUNCTIONAL INTEGRITY. NEVERTHELESS, USERS MUST RECOGNIZE THAT IT **IS** NOT PRACTICAL TO PROVIDE MONITORING FOR ALL CONCEIVABLE SYSTEM FAILURES AND THAT, HOWEVER UNLIKELY, IT **IS** POSSIBLE THAT ERRONEOUS OPERATION COULD OCCUR WITHOUT A FAULT INDICATION. THE PILOT HAS THE RESPONSIBILITY TO DETECT SUCH AN OCCURRENCE AVAILABLE IN THE COCKPIT. BY MEANS OF CROSS-CHECKS WITH REDUNDANT OR CORRELATED INFORMATION
+
+# **WARNING**
+
+THE MFD EMG DISPLAY MODE SHOWS ONLY WHAT HAS BEEN PROGRAMMED INTO MEMORY AS EMERGENCY DATA. PILOTS MUST REALIZE THAT THIS DATA MAY OR MAY NOT BE APPLICABLE TO AN ACTUAL EMERGENCY. THE AIRPLANE FLIGHT MANUAL EMERGENCY CHECKLIST MUST BE REFERRED TO FOR THE PROPER CORRECTIVE ACTIONS TO TAKE IN VARIOUS EMERGENCY SITUATIONS.
+
+### Programming a New MFD Multifunction Display
+
+The following procedures assume that the MFD is new and has not been programmed. Procedures for changing an already programmed MFD follow this section. Program a new MFD as follows:
+
+- 1.—Turn on aircraft power. Ensure that the MFD circuit breakers are in. Push the PWR button at the upper left of the MFD. Position the WXP MODE switch to OFF (the WXP is not required during programming of the MFD). Allow 15 seconds for the MFD to warm up. Adjust the INT control at the upper right of the MFD as desired.
+- 2.—Push the PGE button on the MFD. The display shows:
+
+
+
+---
+
+[🡅](./toc.md) ·•⦁•· [🡄 TABLE OF CONTENTS](./TABLE-OF-CONTENTS.md) ·•⦁•· [**WAR N I N G** 🡆](./WAR-N-I-N-G.md)

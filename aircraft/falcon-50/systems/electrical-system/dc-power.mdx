@@ -1,0 +1,125 @@
+---
+title: "DC Power"
+---
+
+The Falcon 50 DC power system operates at **28.5 volts** and is the aircraft's primary electrical system. It distributes power from multiple independent sources through a dual main-bus architecture with extensive cross-tie capability.
+
+## Main Bus Architecture
+
+DC power is distributed through two main busses, the **Left Hand bus** and the **Right Hand bus**. Each main bus feeds a primary distribution bus and an auxiliary distribution bus.
+
+| Main Bus | Primary Bus | Auxiliary Bus | Normal Sources |
+|----------|-------------|---------------|----------------|
+| **Left Hand Bus** | Primary A | Auxiliary C | Generator 1, Generator 2, BAT1 |
+| **Right Hand Bus** | Primary B | Auxiliary D | Generator 3, BAT2 |
+
+<Note>
+Generator 1 and Generator 2 both normally power the Left Hand bus, while Generator 3 alone normally powers the Right Hand bus. This arrangement preserves Right Hand bus power even after a complete failure of Engines 1 and 2.
+</Note>
+
+### Bus Ties
+
+The DC system includes **three bus ties** that allow the pilot to isolate or connect busses as required:
+
+- Connect the Left Hand and Right Hand main busses
+- Isolate a faulty source from the rest of the electrical system
+- Provide a single power source to the entire aircraft when needed
+
+<Tip>
+Bus ties are the primary tool for managing electrical faults in flight. Closing the appropriate bus tie can restore power to a dead bus from a healthy source on the opposite side.
+</Tip>
+
+## Power Sources
+
+### Batteries
+
+Two **28.5-volt batteries** provide independent power to each side of the electrical system:
+
+- **BAT1** — Normally feeds the Left Hand bus
+- **BAT2** — Normally feeds the Right Hand bus
+
+Batteries supply power before engine start, during APU start, and as emergency backup if all generators fail.
+
+### Engine Generators
+
+Three **engine-driven generators** provide the primary source of in-flight DC power:
+
+| Generator | Driven By | Normal Bus |
+|-----------|-----------|------------|
+| **Generator 1** | Engine 1 | Left Hand bus |
+| **Generator 2** | Engine 2 | Left Hand bus |
+| **Generator 3** | Engine 3 | Right Hand bus |
+
+### APU Generator
+
+The **APU generator** is driven by the auxiliary power unit and can supply DC power on the ground or in flight (within APU operating limits). It is commonly used for engine start and during ground operations to keep the batteries off-line.
+
+## Controls
+
+### Overhead Panel Switches
+
+Battery and engine generator operation is controlled by **five switches** on the top of the overhead panel:
+
+- **BAT1** — Connects Battery 1 to the Left Hand bus
+- **BAT2** — Connects Battery 2 to the Right Hand bus
+- **GEN 1** — Connects Generator 1 to the bus structure
+- **GEN 2** — Connects Generator 2 to the bus structure
+- **GEN 3** — Connects Generator 3 to the bus structure
+
+### APU Generator Pushbutton
+
+The APU generator is controlled by a dedicated **pushbutton on the APU panel** located on the right console.
+
+## Indications
+
+### Voltage Gauges
+
+Two voltmeters on the overhead panel allow the pilot to monitor the voltage on each main DC bus:
+
+- **Left Hand bus voltage**
+- **Right Hand bus voltage**
+
+### Amperage Pushbuttons
+
+Pushbuttons on the overhead allow the pilot to view the **amperage draw of each individual source** (batteries, engine generators, and APU generator). This is useful for verifying generator load sharing and detecting an overloaded or failed source.
+
+### APU Generator Load Gauge
+
+A dedicated **load gauge on the APU panel** indicates the current load being drawn from the APU generator.
+
+<Warning>
+Monitor source amperage when operating with reduced generator capacity. Sustained operation above the rated output of any generator can cause overheating and eventual failure.
+</Warning>
+
+## Hot Battery Bus
+
+A **hot battery bus** continuously supplies power to a limited set of critical systems whenever the batteries are connected, regardless of the position of the master switches. Powered systems include:
+
+- Emergency lighting
+- Fire extinguishing
+- Refueling system
+- Other safety-critical items
+
+<Note>
+Because the hot battery bus is always energized when batteries are connected, the **batteries can be slowly discharged** even with the aircraft "shut down" if it is left unattended for long periods.
+</Note>
+
+## Related Documentation
+
+<CardGroup cols={2}>
+<Card title="Overview" icon="book" href="/aircraft/falcon-50/systems/electrical-system/overview">
+Understand the complete electrical system architecture.
+</Card>
+
+<Card title="AC Power" icon="wave-square" href="/aircraft/falcon-50/systems/electrical-system/ac-power">
+Learn about the inverters and AC distribution system.
+</Card>
+
+<Card title="Ground Power" icon="plug" href="/aircraft/falcon-50/systems/electrical-system/ground-power">
+Learn how to connect and use external power on the ground.
+</Card>
+
+<Card title="Battery Temperature" icon="temperature-high" href="/aircraft/falcon-50/systems/electrical-system/battery-temperature">
+Monitor battery temperature and respond to overheat indications.
+</Card>
+</CardGroup>
