@@ -38,8 +38,66 @@ You are an AI writing assistant specialized in creating exceptional technical do
 
 This documentation is a user manual for the "Falcon 50" project for Microsoft Flight Simulator 2020 and 2024. The simulation tries to replicate the real aircraft as closely as possible
 
-- All information has to be either based on the provided official checklist and pilot training manuals in the `Resources` directory, or verified as true and accurate based on your knowledge about the real aircraft
-- Consume all documents in the `Resources` directory carefully, especially `Ryan_Falcon_50_-_Pilot_Training_Manual.pdf`
+- All information has to be either based on the provided official checklist and pilot training manuals in the `resources/` directory, or verified as true and accurate based on your knowledge about the real aircraft
+- Consume all documents in the `resources/` directory carefully, especially `Ryan_Falcon_50_-_Pilot_Training_Manual.md`
+
+### Repository layout
+
+- `resources/` contains raw reference material (training manuals, OEM systems documents, third-party avionics manuals). These files are **excluded from the Mintlify build** via `.mintignore` and are reference-only — never link to them from published pages and never add them to `docs.json` navigation.
+- All published documentation pages live under top-level product directories (e.g. `aircraft/falcon-50/...`) and must be referenced from `docs.json` to appear in the site.
+
+## MDX authoring rules (Mintlify build safety)
+
+Mintlify parses every `.md` and `.mdx` file under the docs root as MDX (unless excluded via `.mintignore`). MDX is stricter than plain Markdown — the following rules apply to **all published pages**:
+
+### Self-close all void HTML elements
+
+MDX requires every tag to be closed. Void elements that are valid in HTML must be written as self-closing in MDX:
+
+- Use `<br />`, not `<br>`
+- Use `<hr />`, not `<hr>`
+- Use `<img ... />`, not `<img ...>`
+- Use `<input ... />`, `<source ... />`, `<meta ... />`, etc., as self-closing
+
+This is the most common cause of the error `Expected a closing tag for <br> ... before the end of tableHeader/tableData`. Inside Markdown tables, prefer a real `<br />` for soft line breaks, or rewrite the cell as a list outside the table.
+
+### Escape or wrap content that looks like a tag
+
+MDX treats `<` followed by a letter, digit, or other name-start character as the beginning of a JSX element. Anything that isn't a real component will fail the build with errors like:
+
+- `Unexpected character 1 (U+0031) before name` — caused by patterns like `<150 kt>`, `<3 seconds>`, `<10°>`
+- `Unexpected character < (U+003C) before name` — caused by `<<` or stray `<` in prose
+- `Unexpected character " (U+0022) in name` — caused by `<"quoted">` style text
+
+To fix:
+
+- Wrap inequality and range expressions in backticks: `` `<150 kt>` ``, `` `>= 3 sec` ``, `` `<10°>` ``
+- For literal angle brackets in prose, use HTML entities: `&lt;` and `&gt;`, or wrap the whole expression in a code span
+- Never write bare `<word` or `<digit` outside of code blocks
+
+### Tables
+
+- Replace any `<br>` inside table cells with `<br />`
+- Avoid complex HTML markup inside table cells; if a cell needs lists, multiple paragraphs, or rich formatting, move the content out of the table and use a heading + list instead
+- Keep pipe characters inside cells escaped as `\|`
+
+### Curly braces in prose
+
+`{` and `}` are reserved for JSX expressions in MDX. Wrap literal braces in backticks (`` `{value}` ``) or escape them as `\{` and `\}` when they appear in prose or table cells.
+
+### Frontmatter
+
+Every published page must start with YAML frontmatter (see "Required page structure" below). Pages without frontmatter still build but render with auto-generated titles and degrade SEO.
+
+### Verifying before commit
+
+When adding or editing a published page, mentally scan for:
+
+1. Any `<br>`, `<hr>`, `<img>` without ` />`
+2. Any `<` immediately followed by a digit, `<`, `"`, or whitespace in prose
+3. Any `{` / `}` in prose that should be literal text
+
+Fix these before committing — Mintlify's deploy will fail the whole build on the first MDX parse error and the site will not update.
 
 ## Mintlify component reference
 

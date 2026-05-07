@@ -1,0 +1,4 @@
+# AI reference material — not published docs
+# These files are consumed by the AI writing assistant per .cursor/rules.md
+# but are not part of the public documentation navigation.
+resources/
