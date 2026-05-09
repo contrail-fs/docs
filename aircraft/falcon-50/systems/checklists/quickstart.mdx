@@ -1,29 +1,22 @@
 ---
-title: "Quickstart checklist"
+title: "Quickstart"
 ---
 
-This page lists the **minimum normal procedures** needed to get the Falcon 50 from a cold-and-dark cockpit through departure and the early climb, then through a typical arrival and shutdown. Walkaround items, detailed interior preflights, and **test** steps (fire warnings, GPWS, stalls, anti-skid exercises, and similar) are **omitted on purpose**—the simulator’s default cold-and-dark state is assumed to be airworthy, and those checks belong in a full normal checklist when you want every line item.
-
-<Note>
-**Caution (engine start):** Do not start No. 1 engine first; start **No. 2**, then **No. 3**, then **No. 1**, per normal procedures.
-</Note>
+This page lists the **minimum normal procedures** needed to get the Falcon 50 from a cold-and-dark cockpit through departure and climb phases, then through a typical arrival and shutdown. Walkaround items, detailed preflights, and **test** steps (stalls, fire warnings, and similar) are **omitted on purpose**, as are checklist lines that are **already satisfied by the aircraft cold-and-dark state** if you load in that configuration.
 
 ## Power-up and APU
 
-Follow **PRESTART → (A) APU Start**. Test steps (for example fire warning test) are skipped here.
+This section follows **PRESTART → (A) APU Start**. The full normal checklist also covers other ways to get electrical and bleed available before engine start—for example **No. 2 engine as APU**, **battery-only** starts, and **GPU (external power)**—which are not detailed here. Test steps (for example fire warning test) are skipped here.
 
 | Item | Location | Target |
 |------|----------|--------|
 | DC Power Selector | <Badge color="red">Overhead</Badge> | NORMAL |
 | Batteries | <Badge color="red">Overhead</Badge> | ON/CHECKED |
 | Bus Tie | <Badge color="red">Overhead</Badge> | TIED |
-| Bus C and D Switches | <Badge color="red">Overhead</Badge> | ON |
-| Radios | <Badge color="green">Left Pedestal</Badge> | ON |
+| Bus C and D Switches | <Badge color="red">Overhead</Badge> | ON (verify) |
 | No. 2 Boost Pump | <Badge color="red">Overhead</Badge> | ON |
-| No. 2 Engine and Airframe Anti-ice Switches | <Badge color="red">Overhead</Badge> | OFF |
 | NAV Lights | <Badge color="red">Overhead</Badge> | AS REQUIRED |
 | APU Master | <Badge color="blue">Right Pedestal</Badge> | ON/GREEN |
-| APU Amber OIL Light | <Badge color="orange">Front Panel</Badge> | ON |
 | APU Generator Switch | <Badge color="blue">Right Pedestal</Badge> | ON/GREEN |
 | APU Start Switch | <Badge color="blue">Right Pedestal</Badge> | DEPRESS / START CHECKED |
 | Batteries No. 1 and No. 2 | <Badge color="orange">Front Panel</Badge> | CHARGING (verify) |
@@ -35,58 +28,63 @@ Follow **PRESTART → (A) APU Start**. Test steps (for example fire warning test
 
 ## Before engine start
 
-Minimum **PRESTART** configuration needed before **START** (full interior and test sequence omitted).
-
 | Item | Location | Target |
 |------|----------|--------|
-| Start Selector Switches | <Badge color="yellow">Center Pedestal</Badge> | GROUND START |
-| Generator Switches | <Badge color="red">Overhead</Badge> | ON |
-| Engine Computer Switches | <Badge color="red">Overhead</Badge> | ON |
-| Normal Gear Handle | <Badge color="yellow">Center Pedestal</Badge> | DOWN/GUARDED |
+| Generator Switches | <Badge color="red">Overhead</Badge> | ON (verify) |
+| Engine Computer Switches | <Badge color="red">Overhead</Badge> | ON (verify) |
 | Park Brake | <Badge color="yellow">Center Pedestal</Badge> | SET |
-| Airbrake | <Badge color="yellow">Center Pedestal</Badge> | IN |
 
 ## Engine start
 
-From **START**; test and detailed cabin items omitted except where needed for safe operation.
+<Note>
+Start **No. 2** first. With No. 2 running, **its generator helps power** the remaining starts on the DC system; starting an outboard first can cause **electrical eccentricities**. **No. 1** and **No. 3** may be started in **either order** after No. 2.
+</Note>
 
 | Item | Location | Target |
 |------|----------|--------|
-| Cabin Access Door | <Badge color="green">Left Pedestal / cabin</Badge> | CLOSED |
+| Cabin Door | <Badge color="green">Cabin</Badge> | CLOSED |
 | Seat Belt / No Smoking | <Badge color="red">Overhead</Badge> | ON |
 | EMERG Lights | <Badge color="red">Overhead</Badge> | ON/ARMED |
 | Anti-Collision Lights | <Badge color="red">Overhead</Badge> | AS REQUIRED |
 | Boost Pumps (all 3) | <Badge color="red">Overhead</Badge> | ON |
 | DC Power Selector | <Badge color="red">Overhead</Badge> | AS REQUIRED (battery / low-temp / APU / GPU per situation) |
-| No. 2 Engine | <Badge color="yellow">Center Pedestal</Badge> | START/CHECKED |
-| No. 3 Engine | <Badge color="yellow">Center Pedestal</Badge> | START/CHECKED |
-| No. 1 Engine | <Badge color="yellow">Center Pedestal</Badge> | START/CHECKED |
+| No. 2 Engine | <Badge color="yellow">Center Pedestal</Badge> | START (see Ground Start procedure below) |
+| No. 1 and No. 3 Engines | <Badge color="yellow">Center Pedestal</Badge> | START (after No. 2; either order) |
+
+### Ground Start
+
+**Each engine, start selector on GRD START**
+
+1. Press and hold that engine’s **start pushbutton** about **2–3 seconds** so the starter-generator engages (you can release once the start sequence maintains).
+2. Confirm **N2** rises—if it does not reach **10%** within about **6 seconds**, abort per standard callouts.
+3. When **N2 is above 10%**, advance the **power lever** from **STOP** to **IDLE** (fuel on; with **GRD START** selected, ignition is armed and cuts off automatically at **50% N2**).
+
+The same sequence applies to **No. 1** and **No. 3** after No. 2. Continue to monitor **ITT**, **oil pressure**, and **N1** through idle per the full procedure.
 
 ## After start
-
-From **AFTER START**; audible/GPWS/stall/marker tests and similar omitted.
 
 | Item | Location | Target |
 |------|----------|--------|
 | DC Power Selector | <Badge color="red">Overhead</Badge> | NORMAL |
 | External Power Cord | — | DISCONNECTED (if GPU was used) |
 | Engine Parameters | <Badge color="orange">Front Panel</Badge> | CHECKED (N1, N2, oil, ITT within limits) |
-| Batteries: Amps/Temps | <Badge color="orange">Front Panel</Badge> | CHECKED |
-| Generators: Volts/Amps | <Badge color="orange">Front Panel</Badge> | CHECKED |
+| Batteries: Amps/Temps | <Badge color="red">Overhead</Badge> | CHECKED |
+| Generators: Volts/Amps | <Badge color="red">Overhead</Badge> | CHECKED |
 | Bus Tie | <Badge color="red">Overhead</Badge> | FLIGHT NORMAL (LIGHT OUT) |
 | Transfer Fuel Pumps | <Badge color="red">Overhead</Badge> | ALL ON/LIGHTS OUT |
-| EFIS | <Badge color="orange">Front Panel</Badge> | ON |
+| EFIS 1 and 2 | <Badge color="red">Overhead</Badge> | ON |
 | Cockpit Lighting | <Badge color="red">Overhead</Badge> | AS REQUIRED |
 | Emergency Horizon | <Badge color="orange">Front Panel</Badge> | UNCAGED |
-| Emergency Batteries (If Equipped) | <Badge color="red">Overhead</Badge> | ON |
-| Radios | <Badge color="green">Left Pedestal</Badge> | ON/SET |
+| Emergency Batteries | <Badge color="orange">Front Panel</Badge> | ON |
+| Radio Master | <Badge color="red">Overhead</Badge> | ON |
+| Radios | <Badge color="green">Left Pedestal</Badge> | SET |
 | Transponder/TCAS | <Badge color="yellow">Center Pedestal</Badge> | ON |
 | Radar | <Badge color="orange">Front Panel</Badge> | STANDBY |
 | Mach Trim | <Badge color="yellow">Center Pedestal</Badge> | ON |
 | Compass Headings | <Badge color="orange">Front Panel</Badge> | BOTH CHECKED |
 | Circuit Breakers | <Badge color="red">Overhead</Badge> | IN |
 | Windshield Heat/Side | <Badge color="red">Overhead</Badge> | NORMAL/ON |
-| APU Shutdown | <Badge color="blue">Right Pedestal</Badge> | PER MANUFACTURER |
+| APU STOP | <Badge color="blue">Right Pedestal</Badge> | PUSHED |
 | Hydraulic Standby Pump | <Badge color="orange">Front Panel</Badge> | ON |
 | Engine Computers Manual Mode | <Badge color="red">Overhead</Badge> | CHECKED/ON |
 | Sliding Window | — | CLOSED |
@@ -147,23 +145,23 @@ From **AFTER START**; audible/GPWS/stall/marker tests and similar omitted.
 | Standby Pump | <Badge color="orange">Front Panel</Badge> | AUTO |
 | Seat Belt Sign | <Badge color="red">Overhead</Badge> | AS REQUIRED |
 | Altimeters | <Badge color="orange">Front Panel</Badge> | SET |
-| Entrance Curtain | <Badge color="green">Left Pedestal / cabin</Badge> | AS REQUIRED |
 
-## 18,000 foot check
+## Transition altitude
+
+When climbing through **transition altitude**, set the altimeters to **standard pressure (STD)** and finish the items below. In the **U.S.**, that step is commonly associated with **18,000 ft**. In **Europe** and many other regions, transition altitude is **published per airport or airspace** and is often **much lower** (for example around **5,000 ft** in numerous areas—use your chart, NOTAM, or briefing).
 
 | Item | Location | Target |
 |------|----------|--------|
-| Altimeters | <Badge color="orange">Front Panel</Badge> | 29.92 |
+| Altimeters | <Badge color="orange">Front Panel</Badge> | STD |
 | Oxygen | <Badge color="red">Overhead</Badge> | AS REQUIRED |
 | Station Check | — | COMPLETE |
 
-## Descent check (essential items)
+## Descent check
 
 | Item | Location | Target |
 |------|----------|--------|
-| Entrance Curtain | <Badge color="green">Left Pedestal / cabin</Badge> | OPEN |
 | ATIS | <Badge color="green">Left Pedestal</Badge> | ACQUIRED |
-| Cabin Altitude Controller | <Badge color="red">Overhead</Badge> | SET |
+| Cabin Altitude Controller | <Badge color="orange">Front Panel</Badge> | SET |
 | Anti-Icing | <Badge color="red">Overhead</Badge> | AS REQUIRED |
 | Fuel XFR Intercom and X-Feed | <Badge color="red">Overhead</Badge> | CLOSED |
 | Altimeters | <Badge color="orange">Front Panel</Badge> | SET/X-CHECKED |
@@ -172,7 +170,7 @@ From **AFTER START**; audible/GPWS/stall/marker tests and similar omitted.
 | Approach Briefing | — | COMPLETE |
 | Radio Altimeter | <Badge color="orange">Front Panel</Badge> | SET |
 
-#### Below 10,000 feet (descent checklist continuation)
+#### Below 10,000 feet
 
 | Item | Location | Target |
 |------|----------|--------|
@@ -192,21 +190,17 @@ From **AFTER START**; audible/GPWS/stall/marker tests and similar omitted.
 
 ## Landing
 
-Anti-skid and stall **tests** omitted per quickstart scope; configuration targets retained.
-
 | Item | Location | Target |
 |------|----------|--------|
 | Landing Gear | <Badge color="yellow">Center Pedestal</Badge> | DOWN/THREE GREEN |
 | Brake Selector | <Badge color="yellow">Center Pedestal</Badge> | #1 ON |
 | Hydraulics (Pressure/Quantity) | <Badge color="orange">Front Panel</Badge> | CHECKED |
 | Flaps | <Badge color="yellow">Center Pedestal</Badge> | SET |
-| No Smoking Sign | <Badge color="red">Overhead</Badge> | ON |
 | Taxi Light | <Badge color="red">Overhead</Badge> | ON |
 | Windshield Wipers | <Badge color="red">Overhead</Badge> | AS REQUIRED |
 | Airbrakes | <Badge color="yellow">Center Pedestal</Badge> | IN/LIGHT OUT |
 | Yaw Damper | <Badge color="yellow">Center Pedestal</Badge> | AS REQUIRED |
 | Autopilot | <Badge color="yellow">Center Pedestal</Badge> | OFF (LIGHT OUT) |
-| Landing Lights | <Badge color="red">Overhead</Badge> | AS REQUIRED |
 
 ## After landing
 
@@ -216,24 +210,21 @@ Anti-skid and stall **tests** omitted per quickstart scope; configuration target
 | Anti-Ice | <Badge color="red">Overhead</Badge> | OFF |
 | Windshield Heat | <Badge color="red">Overhead</Badge> | OFF |
 | Windshield Wipers | <Badge color="red">Overhead</Badge> | OFF |
-| Pitot Heat | <Badge color="red">Overhead</Badge> | STANDBY |
+| Pitot Heat | <Badge color="red">Overhead</Badge> | OFF |
 | Radar | <Badge color="orange">Front Panel</Badge> | STANDBY |
 
 ## Parking
 
-From **PARKING** (abbreviated to switches most crews use every shutdown).
-
 | Item | Location | Target |
 |------|----------|--------|
 | Park Brake | <Badge color="yellow">Center Pedestal</Badge> | SET/LIGHT ON STEADY |
+| Taxi Light | <Badge color="red">Overhead</Badge> | OFF |
 | Radar | <Badge color="orange">Front Panel</Badge> | OFF |
 | INS/FMS/IRS/LRN | <Badge color="green">Left Pedestal</Badge> | OFF |
 | Standby Pump | <Badge color="orange">Front Panel</Badge> | OFF |
 | Transponder | <Badge color="yellow">Center Pedestal</Badge> | OFF |
+| EFIS 1 and 2 | <Badge color="orange">Front Panel</Badge> | OFF |
 | Inverters | <Badge color="red">Overhead</Badge> | OFF |
-| EFIS (If Installed) | <Badge color="orange">Front Panel</Badge> | OFF |
-| Taxi Light | <Badge color="red">Overhead</Badge> | OFF |
-| Floor Heat | <Badge color="red">Overhead</Badge> | BOTH OFF |
 | Power Levers | <Badge color="yellow">Center Pedestal</Badge> | CUT-OFF |
 | Transfer Pumps | <Badge color="red">Overhead</Badge> | OFF |
 | Boost Pumps | <Badge color="red">Overhead</Badge> | OFF |
@@ -242,9 +233,9 @@ From **PARKING** (abbreviated to switches most crews use every shutdown).
 | Anticollision Lights | <Badge color="red">Overhead</Badge> | OFF |
 | Navigation Lights | <Badge color="red">Overhead</Badge> | OFF |
 | Emergency Horizon | <Badge color="orange">Front Panel</Badge> | CAGED |
-| Emergency Batteries (If Equipped) | <Badge color="red">Overhead</Badge> | OFF |
-| APU | <Badge color="blue">Right Pedestal</Badge> | SHUTDOWN |
+| Emergency Batteries | <Badge color="red">Overhead</Badge> | OFF |
+| APU STOP | <Badge color="blue">Right Pedestal</Badge> | PUSHED |
 | Bus Tie | <Badge color="red">Overhead</Badge> | FLIGHT NORMAL |
-| Bus C and D Switches | <Badge color="red">Overhead</Badge> | OFF |
+| Bus C and D Switches | <Badge color="red">Overhead</Badge> | AS REQUIRED |
 | APU Master Switch | <Badge color="blue">Right Pedestal</Badge> | OFF |
 | Batteries | <Badge color="red">Overhead</Badge> | BOTH OFF |
