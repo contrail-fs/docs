@@ -1,4 +1,4 @@
-"""Render annotation number circles 1..20 via headless Chromium."""
+"""Render annotation number circles 1..60 via headless Chromium."""
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -66,7 +66,7 @@ def main():
             device_scale_factor=DEVICE_SCALE,
         )
         page = ctx.new_page()
-        for n in range(1, 21):
+        for n in range(21, 61):
             page.set_content(html_for(n), wait_until="load")
             page.evaluate("document.fonts.ready")
             out = OUT_DIR / f"annotation-number-{n:02d}.png"
