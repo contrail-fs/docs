@@ -8,6 +8,12 @@
     "dark": "#F4D134"
   },
   "favicon": "/images/Logo-Yellow.svg",
+  "redirects": [
+    {
+      "source": "/aircraft/falcon-50/systems/checklists/quickstart",
+      "destination": "/aircraft/falcon-50/procedures/checklists/quickstart"
+    }
+  ],
   "navigation": {
     "global": {
       "anchors": [
@@ -94,15 +100,21 @@
             "tab": "Falcon 50",
             "groups": [
               {
-                "group": "Systems",
+                "group": "Procedures",
                 "expanded": false,
                 "pages": [
                   {
                     "group": "Checklists",
                     "pages": [
-                      "aircraft/falcon-50/systems/checklists/quickstart"
+                      "aircraft/falcon-50/procedures/checklists/quickstart"
                     ]
-                  },
+                  }
+                ]
+              },
+              {
+                "group": "Systems",
+                "expanded": false,
+                "pages": [
                   {
                     "group": "Fuel System",
                     "pages": [
