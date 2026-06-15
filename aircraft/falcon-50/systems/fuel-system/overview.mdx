@@ -2,6 +2,10 @@
 title: "Overview"
 ---
 
+<Frame>
+  ![fa50-fuel-system-overhead](/images/fa50-fuel-system-overhead.jpg)
+</Frame>
+
 The Falcon 50 fuel system supplies all three engines through a **feeder-tank architecture** with automatic quantity regulation, multiple transfer paths, and built-in redundancy. The system is arranged as three normally independent subsystems — left, center, and right — with cross-tie capability for abnormal operations.
 
 <Note>
@@ -25,15 +29,15 @@ Total usable fuel is **15,513.8 lb**.
 
 ## Fuel Flow
 
-Fuel moves from storage to engines in three stages: **storage → regulation → engine feed**. Forward tanks are pressurized by low-pressure bleed air from Engines 1 and 2, creating a differential pressure that drives fuel toward the lower-pressure feeder tanks even with the transfer pumps off. Electrically driven transfer pumps in the forward tanks provide the primary transfer path, while the differential pressure system serves as an automatic backup.
+Fuel moves from storage to engines in three stages: **storage → regulation → engine feed**. Forward tanks are pressurized by low-pressure bleed air from Engines 1 and 2, creating a differential pressure that drives fuel toward the lower-pressure feeder tanks even with the transfer pumps off. Electrically driven transfer pumps <Badge color="yellow">1</Badge> in the forward tanks provide the primary transfer path, while the differential pressure system serves as an automatic backup.
 
-Each feeder tank is automatically regulated to a nominal **609 lb** during flight. Above the regulation level, transfer is inhibited; below it, fuel is automatically drawn from the associated forward tank. From the feeder tank, an electric **booster pump** supplies positive-pressure fuel to its engine.
+Each feeder tank is automatically regulated to a nominal **609 lb** during flight. Above the regulation level, transfer is inhibited; below it, fuel is automatically drawn from the associated forward tank. From the feeder tank, an electric **booster pump** <Badge color="yellow">3</Badge> supplies positive-pressure fuel to its engine.
 
 Within each wing, two **jet pumps** transfer fuel from the outboard sections to the inboard sections, ensuring the more aft (outboard) fuel is burned first to maintain a forward center of gravity throughout the flight.
 
 ## Abnormal Operations
 
-The fuel system includes interconnect and crossfeed capabilities for redundancy. **Transfer interconnect valves** allow fuel from any forward tank to be routed to any feeder tank, which is useful for managing imbalance or routing fuel from a full tank when its associated forward tank is empty. **Crossfeed valves** allow one feeder tank to supply more than one engine, used following a booster pump or feeder tank failure.
+The fuel system includes interconnect and crossfeed capabilities for redundancy. **Transfer interconnect valves** <Badge color="yellow">2</Badge> allow fuel from any forward tank to be routed to any feeder tank, which is useful for managing imbalance or routing fuel from a full tank when its associated forward tank is empty. **Crossfeed valves** <Badge color="yellow">4</Badge> allow one feeder tank to supply more than one engine, used following a booster pump or feeder tank failure.
 
 <Warning>
 Crossfeed operations should only be used during abnormal conditions. Monitor fuel quantities closely when using crossfeed, as a single feeder tank will then supply multiple engines.
