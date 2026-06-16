@@ -149,6 +149,12 @@
                     ]
                   }
                 ]
+              },
+              {
+                "group": "Troubleshooting",
+                "pages": [
+                  "debug-logs"
+                ]
               }
             ]
           }

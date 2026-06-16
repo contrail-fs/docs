@@ -1,0 +1,58 @@
+---
+title: "Debug Logs"
+---
+
+Weird things happen in specific scenarios. If your flight planning or VNAV is acting up, precise logs are very helpful to track down the cause of the issue.
+
+Below you can find instructions on how to create these logs. These have to be recorded in the active session, meaning when something weird happened, take a snapshot of the aircraft state by saving the log.
+
+You can find the log files here:
+
+```text
+MSFS 2020 Store Version: 
+%USERPROFILE%\AppData\Local\Packages\Microsoft.FlightSimulator_8wekyb3d8bbwe\LocalState\packages\ctl-aircraft-fa50\work\gnsxls
+
+MSFS 2020 Steam Version:
+%USERPROFILE%\AppData\Roaming\Microsoft Flight Simulator\Packages\ctl-aircraft-fa50\work\gnsxls
+
+MSFS 2024 Store Version: 
+%USERPROFILE%\AppData\Local\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalState\WASM\MSFS2024\ctl-aircraft-fa50\work\gnsxls
+
+MSFS 2024 Steam Version:
+%USERPROFILE%\AppData\Roaming\Microsoft Flight Simulator 2024\WASM\MSFS2024\ctl-aircraft-fa50\work\gnsxls
+```
+
+Then send the log to our support staff along with a precise description of the issue: [support@contrail.shop](mailto:support@contrail.shop)
+
+## Flight Plan Debug
+
+On the GNSXLS **ACTIVE FPL Page** hit the "\*" (asterisk) key to save a log of the flight plan state and mutations.
+
+The log files are named as follows:
+
+```text
+fpl-debug-{timestamp}.json
+ap-debug-{timestamp}.json
+```
+
+<Frame>
+  ![Flight Simulator2024 1z Owqok Ok M](/images/FlightSimulator2024_1zOwqokOkM.jpg)
+</Frame>
+
+## VNAV Debug
+
+On the GNSXLS **VNAV Page** hit the `*` (asterisk) key to save a log of the VNAV state and mutations.
+
+The log files are named as follows:
+
+```text
+vnav-debug-{timestamp}.json
+vnav-path-{timestamp}.json
+vnav-vs-{timestamp}.json
+```
+
+<Frame>
+  ![Flight Simulator2024 Vv Df0ra RZZ](/images/FlightSimulator2024_VvDF0RaRZZ.jpg)
+</Frame>
+
+\
