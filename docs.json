@@ -100,6 +100,12 @@
             "tab": "Falcon 50",
             "groups": [
               {
+                "group": "Introduction",
+                "pages": [
+                  "aircraft/falcon-50/introduction/welcome"
+                ]
+              },
+              {
                 "group": "Aircraft",
                 "expanded": false,
                 "pages": [
