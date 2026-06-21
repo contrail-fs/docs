@@ -90,7 +90,8 @@
               }
             ]
           }
-        ]
+        ],
+        "hidden": true
       },
       {
         "product": "Aircraft",
@@ -102,8 +103,7 @@
               {
                 "group": "Introduction",
                 "pages": [
-                  "aircraft/falcon-50/introduction/welcome",
-                  "aircraft/falcon-50/introduction/disclaimer-legal"
+                  "aircraft/falcon-50/introduction/welcome"
                 ]
               },
               {
@@ -115,18 +115,6 @@
                     "pages": [
                       "aircraft/falcon-50/aircraft/cockpit-layout/front-panel",
                       "aircraft/falcon-50/aircraft/cockpit-layout/overhead-panel"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Procedures",
-                "expanded": false,
-                "pages": [
-                  {
-                    "group": "Checklists",
-                    "pages": [
-                      "aircraft/falcon-50/procedures/checklists/quickstart"
                     ]
                   }
                 ]
@@ -158,15 +146,27 @@
                 ]
               },
               {
-                "group": "Troubleshooting",
+                "group": "Procedures",
+                "expanded": false,
                 "pages": [
-                  "aircraft/falcon-50/troubleshooting/debug-logs"
+                  {
+                    "group": "Checklists",
+                    "pages": [
+                      "aircraft/falcon-50/procedures/checklists/quickstart"
+                    ]
+                  }
                 ]
               },
               {
                 "group": "Hardware",
                 "pages": [
                   "aircraft/falcon-50/hardware/keybindings"
+                ]
+              },
+              {
+                "group": "Troubleshooting",
+                "pages": [
+                  "aircraft/falcon-50/troubleshooting/debug-logs"
                 ]
               }
             ]
