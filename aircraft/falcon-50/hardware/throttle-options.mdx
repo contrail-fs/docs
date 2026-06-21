@@ -1,0 +1,142 @@
+---
+title: "Throttle Hardware Setup"
+---
+
+This setup guide provides recommended throttle profile setups for use in the sim with common hardware setups.
+
+##General recommendations
+
+| Control | Sim keybind/axis | Normal/inverted axis |
+| --- | --- | --- |
+| Engine 1 throttle | `THROTTLE 1 AXIS` | Inverted |
+| | `THROTTLE 1 AXIS (0 to 100%)` | Normal |
+| Engine 2 throttle | `THROTTLE 2 AXIS` | Inverted |
+| | `THROTTLE 2 AXIS (0 to 100%)` | Normal |
+| Engine 3 throttle | `THROTTLE 3 AXIS` | Inverted |
+| | `THROTTLE 3 AXIS (0 to 100%)` | Normal |
+
+##WinCtrl URSA MINOR 32 Throttle Metal - Option 1
+
+This first option for the WinCtrl throttle uses the virtual buttons on the hardware to set the reverser. It uses the reverse range on the throttle, but will only apply maximum reverse. The engine 3 switch in this setup is assigned to the ignition switch on the quadrant, with "IGN/START" position for engine 3 to be cut in.
+
+<Warning>
+The axis control must be set as "Double-stroke four-axle" in WinCtrl's SimAppPro
+</Warning>
+
+| Sim keybind/axis | Hardware option | Normal/inverted axis |
+| --- | --- | --- |
+| `THROTTLE 1 AXIS` | `JOYSTICK RAXIS X` | Inverted |
+| `THROTTLE 2 AXIS` | `JOYSTICK RAXIS Y` | Inverted |
+| `THROTTLE 3 AXIS` | `JOYSTICK RAXIS X` | Inverted |
+| `THROTTLE 2 DECREASE` | `JOYSTICK BUTTON 41` | N/A |
+| `THROTTLE 2 IDLE` | `21` | N/A |
+| `SET ENGINE MASTER 1` | `JOYSTICK BUTTON 1` | N/A |
+| `SET ENGINE MASTER 2` | `JOYSTICK BUTTON 3` | N/A |
+| `SET ENGINE MASTER 3` | `JOYSTICK BUTTON 9` | N/A |
+
+<Frame>
+  ![wc_keybinds](/images/wc_keybinds.jpg)
+</Frame>
+
+<Frame>
+  ![wc_eng1_settings](/images/wc_eng1_settings.jpg)
+</Frame>
+
+##WinCtrl URSA MINOR 32 Throttle Metal - Option 2
+
+This second option provides full reverse axis functionality but requires an override of the device input curve in the sim control options. Like the first option, this uses the reverse range but as a functional reverse axis. The engine 3 switch in this setup is assigned to the ignition switch on the quadrant, with "IGN/START" position for engine 3 to be cut in.
+
+<Warning>
+The axis control must be set as "Single-stroke double shaft" in WinCtrl's SimAppPro
+</Warning>
+
+| Sim keybind/axis | Hardware option | Normal/inverted axis | Hardware curve setting |
+| --- | --- | --- | --- |
+| `THROTTLE 1 AXIS (0 to 100%)` | `JOYSTICK RAXIS X` | Normal | Neutral set to -0.38 |
+| `THROTTLE 2 AXIS (0 to 100%)` | `JOYSTICK RAXIS Y` | Normal | Neutral set to -0.38 |
+| `THROTTLE 3 AXIS (0 to 100%)` | `JOYSTICK RAXIS X` | Normal | Neutral set to -0.38 |
+| `SET ENGINE MASTER 1` | `JOYSTICK BUTTON 1` | N/A | N/A |
+| `SET ENGINE MASTER 2` | `JOYSTICK BUTTON 3` | N/A | N/A |
+| `SET ENGINE MASTER 3` | `JOYSTICK BUTTON 9` | N/A | N/A |
+
+<Frame>
+  ![wc_alt_keybinds](/images/wc_alt_keybinds.jpg)
+</Frame>
+
+<Frame>
+  ![wc_alt_eng1_settings](/images/wc_alt_eng1_settings.jpg)
+</Frame>
+
+<Frame>
+  ![wc_alt_eng1_curve](/images/wc_alt_eng1_curve.jpg)
+</Frame>
+
+##Moza MTQ Throttle Quadrant
+
+
+
+| Sim keybind/axis | Hardware option | Normal/inverted axis |
+| --- | --- | --- |
+| `THROTTLE 1 AXIS` | `###` | Inverted |
+| `THROTTLE 2 AXIS` | `###` | Inverted |
+| `THROTTLE 3 AXIS` | `###` | Inverted |
+| `TOGGLE REVERSE THRUST` | `###` | N/A |
+
+##Honeycomb Bravo Throttle Quadrant
+
+The recommended setup for the Honeycomb Bravo uses three throttle levers in slots 2, 3, and 4. The spoilers lever is in slot 1 with the flaps in slot 6. To use reverser, the reverse switches on the throttle levers should be used and lever for ENG2 advanced forward. This will function as a reverser axis.
+
+| Sim keybind/axis | Hardware option | Normal/inverted axis |
+| --- | --- | --- |
+| `THROTTLE 1 AXIS` | `JOYSTICK LAXIS X` | Inverted |
+| `THROTTLE 2 AXIS` | `JOYSTICK RAXIS Z` | Inverted |
+| `THROTTLE 3 AXIS` | `JOYSTICK RAXIS Y` | Inverted |
+| `HOLD THROTTLE REVERSE THRUST` | `JOYSTICK BUTTON 9 + JOYSTICK BUTTON 10` | N/A |
+| `SPOILERS AXIS` | `JOYSTICK LAXIS Y` | Normal |
+| `FLAPS AXIS` | `JOYSTICK LAXIS Z` | Normal |
+
+<Frame>
+  ![hc_keybinds](/images/hc_keybinds.jpg)
+</Frame>
+
+<Frame>
+  ![hc_eng1_settings](/images/hc_eng1_settings.jpg)
+</Frame>
+
+##Thrustmaster TCA Quadrant Airbus Edition - Single throttle body (two levers)
+
+The TCA Airbus edition has a single throttle axis that can function through the full throttle range of maximum thrust and maximum reverse. This setup allows the levers to be pulled back into the reverse range for full reverse power control. The engine 3 switch in this setup is assigned to the ignition switch on the quadrant, with "IGN/START" position for engine 3 to be cut in.
+
+| Sim keybind/axis | Hardware option | Normal/inverted axis | Hardware curve setting |
+| --- | --- | --- | --- |
+| `THROTTLE 1 AXIS (0 to 100%)` | `JOYSTICK LAXIS X` | Inverted | Neutral set to 0.5 |
+| `THROTTLE 2 AXIS (0 to 100%)` | `JOYSTICK LAXIS Y` | Inverted | Neutral set to 0.5 |
+| `THROTTLE 3 AXIS (0 to 100%)` | `JOYSTICK LAXIS X` | Inverted | Neutral set to 0.5 |
+| `SET ENGINE MASTER 1` | `JOYSTICK BUTTON 3` | N/A | N/A |
+| `SET ENGINE MASTER 2` | `JOYSTICK BUTTON 4` | N/A | N/A |
+| `SET ENGINE MASTER 3` | `JOYSTICK BUTTON 8` | N/A | N/A |
+
+<Frame>
+  ![tca_keybinds](/images/tca_keybinds.jpg)
+</Frame>
+
+<Frame>
+  ![tca_eng1_settings](/images/tca_eng1_settings.jpg)
+</Frame>
+
+<Frame>
+  ![tca_eng1_curve](/images/tca_eng1_curve.jpg)
+</Frame>
+
+##Thrustmaster TCA Quadrant Airbus Edition - Dual throttle body (four levers)
+
+As it is possible to use two TCA Airbus edition quadrants for up to four throttle levers, this setup describes the keybinds for unique levers for each throttle.
+
+| Sim keybind/axis | Device | Hardware option | Normal/inverted axis | Hardware curve setting |
+| --- | --- | --- | --- | --- |
+| `THROTTLE 1 AXIS (0 to 100%)` | TCA Q-Eng 1&2 | `JOYSTICK LAXIS X` | Inverted | Neutral set to 0.5 |
+| `THROTTLE 2 AXIS (0 to 100%)` | TCA Q-Eng 1&2 | `JOYSTICK LAXIS Y` | Inverted | Neutral set to 0.5 |
+| `THROTTLE 3 AXIS (0 to 100%)` | TCA Q-Eng 3&4 | `JOYSTICK LAXIS X` | Inverted | Neutral set to 0.5 |
+| `SET ENGINE MASTER 1` | TCA Q-Eng 1&2 | `JOYSTICK BUTTON 3` | N/A | N/A |
+| `SET ENGINE MASTER 2` | TCA Q-Eng 1&2 | `JOYSTICK BUTTON 4` | N/A | N/A |
+| `SET ENGINE MASTER 3` | TCA Q-Eng 3&4 | `JOYSTICK BUTTON 3` | N/A | N/A |
