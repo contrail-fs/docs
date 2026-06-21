@@ -153,13 +153,13 @@
               {
                 "group": "Troubleshooting",
                 "pages": [
-                  "debug-logs"
+                  "aircraft/falcon-50/troubleshooting/debug-logs"
                 ]
               },
               {
                 "group": "Hardware",
                 "pages": [
-                  "keybindings"
+                  "aircraft/falcon-50/hardware/keybindings"
                 ]
               }
             ]
