@@ -20,12 +20,14 @@
         {
           "anchor": "Documentation",
           "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
+          "href": "https://mintlify.com/docs",
+          "hidden": true
         },
         {
           "anchor": "Blog",
           "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
+          "href": "https://mintlify.com/blog",
+          "hidden": true
         }
       ]
     },
