@@ -103,7 +103,8 @@
               {
                 "group": "Introduction",
                 "pages": [
-                  "aircraft/falcon-50/introduction/welcome"
+                  "aircraft/falcon-50/introduction/welcome",
+                  "aircraft/falcon-50/introduction/disclaimer-legal"
                 ]
               },
               {
