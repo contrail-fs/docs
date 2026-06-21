@@ -155,6 +155,12 @@
                 "pages": [
                   "debug-logs"
                 ]
+              },
+              {
+                "group": "Hardware",
+                "pages": [
+                  "keybindings"
+                ]
               }
             ]
           }
