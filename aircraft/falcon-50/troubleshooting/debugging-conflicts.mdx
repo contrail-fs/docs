@@ -1,0 +1,39 @@
+---
+title: "Debugging potentional conflicts"
+---
+
+## Delete WASM files
+
+If you find that the aircraft does not load correctly or performs unexpectedly, first try to delete the WASM files.
+
+You can find the WASM files at:
+- Microsoft Store installs: `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalState\WASM\ctl-aircraft-fa50`
+- Steam installs: `%AppData%\Microsoft Flight Simulator 2024\WASM\ctl-aircraft-fa50`
+
+Delete all files inside this folder (do not delete the Work folder or anything within that)
+
+<Frame>
+  ![ctl_wasm_folder](/images/ctl_wasm_folder.jpg)
+</Frame>
+
+The files within this folder will be recompiled fresh next time you select "Fly Now" with the FA50.
+
+## MSFS 2024 Cache
+
+Over time, the MSFS cache may contain corrupted cache files that prevent products from loading correctly. This can happen as a result of sim & world updates, but also by adding/removing packages from the Community folder. Deleting the cache files can resolve some issues related to corrupted files.
+
+<Note>
+Deleting the cache files is safe to do. The next time that you launch the simulator, the sim will automatically create new cache files that it requires.
+</Note>
+
+Microsoft Store installs:
+- `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalCache` - delete the `ROLLINGCACHE.CCC` file
+- `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalCache\ModelLibCache` - delete all files within this folder if any
+- `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalCache\SceneryIndexes` - delete all files within this folder
+- `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalState\cache` - delete any/all folders within this cache folder
+
+Steam installs:
+- `%AppData%\Microsoft Flight Simulator 2024` - delete the `ROLLINGCACHE.CCC` file
+- `%AppData%\Microsoft Flight Simulator 2024\ModelLibCache` - delete all files within this folder if any
+- `%AppData%\Microsoft Flight Simulator 2024\SceneryIndexes` - delete all files within this folder
+- `%AppData%\Microsoft Flight Simulator 2024\cache` - delete any/all folders within this cache folder
