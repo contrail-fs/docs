@@ -179,6 +179,12 @@
                 "pages": [
                   "aircraft/falcon-50/procedures/icing-conditions",
                   {
+                    "group": "Takeoff",
+                    "pages": [
+                      "aircraft/falcon-50/procedures/takeoff/thrust-setting"
+                    ]
+                  },
+                  {
                     "group": "Checklists",
                     "pages": [
                       "aircraft/falcon-50/procedures/checklists/quickstart"
