@@ -119,6 +119,12 @@
                       "aircraft/falcon-50/aircraft/cockpit-layout/front-panel",
                       "aircraft/falcon-50/aircraft/cockpit-layout/overhead-panel"
                     ]
+                  },
+                  {
+                    "group": "EFB",
+                    "pages": [
+                      "aircraft/falcon-50/aircraft/efb/fs24-efb-user-guide"
+                    ]
                   }
                 ]
               },

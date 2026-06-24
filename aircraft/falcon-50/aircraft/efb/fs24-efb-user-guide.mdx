@@ -1,0 +1,264 @@
+---
+title: "Contrail Falcon 50 EFB"
+---
+
+## Access and requirements
+
+<Frame>
+  ![Contrail FA50 App tile in the MSFS 2024 EFB](./images/fs24-efb-access.jpg)
+</Frame>
+
+1. **Open the EFB** in the simulator (tablet / integrated EFB depending on setup).
+2. Select the **"Contrail FA50 App"** - it is enabled only for the **ATC model "Falcon 50"** (other aircraft show greyed out).
+
+**JetCard:** If the external JetCard App is running, the footer shows **"JetCard connected"**.
+
+**MSFS 2020 note:** The 2020 version features a **Lite EFB** which does include the most important features to operate the aircraft but misses certain features. A fully enhanced EFB is only available in MSFS 2024.
+
+## Home
+
+<Frame>
+  ![Contrail Falcon 50 EFB home page](./images/fs24-efb-home.jpg)
+</Frame>
+
+| Tile | Content |
+| --- | --- |
+| **GROUND OPERATIONS** | Ground controls on the exterior model (doors, chocks, GPU, ...) |
+| **WEIGHT & BALANCE** | Payload, fuel, CG chart, SimBrief / JetCard |
+| **CHARTS** | Host area for the **Navigraph Charts** app (see below) |
+| **OPTIONS** | Global and livery-specific settings |
+
+**Header:**
+
+- **SimRate icon** - shows the current simulation rate (for example **1X**) and opens the Sim Rate menu. See [Sim Rate](#sim-rate) below.
+- **Pause icon** - toggles pause/unpause.
+- **Replay icon** - visible only when **Replay mode** is enabled under *Options*. Opens the Replay page. See [Replay](#replay) below.
+- **Profile icon** - opens User profile (name, home ICAO, achievements, statistics).
+
+## Sim Rate
+
+<Frame>
+  ![Sim rate control menu](./images/fs24-efb-sim-rate.jpg)
+</Frame>
+
+Open the Sim Rate popup from the **SimRate icon** in the EFB header on any Contrail EFB page. The icon always reflects the **current simulation rate** read from the simulator.
+
+### Controls
+
+| Control | Function |
+| --- | --- |
+| **Slider** | Pick one of five fixed rates: **0.25X**, **0.5X**, **1X**, **2X**, **4X** |
+| **<<** | Step one rate slower |
+| **>>** | Step one rate faster |
+| **Reset** | Return to normal **1X** speed |
+| **X** / backdrop click | Close the popup |
+
+The **Current rate** readout shows the live value from the simulator while the popup is open.
+
+### Behaviour
+
+Speed changes are not applied instantly. After you move the slider or press a button, the EFB waits briefly, then ramps the simulator toward the selected rate in smooth steps rather than jumping immediately.
+
+Microsoft Flight Simulator only supports discrete simulation rates that double or halve (via the standard sim-rate increase/decrease commands). Values between the five stops are therefore not available — the slider and step buttons always target one of the fixed rates above.
+
+If you close the popup before the ramp finishes, any pending change is applied immediately so your last selection still takes effect.
+
+<Note>
+The Sim Rate control adjusts MSFS simulation speed only. It does not pause the sim — use the separate **Pause** icon in the header for that.
+</Note>
+
+## Ground Operations
+
+<Frame>
+  ![Ground Operations page with aircraft service controls](./images/fs24-efb-ground-operations.jpg)
+</Frame>
+
+Interactive **top-down** view of the aircraft.
+
+- **MAIN DOOR** - passenger door
+- **VAN** - service / passenger van
+- **CHOCKS** - wheel chocks
+- **TORQUE LINK** - torque links (nose)
+- **QUICK PREFLIGHT** - prepares the aircraft for startup immediately
+- **REFUELING** - refuel / fuel service
+- **EXT POWER** - external GPU
+- **COVERS** - covers / plugs
+- **BAG COMP** - baggage compartment
+
+## Weight & Balance
+
+<Frame>
+  ![Weight and Balance page with payload controls and CG chart](./images/fs24-efb-weight-balance.jpg)
+</Frame>
+
+Plan payload and fuel, apply to the simulation, and optionally populate from **SimBrief** or **JetCard**. A **CG / weight chart** on the right visualises the current **MAC %** and total weight combination.
+
+### Top bar
+
+| Control | Function |
+| --- | --- |
+| **Pilot Operation** | Cockpit perspective / control logic (dropdown) |
+| **Weight Unit** | Display **Kilograms** or **Pounds** (also tied to `L:CTL_FA50_EFB_WEIGHT_USE_KG`) |
+| **SimBrief -> Download** | Loads the OFP for the **SimBrief Username** set under *Options* |
+| **JetCard -> Import** | Shown when JetCard is online; imports W&B data from the bridge |
+
+**SimBrief:** Enter the username or pilot ID under **Options -> SimBrief Username**. If it is missing, the download fails.
+
+**JetCard:** If JetCard App is running, you can import its weight instead of using SimBrief.
+
+### Passengers, baggage, fuel
+
+**Instant loading**
+
+- **Passenger** - slider 0-9 and counter field; **>>** immediately applies the planned passenger load.
+- **PAX Weight** - total passenger weight (display / entry).
+- **Baggage** - percent slider and weight field; **>>** to apply.
+- **Fuel** - percent slider and weight field; **>>** sets planned fuel mass.
+
+**Real-time refuelling**
+
+- **Start Real Time Refueling** - simulated pressure transfer with progress at the fuel panel (hose and pump); **Stop** ends the sequence.
+- If the fuel slider target is **below** fuel already on board, the sequence runs in **defuel** mode (defuel switch and cover on the panel are set automatically).
+- If the target is **above** current fuel, fuel is added the same way as manual panel refuelling.
+- With JetCard, **Start JetCard Services** may appear instead (integrated service flow; same refuel/defuel rules for the fuel leg).
+
+### Totals
+
+- **Zero Fuel Weight** - planned weight without fuel
+- **Takeoff Weight** - takeoff weight including fuel
+
+## Charts (Navigraph)
+
+<Frame>
+  ![Navigraph Charts embedded in the Contrail Falcon 50 EFB](./images/fs24-efb-navigraph-charts.jpg)
+</Frame>
+
+The **Charts** page embeds the separate **Navigraph Charts** EFB app when it is installed.
+
+<Note>
+Install the Navigraph Charts app from the **Navigraph Hub** in MSFS and sign in. The Contrail EFB does not bundle Navigraph Charts; if the Navigraph app is missing, the Charts page shows an install prompt instead.
+</Note>
+
+## Options
+
+<Frame>
+  ![Options page showing cockpit settings](./images/fs24-efb-options.jpg)
+</Frame>
+
+This section contains **aircraft-wide** and **per livery** settings that will automatically be saved within your MSFS installation.
+
+### Cockpit options
+
+| Option | Short description |
+| --- | --- |
+| **EADI Flight Director** | V-Bar / X-Bar presentation |
+| **AP Control Labels** | Extra AP labelling (fake clickspots) |
+| **Allow Autopilot Override** | Manual yoke/stick AP override |
+| **Baro Sync** | None / Captain & FO / Sync all |
+| **Engine N1/ITT Display Refresh rate** | Realistic vs instant display |
+| **Enable IRS fast align** | IRS fast alignment |
+| **Co-pilot Seat** | Move camera to the right seat |
+| **Cockpit Door** | Cockpit door visibility in 3D model |
+| **G-Loaded Head Movement** | Camera movement under G Load |
+| **Spawn with covers** | Start with engine covers applied |
+| **Show user hints** | Extra tips & hints |
+| **Replay mode** | Enable custom replay features |
+| **SimBrief Username** | For weight & balance import |
+| **Pause at TOD** | Pause at top of descent |
+| **Reset Option Settings** | Reset options to defaults |
+
+### Livery options
+
+| Option | Short description |
+| --- | --- |
+| **Save fuel across sessions** | Remember fuel quantity between sessions |
+| **Auto Window Blinds** | Automatic window blind animations depending on sun angle |
+
+## Replay
+
+<Note>
+Only applicable in Microsoft Flight Simulator 2024. Enable **Replay mode** under *Options → Cockpit options* first — the **Replay icon** in the EFB header appears only when this option is on.
+</Note>
+
+<Frame>
+  ![Replay page with rewind and takeoff replay controls](./images/fs24-efb-replay.jpg)
+</Frame>
+
+Open the Replay page from the **Replay icon** in the EFB header. The page has three sections: a continuous **REWIND** buffer, an automatic **TAKEOFF REPLAY** clip, and an automatic **LANDING REPLAY** clip.
+
+While the Replay page is open, the simulator runs in a replay-ready state at the **live** edge of the buffer. Leaving the page returns you to normal live flight.
+
+### REWIND
+
+The REWIND section scrubs a rolling buffer of the last **5 minutes** of flight.
+
+| Control | Function |
+| --- | --- |
+| **Slider** | **Left** = oldest point in the buffer (~5 minutes ago). **Right** = live (now). |
+| **Time label** | Shows how far behind live you are, for example **-0:47** |
+| **Play** | Play back from the current slider position toward live |
+| **Pause** | Stop playback at the current position |
+
+Drag the slider to jump to any moment within the buffer. Moving the slider pauses playback. While **Play** is active, the slider follows the replay forward toward live.
+
+If the aircraft position jumps by more than about **50 NM** (for example after a teleport or flight reload), the buffer is cleared and recording starts fresh.
+
+### TAKEOFF REPLAY
+
+Takeoff clips are captured automatically when the aircraft lifts off. No button press is needed to start recording.
+
+**What is recorded**
+
+- Up to **60 seconds** on the ground before liftoff (rolling pre-roll)
+- **60 seconds** after liftoff
+
+**Status line**
+
+| Message | Meaning |
+| --- | --- |
+| **No takeoff recorded yet** | No takeoff clip available for this flight |
+| **Recording takeoff · MM:SS** | Capture in progress |
+| **Takeoff ready · MM:SS · auto-saved** | Clip finished and ready to replay |
+
+When a clip is ready, press **Replay Takeoff**. The REWIND section is hidden while a clip plays. Use the clip slider and **Play** / **Pause** / **Stop** controls:
+
+| Control | Function |
+| --- | --- |
+| **Slider** | Scrub within the takeoff clip |
+| **Time label** | Current position and clip length, for example **00:32 / 01:02** |
+| **Play** | Play from the current position |
+| **Pause** | Pause playback |
+| **Stop** | Exit takeoff replay and return to the REWIND view |
+
+Finished takeoff clips are **auto-saved** locally and can be replayed again in a later session. Loading a **new flight** clears the previous takeoff clip.
+
+### LANDING REPLAY
+
+Landing clips are also captured automatically.
+
+The landing section uses the same status messages and **Replay Landing** / slider / **Play** / **Pause** / **Stop** controls as takeoff replay. While a landing clip plays, the takeoff section is hidden.
+
+Landing clips are **auto-saved** locally between sessions. Loading a **new flight** clears the previous landing clip.
+
+### General behaviour
+
+- Only **one** replay mode is active at a time: takeoff replay, landing replay, or REWIND scrubbing.
+- Switching to another EFB app, closing the Contrail EFB, or leaving the Replay page stops playback and returns the simulator to **live** flight.
+- Turning **Replay mode** off in Options while the Replay page is open closes replay and returns you to live flight.
+
+
+## User profile
+
+<Note>
+Only applicable in Microsoft Flight Simulator 2024.
+</Note>
+
+<Frame>
+  ![User profile page with flight statistics and achievements](./images/fs24-efb-user-profile.jpg)
+</Frame>
+
+All data is stored locally in your MSFS installation. No online sync is available.
+
+- **Display name** and **home airport (ICAO)**
+- **Achievements** - progress and unlocked items; new unlocks may open an **achievement popup**.
+- **Statistics** - flights, hours, airports visited, distance flown.
