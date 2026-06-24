@@ -117,7 +117,8 @@
                     "group": "Cockpit Layout",
                     "pages": [
                       "aircraft/falcon-50/aircraft/cockpit-layout/front-panel",
-                      "aircraft/falcon-50/aircraft/cockpit-layout/overhead-panel"
+                      "aircraft/falcon-50/aircraft/cockpit-layout/overhead-panel",
+                      "aircraft/falcon-50/aircraft/cockpit-layout/clickspots"
                     ]
                   },
                   {
