@@ -1,0 +1,70 @@
+---
+title: "High-Pressure Bleed Air"
+---
+
+High-pressure (HP) bleed air is taken from the top port of each engine, downstream of the centrifugal compressor. Under normal conditions the HP system is **not used** — each engine's HP valve stays closed and opens only when an anti-icing system is selected on. The HP lines tee into the LP lines so that, when an HP valve opens, the common manifold rises to HP level.
+
+| Condition | Absolute Pressure | Temperature |
+|-----------|-------------------|-------------|
+| **Idle, no flow** | 2 bar (31 psi) | 110 °C (230 °F) |
+| **Take-off, no flow** | 15.8 bar (230 psi) | 440 °C (820 °F) |
+| **Take-off, 30 kg/min flow** | 13.9 bar (200 psi) | 385 °C (725 °F) |
+| **In flight, 41,000 ft, M 0.75, no flow** | 4.4 bar (64 psi) | 355 °C (670 °F) |
+
+<Note>
+At a given engine rpm, thrust is lower with bleed air flow than with no flow. Each bleed line is sized to limit maximum flow, which both limits downstream mixed-air temperature and minimizes the effect of a line rupture on engine operation.
+</Note>
+
+## HP Valves
+
+Each engine has an HP bleed valve controlled by a two-position **HP 1**, **HP 2**, or **HP 3** switch (AUTO / OFF) on the overhead panel. AUTO is the normal position, in which the valve opens automatically according to the associated anti-icing selection.
+
+| Valve | Opens When |
+|-------|-----------|
+| **HP 1 and HP 3** | Airframe (wing) anti-icing is selected ON |
+| **HP 2** | No. 2 engine anti-icing is selected ON |
+
+When airframe anti-ice is selected, HP 1 and HP 3 open and supply HP air to the manifold near the airframe anti-ice valves, heating the wing leading edges. When No. 2 engine anti-ice is selected, HP 2 opens and feeds the No. 2 engine S-duct heater. In OFF, the associated valve stays closed regardless of the anti-icing selection.
+
+<Note>
+No. 1 and No. 3 engine anti-ice operation has no effect on the HP bleed valves. When an HP valve opens, the check valve at that engine's LP port closes, shutting off LP airflow from that engine and preventing reverse flow of HP air.
+</Note>
+
+## Pressure Regulating Valve (PRV)
+
+A Pressure Regulating Valve is installed in the No. 2 engine HP bleed line. Its sole purpose is to reduce No. 2 engine HP air down to LP level and supply the **air-conditioning systems when the engines are at too low a power setting** (idle, descent) to maintain manifold pressure. The PRV cannot supply air to the common manifold.
+
+The PRV is controlled by a two-position **PRV** switch (AUTO / OFF) on the overhead panel. In AUTO (normal):
+
+- If No. 2 engine anti-ice is **on**, the PRV closes so HP 2 air is used for anti-icing.
+- If No. 2 engine anti-ice is **off**, the PRV delivers regulated air only when manifold pressure is at or below the PRV setting (i.e. at low rpm). As the engines spool up and manifold pressure exceeds the PRV output, the valve closes and the manifold resumes supplying the air conditioning.
+
+Regulated PRV pressure varies with altitude, from about **2 bar (29 psi)** at sea level down to **0.81 bar (11.8 psi)** at 45,000 ft.
+
+<Tip>
+When the PRV is regulating, the No. 2 engine ITT runs higher than Engines 1 and 3. If No. 2 runs noticeably hotter while taxiing, the PRV switch may be set to OFF to equalize engine temperatures.
+</Tip>
+
+## Secondary HP Bleed Air
+
+Engines 1 and 2 also supply a **secondary HP manifold**. This HP air is jetted through a venturi (jet pump) to produce the negative pressure that controls the cabin pressurization outflow valves. The APU can also supply this manifold when running with the APU bleed selected on. This system has no pilot controls and stops when Engines 1 and 2 are shut down.
+
+## Related Documentation
+
+<CardGroup cols={2}>
+<Card title="Overview" icon="book" href="/aircraft/falcon-50/systems/pneumatic-system/overview">
+Understand the complete pneumatic system architecture.
+</Card>
+
+<Card title="Low-Pressure Bleed Air" icon="wind" href="/aircraft/falcon-50/systems/pneumatic-system/low-pressure-bleed">
+Learn how LP bleed air feeds the main and secondary systems.
+</Card>
+
+<Card title="APU Bleed Air" icon="fan" href="/aircraft/falcon-50/systems/pneumatic-system/apu-bleed">
+Explore how the APU supplies bleed air on the ground.
+</Card>
+
+<Card title="Controls & Indications" icon="sliders" href="/aircraft/falcon-50/systems/pneumatic-system/controls-indications">
+Read the overhead panel switches, isolation valve, and warning lights.
+</Card>
+</CardGroup>

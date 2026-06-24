@@ -1,0 +1,68 @@
+---
+title: "Controls & Indications"
+---
+
+The pneumatic system is controlled from the **overhead panel**, with warning lights on the master warning panel and the bleed pushbutton on the APU control panel. The overhead panel carries a blue schematic of the bleed-air system with the valve switches arranged around it.
+
+## Overhead Panel Switches
+
+Across the top of the schematic are four two-position toggle switches controlling the HP valves and the PRV. Across the bottom are three switches controlling conditioned airflow to each compartment.
+
+| Switch | Positions | Function |
+|--------|-----------|----------|
+| **HP 1 / HP 2 / HP 3** | AUTO / OFF | HP bleed valves; in AUTO they open automatically with anti-icing (OFF locked by a stud) |
+| **PRV** | AUTO / OFF | Pressure regulating valve for air-conditioning make-up at low rpm |
+| **CABIN** | OFF / ON / AUTO | Conditioned air to the passenger cabin |
+| **CREW** | OFF / ON / AUTO | Conditioned air to the cockpit (nose cone) |
+| **BAG** | OFF / ON | Opens a valve to pressurize the baggage compartment with cabin air |
+
+In **AUTO**, the CABIN and CREW valves supply air on the ground with thrust levers below 54 % N1, and supply air in flight regardless of thrust lever position. In **ON**, the valves are open under all conditions; in **OFF**, airflow is shut off.
+
+## Isolation Valve
+
+In the center of the schematic is a rotary **ISOLATION** switch that controls a motor-operated isolation valve in the common manifold. The valve is normally **open**, so air from any engine or the APU feeds the whole system. Rotating the knob 90° to ISOLATION closes the valve and splits the manifold into independent left and right sub-systems.
+
+Closing the isolation valve is used for three situations:
+
+- A leak in either sub-system (limits the leak to one side; one conditioning system remains, sufficient for pressurization and air conditioning)
+- Unwanted airframe or No. 2 engine anti-ice operation
+- Smoke in the air-conditioning system
+
+<Tip>
+In the OPEN position the blue bar on the ISOLATION knob is aligned with the system diagram painted on the panel.
+</Tip>
+
+## Warning Lights
+
+Two amber lights on the master warning panel monitor the pneumatic system.
+
+| Light | Meaning |
+|-------|---------|
+| **BLEED OVHT** | Overheat in a bleed-air system or at a conditioning inlet (thermostats set to 300 °C / 572 °F) |
+| **APU BLEED** | APU bleed valve open when it should be closed |
+
+The BLEED OVHT detection uses five thermostats — one per HP bleed system and one per conditioning system. If BLEED OVHT illuminates while the anti-icing systems are off, the PRV is the most likely cause.
+
+<Warning>
+To identify a faulty bleed system, set the **HP 1, HP 2, HP 3, and PRV** switches to OFF one at a time. If the light keeps steady, return that switch to AUTO and try the next. When the light **flashes**, the last switch actuated identifies the faulty system — leave it OFF and follow the checklist. The light extinguishes once the system cools to 265 °C (510 °F).
+</Warning>
+
+## Related Documentation
+
+<CardGroup cols={2}>
+<Card title="Overview" icon="book" href="/aircraft/falcon-50/systems/pneumatic-system/overview">
+Understand the complete pneumatic system architecture.
+</Card>
+
+<Card title="Low-Pressure Bleed Air" icon="wind" href="/aircraft/falcon-50/systems/pneumatic-system/low-pressure-bleed">
+Learn how LP bleed air feeds the main and secondary systems.
+</Card>
+
+<Card title="High-Pressure Bleed Air" icon="gauge-high" href="/aircraft/falcon-50/systems/pneumatic-system/high-pressure-bleed">
+Understand the HP valves, the PRV, and anti-icing supply.
+</Card>
+
+<Card title="APU Bleed Air" icon="fan" href="/aircraft/falcon-50/systems/pneumatic-system/apu-bleed">
+Explore how the APU supplies bleed air on the ground.
+</Card>
+</CardGroup>

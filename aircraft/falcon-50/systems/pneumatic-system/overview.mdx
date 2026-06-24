@@ -1,0 +1,59 @@
+---
+title: "Overview"
+---
+
+The Falcon 50 pneumatic system extracts compressed **bleed air** from the engines and, optionally, the APU to power a wide range of aircraft services. Bleed air feeds air conditioning, cabin pressurization, airframe and nacelle anti-icing, fuel tank pressurization, and hydraulic reservoir pressurization.
+
+<Note>
+Because the engines produce an abundance of compressed air, the pneumatic system simply taps a portion of it. There are no dedicated air compressors — all pneumatic supply comes from the engine bleed ports or the APU.
+</Note>
+
+## Bleed Ports
+
+Each engine has **three bleed-air ports**: two Low-Pressure (LP) ports on the compressor case (at the 3 o'clock and 9 o'clock positions) and one High-Pressure (HP) port on top of the engine (12 o'clock), downstream of the centrifugal compressor. All ports feed the pneumatic system except the right-hand LP port of the No. 3 engine, which is capped off.
+
+| Port | Location | Normal Use |
+|------|----------|------------|
+| **LP (×2 per engine)** | 3 and 9 o'clock | Air conditioning, pressurization, fuel and hydraulic reservoir pressurization |
+| **HP (×1 per engine)** | 12 o'clock | Anti-icing, and air-conditioning make-up via the PRV |
+| **Internal HP** | Within engine | That engine's own anti-icing |
+
+Each bleed line carries **check valves** that establish an airflow priority and prevent air from flowing back into an engine that is shut down or running at low rpm.
+
+## System Architecture
+
+The pneumatic system is divided into a **main bleed-air system** and **secondary bleed-air systems**, both fed from a common distribution manifold.
+
+| System | Source | Supplies |
+|--------|--------|----------|
+| **Main bleed air** | All three engine LP/HP ports + APU (option) | Air conditioning, cabin / baggage / nose cone pressurization, airframe and S-duct anti-icing |
+| **Secondary LP** | No. 1 and No. 2 engine LP ports | Fuel tank and hydraulic reservoir pressurization |
+| **Secondary HP** | No. 1 and No. 2 engine HP ports + APU (option) | Jet pump for cabin pressurization outflow valve control |
+
+## Normal Operation
+
+In normal flight the **LP bleed system alone** supplies the aircraft. The HP system is normally **not used** — the HP valves stay closed and only open automatically when an anti-icing system is selected on. On the ground, the APU can supply the common manifold for air conditioning before the engines are providing sufficient air.
+
+<Warning>
+APU bleed air should **never** be used while the anti-icing systems are in use.
+</Warning>
+
+## Related Documentation
+
+<CardGroup cols={2}>
+<Card title="Low-Pressure Bleed Air" icon="wind" href="/aircraft/falcon-50/systems/pneumatic-system/low-pressure-bleed">
+Learn how LP bleed air feeds the main and secondary systems.
+</Card>
+
+<Card title="High-Pressure Bleed Air" icon="gauge-high" href="/aircraft/falcon-50/systems/pneumatic-system/high-pressure-bleed">
+Understand the HP valves, the PRV, and anti-icing supply.
+</Card>
+
+<Card title="APU Bleed Air" icon="fan" href="/aircraft/falcon-50/systems/pneumatic-system/apu-bleed">
+Explore how the APU supplies bleed air on the ground.
+</Card>
+
+<Card title="Controls & Indications" icon="sliders" href="/aircraft/falcon-50/systems/pneumatic-system/controls-indications">
+Read the overhead panel switches, isolation valve, and warning lights.
+</Card>
+</CardGroup>

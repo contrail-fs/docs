@@ -114,6 +114,7 @@
                 "group": "Introduction",
                 "pages": [
                   "aircraft/falcon-50/introduction/welcome",
+                  "aircraft/falcon-50/introduction/getting-started",
                   "aircraft/falcon-50/introduction/disclaimer-legal"
                 ]
               },
@@ -165,6 +166,16 @@
                       "aircraft/falcon-50/systems/hydraulic-system/pumps",
                       "aircraft/falcon-50/systems/hydraulic-system/accumulators",
                       "aircraft/falcon-50/systems/hydraulic-system/controls-indications"
+                    ]
+                  },
+                  {
+                    "group": "Pneumatic System",
+                    "pages": [
+                      "aircraft/falcon-50/systems/pneumatic-system/overview",
+                      "aircraft/falcon-50/systems/pneumatic-system/low-pressure-bleed",
+                      "aircraft/falcon-50/systems/pneumatic-system/high-pressure-bleed",
+                      "aircraft/falcon-50/systems/pneumatic-system/apu-bleed",
+                      "aircraft/falcon-50/systems/pneumatic-system/controls-indications"
                     ]
                   }
                 ]

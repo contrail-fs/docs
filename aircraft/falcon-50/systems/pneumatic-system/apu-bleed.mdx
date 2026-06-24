@@ -1,0 +1,52 @@
+---
+title: "APU Bleed Air"
+---
+
+The Auxiliary Power Unit can supply LP bleed air to the common manifold and to the secondary HP manifold while the aircraft is **on the ground**. This provides enough air to run the air-conditioning system before the engines are producing sufficient bleed air, and feeds the jet pump used for cabin pressurization control.
+
+| Parameter | APU Port (on ground) |
+|-----------|----------------------|
+| **Absolute pressure** | 3.3 bar (48 psi) |
+| **Temperature** | 240 °C (464 °F) |
+| **Air flow** | 20 kg/min (44 lb/min) |
+
+## Operation
+
+APU bleed air is available only when the APU speed is at or above **95 %** and all engine thrust levers are below **54 % N1** (54° PLA). Bleed air is extracted through a butterfly valve controlled by the **BLEED** pushbutton on the APU control panel (right console), which illuminates green when bleed is commanded. Pressing the button again closes the valve and extinguishes the light.
+
+The valve closes **automatically** whenever at least one throttle is advanced above 54 % N1. This prevents engine bleed air from being re-ingested by the APU through its bleed port.
+
+<Warning>
+APU bleed air should **never** be used while the anti-icing systems are in use.
+</Warning>
+
+## APU BLEED Warning Light
+
+An amber **APU BLEED** light on the warning panel indicates that the APU bleed valve is open when it should be closed.
+
+- With the APU shut down or running below 95 %, the light indicates that the bleed valve is **not fully closed**.
+- With the APU running above 95 % but a throttle above 54 % N1, it indicates that the **automatic closing function is inoperative**.
+
+<Note>
+There is a four-second time delay between the command to close the valve and illumination of the APU BLEED light.
+</Note>
+
+## Related Documentation
+
+<CardGroup cols={2}>
+<Card title="Overview" icon="book" href="/aircraft/falcon-50/systems/pneumatic-system/overview">
+Understand the complete pneumatic system architecture.
+</Card>
+
+<Card title="Low-Pressure Bleed Air" icon="wind" href="/aircraft/falcon-50/systems/pneumatic-system/low-pressure-bleed">
+Learn how LP bleed air feeds the main and secondary systems.
+</Card>
+
+<Card title="High-Pressure Bleed Air" icon="gauge-high" href="/aircraft/falcon-50/systems/pneumatic-system/high-pressure-bleed">
+Understand the HP valves, the PRV, and anti-icing supply.
+</Card>
+
+<Card title="Controls & Indications" icon="sliders" href="/aircraft/falcon-50/systems/pneumatic-system/controls-indications">
+Read the overhead panel switches, isolation valve, and warning lights.
+</Card>
+</CardGroup>

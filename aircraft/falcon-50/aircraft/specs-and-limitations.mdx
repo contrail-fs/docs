@@ -1,6 +1,6 @@
 ---
 title: "Specs & Limitations"
-description: "Key specifications and operating limitations for the Dassault Falcon 50, focused on the values that matter most in the simulator."
+description: "Key specifications and operating limitations for the Falcon 50, focused on the values that matter most in the simulator."
 ---
 
 The figures below reflect the aircraft as modelled in Microsoft Flight Simulator. Only limitations that are relevant to flying the aircraft in the simulator are listed here.
@@ -55,6 +55,52 @@ The figures below reflect the aircraft as modelled in Microsoft Flight Simulator
 | Turbulent air penetration | 0.76 Mach |
 | Landing gear extended (MLE) | 0.75 Mach |
 | Landing gear operating (MLO) | 0.70 Mach |
+
+## Engine operation (Garrett TFE731-3-1C)
+
+### RPM limits
+
+| Limit | N1 | N2 |
+| --- | --- | --- |
+| Takeoff / maximum continuous | 101.5% | 100.0% |
+| One minute maximum allowable | 103.0% | 103.0% |
+| Transient (5 seconds maximum allowable) | 105.0% | 105.0% |
+
+### ITT limits
+
+| Phase | Condition | –3 | –3D |
+| --- | --- | --- | --- |
+| Starting | Normal | 907° C | 910° C |
+| Ground | Transient (10 s max) | 927° C | 929° C |
+| Air | Transient (5 s max) | 977° C | 971° C |
+| Air | Normal (5 min max) | 907° C | 910° C |
+| Takeoff | Transient (10 s max) | 917° C | 912° C |
+| Maximum continuous | — | 885° C | 910° C |
+
+### Starting time
+
+| Phase | Range | Limit |
+| --- | --- | --- |
+| Ground start & starter-assist airstart | From 10% N2 to light-off | 10 s max |
+| Windmilling airstart | From windmilling N2 to 60% N2 | 25 s max |
+| Ground start | From light-off to idle | 50 s max |
+
+### Oil pressure
+
+| Thrust setting | Minimum | Maximum |
+| --- | --- | --- |
+| Takeoff or maximum continuous | 38 psi | 46 psi |
+| Idle | 25 psi | 46 psi |
+| Transient (less than 3 minutes) | — | 55 psi |
+
+### Oil temperature
+
+| Condition | Limit |
+| --- | --- |
+| Sea level to 30,000 ft | 127° C max |
+| Above 30,000 ft | 140° C max |
+| Transient (less than 2 minutes) | 149° C max |
+| Minimum for takeoff & continuous operation | 30° C |
 
 ## Miscellaneous
 
