@@ -121,6 +121,7 @@
                 "group": "Aircraft",
                 "expanded": false,
                 "pages": [
+                  "aircraft/falcon-50/aircraft/specs-and-limitations",
                   {
                     "group": "Cockpit Layout",
                     "pages": [
@@ -154,6 +155,16 @@
                       "aircraft/falcon-50/systems/electrical-system/ac-power",
                       "aircraft/falcon-50/systems/electrical-system/ground-power",
                       "aircraft/falcon-50/systems/electrical-system/battery-temperature"
+                    ]
+                  },
+                  {
+                    "group": "Hydraulic System",
+                    "pages": [
+                      "aircraft/falcon-50/systems/hydraulic-system/overview",
+                      "aircraft/falcon-50/systems/hydraulic-system/reservoirs",
+                      "aircraft/falcon-50/systems/hydraulic-system/pumps",
+                      "aircraft/falcon-50/systems/hydraulic-system/accumulators",
+                      "aircraft/falcon-50/systems/hydraulic-system/controls-indications"
                     ]
                   }
                 ]

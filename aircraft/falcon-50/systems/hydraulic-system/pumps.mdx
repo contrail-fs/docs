@@ -1,0 +1,71 @@
+---
+title: "Pumps"
+---
+
+Hydraulic pressure is produced by **three engine-driven pumps** for normal operation and an electric **stand-by pump** for emergency and ground use. The engine-driven pumps require no pilot input, while the stand-by pump is managed from the hydraulic panel.
+
+## Engine-Driven Pumps
+
+The three main pumps are self-regulating, barrel-type units mounted on the accessory gear box of each engine. The left and center engine pumps feed **System 1**; the right engine pump feeds **System 2**. Output flow is proportional to engine N2, reaching **20.3 liters per minute at 100 % N2**.
+
+| Condition | Regulated Pressure |
+|-----------|--------------------|
+| **Zero flow** | 206 bar (3,000 psi) |
+| **Maximum flow** | 197 bar (2,850 psi) |
+
+There are no cockpit controls for the engine-driven pumps. A fuse on each pump shaft protects the engine in the event of a pump jam.
+
+### Indication
+
+Each pump is monitored by a pressure switch that illuminates the **PMP 1**, **PMP 2**, or **PMP 3** amber light whenever the pressure delivered by the associated pump drops below **103.5 bar (1,500 psi)**. The lights extinguish once pressure rises back to **150 bar (2,150 psi)**.
+
+<Note>
+**PMP 1** and **PMP 2** may illuminate while extending the landing gear with Engines 1 and 2 at idle. This momentary drop in pressure is normal during the extension cycle.
+</Note>
+
+## Stand-by Pump
+
+The stand-by pump is driven by an electric motor, delivers a rated flow of **4.5 liters per minute**, and is installed in the aft compartment. In flight it is connected to **System 2** to provide emergency power. A manual selector in the aft compartment selects how the pump is used on the ground.
+
+| Selector Position | Use |
+|-------------------|-----|
+| **IN-FLIGHT** | Normal take-off configuration; supplies System 2 in flight or on the ground (normally safetied in this position) |
+| **GROUND-TEST** | Connects the pump to System 1 for ground testing in the absence of a hydraulic ground power unit |
+
+Stand-by pump operation depends on the system pressure (via a pressure switch downstream of the accumulator), the position of the **STBY PUMP** control lever (AUTO / ON / OFF), and whether the aircraft is on the ground or in flight.
+
+- **Lever ON or AUTO, on the ground:** if System 2 pressure falls below 1,500 psi (103.5 bar), the pump activates automatically and stops at 2,150 psi (150 bar).
+- **Lever AUTO, in flight:** with the airbrake handle out of the retracted position, the pump activates automatically if System 2 pressure falls below 1,500 psi and stops at 2,150 psi.
+- **Lever ON, in flight:** the pump runs continuously, regulated by the pressure switch of the system it serves.
+
+<Warning>
+The aft-compartment manual selector must **never** be operated while the stand-by pump is running.
+</Warning>
+
+### Indication
+
+An amber **ST.PMP** light illuminates when the stand-by pump has run for more than **60 seconds**, or whenever the manual selector is set to GROUND-TEST. There is no light indicating that the pump is simply running.
+
+<Tip>
+If the **ST.PMP** light illuminates in flight, move the STBY PUMP lever to **OFF** to stop the pump. The stand-by pump should also be tested before each flight: with Engine 3 shut down and the lever in AUTO, check that System 2 pressure cycles between 2,150 and 1,500 psi.
+</Tip>
+
+## Related Documentation
+
+<CardGroup cols={2}>
+<Card title="Overview" icon="book" href="/aircraft/falcon-50/systems/hydraulic-system/overview">
+Understand the complete hydraulic system architecture.
+</Card>
+
+<Card title="Reservoirs" icon="droplet" href="/aircraft/falcon-50/systems/hydraulic-system/reservoirs">
+Learn about the two hydraulic reservoirs, pressurization, and fluid quantity.
+</Card>
+
+<Card title="Accumulators" icon="gauge-high" href="/aircraft/falcon-50/systems/hydraulic-system/accumulators">
+Explore the accumulators that damp surges and store hydraulic energy.
+</Card>
+
+<Card title="Controls & Indications" icon="sliders" href="/aircraft/falcon-50/systems/hydraulic-system/controls-indications">
+Read the hydraulic panel indicators, lights, and brake controls.
+</Card>
+</CardGroup>
