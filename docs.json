@@ -12,6 +12,14 @@
     {
       "source": "/aircraft/falcon-50/systems/checklists/quickstart",
       "destination": "/aircraft/falcon-50/procedures/checklists/quickstart"
+    },
+    {
+      "source": "/aircraft/falcon-50/aircraft/efb/fs24-efb-user-guide",
+      "destination": "/aircraft/falcon-50/aircraft/efb-app"
+    },
+    {
+      "source": "/aircraft/falcon-50/aircraft/cockpit-layout/clickspots",
+      "destination": "/aircraft/falcon-50/aircraft/clickspots"
     }
   ],
   "navigation": {
@@ -117,16 +125,11 @@
                     "group": "Cockpit Layout",
                     "pages": [
                       "aircraft/falcon-50/aircraft/cockpit-layout/front-panel",
-                      "aircraft/falcon-50/aircraft/cockpit-layout/overhead-panel",
-                      "aircraft/falcon-50/aircraft/cockpit-layout/clickspots"
+                      "aircraft/falcon-50/aircraft/cockpit-layout/overhead-panel"
                     ]
                   },
-                  {
-                    "group": "EFB",
-                    "pages": [
-                      "aircraft/falcon-50/aircraft/efb/fs24-efb-user-guide"
-                    ]
-                  }
+                  "aircraft/falcon-50/aircraft/clickspots",
+                  "aircraft/falcon-50/aircraft/efb-app"
                 ]
               },
               {
@@ -162,7 +165,10 @@
                   {
                     "group": "Cruise",
                     "pages": [
-                      "aircraft/falcon-50/performance/cruise/long-range-cruise"
+                      "aircraft/falcon-50/performance/cruise/long-range-cruise",
+                      "aircraft/falcon-50/performance/cruise/mach-0-75",
+                      "aircraft/falcon-50/performance/cruise/mach-0-80",
+                      "aircraft/falcon-50/performance/cruise/max-cruise-thrust"
                     ]
                   }
                 ]
@@ -171,6 +177,7 @@
                 "group": "Procedures",
                 "expanded": false,
                 "pages": [
+                  "aircraft/falcon-50/procedures/icing-conditions",
                   {
                     "group": "Checklists",
                     "pages": [
