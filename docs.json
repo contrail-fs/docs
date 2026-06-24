@@ -170,6 +170,12 @@
                       "aircraft/falcon-50/performance/cruise/mach-0-80",
                       "aircraft/falcon-50/performance/cruise/max-cruise-thrust"
                     ]
+                  },
+                  {
+                    "group": "Takeoff",
+                    "pages": [
+                      "aircraft/falcon-50/performance/takeoff/thrust-setting"
+                    ]
                   }
                 ]
               },
@@ -177,19 +183,13 @@
                 "group": "Procedures",
                 "expanded": false,
                 "pages": [
-                  "aircraft/falcon-50/procedures/icing-conditions",
-                  {
-                    "group": "Takeoff",
-                    "pages": [
-                      "aircraft/falcon-50/procedures/takeoff/thrust-setting"
-                    ]
-                  },
                   {
                     "group": "Checklists",
                     "pages": [
                       "aircraft/falcon-50/procedures/checklists/quickstart"
                     ]
-                  }
+                  },
+                  "aircraft/falcon-50/procedures/icing-conditions"
                 ]
               },
               {
