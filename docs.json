@@ -181,6 +181,13 @@
                 ]
               },
               {
+                "group": "Avionics",
+                "expanded": false,
+                "pages": [
+                  "aircraft/falcon-50/avionics/autopilot"
+                ]
+              },
+              {
                 "group": "Performance",
                 "expanded": false,
                 "pages": [

@@ -1,0 +1,134 @@
+---
+title: "Autopilot"
+description: "Reference for the Falcon 50 autopilot and flight director modes — basic, lateral, and vertical."
+---
+
+The Falcon 50 autopilot and flight director (FD) work together to provide guidance in both the lateral and vertical axes. The flight director computes the commands and displays them on the command bars; the autopilot can then fly those commands automatically, or the pilot can hand-fly them by following the bars.
+
+Modes are grouped into three categories: **basic modes** that are always available, **lateral modes** that control heading and tracking, and **vertical modes** that control pitch, altitude, and speed.
+
+<Note>
+With the autopilot engaged, the relevant servos fly the flight director commands. With the autopilot off, the command bars still display guidance for the pilot to follow by hand.
+</Note>
+
+## Basic Modes
+
+### PITCH Mode (no switch)
+
+This is the basic vertical mode of both the autopilot and the flight director.
+
+- With the autopilot **ON**, the pitch command bar can be slewed using the pitch wheel.
+- With the autopilot **OFF**, the command bar pitch is changed by manually flying the aircraft to the desired attitude and pressing the **SYNC** switch on the yoke.
+
+Overspeed protection is always available: when the overspeed warning horn sounds, **SPEED** mode is selected automatically and the flight director commands V<sub>MO</sub>/M<sub>MO</sub> − 2 kts.
+
+### PSA — Preselect Altitude Mode
+
+When capture conditions are met, the flight director levels the aircraft at the selected altitude and holds it.
+
+- PSA arms automatically when the **altitude alerter knob** is activated, provided the system is not in Go-around (GA) mode. If in GA mode, PSA arms when the vertical **SYNC** switch is pressed, another vertical mode is selected, or the autopilot is engaged.
+- PSA cannot be armed once the glideslope (GS) has been captured.
+- Selecting a new altitude in the alerter during capture returns the flight director to basic **PITCH** mode and re-arms PSA.
+- Selecting a different vertical mode during PSA capture or track switches the system to that mode and disengages PSA. PSA will not re-arm until the altitude alerter knob is re-activated.
+
+### GA — Go-around Mode
+
+GA mode is selected for both pilots simultaneously by pressing either pilot's **Go-around** button on the yoke.
+
+GA commands the flight director in two axes: a **vertical** command to pitch up to approximately **14°**, and a **lateral** command to hold the aircraft heading at the moment of GA selection. The autopilot servos are disengaged in GA mode — the pilot hand-flies the aircraft to follow the command bars.
+
+- The lateral mode uses the EHSI heading at the time of selection **unless** the aircraft is on the ground (weight on wheels). On takeoff with GA selected, the lateral go-around mode uses the EHSI heading at liftoff.
+- GA automatically disengages the autopilot and disarms all other vertical and lateral modes, including PSA. To re-select PSA while in GA mode, press the vertical **SYNC** switch, manually select another vertical mode, or engage the autopilot. Re-engaging the autopilot in GA mode places the system in **ROL** (roll hold) and basic **PITCH** mode; any other modes must be re-selected.
+- GA can also be used with the autopilot **OFF** on the ground for takeoff guidance: pressing GA engages the FD with a 14° pitch-up and wings-level command, providing pitch and roll guidance for the takeoff roll and initial climb. Once airborne, the lateral target latches to the heading at liftoff.
+
+## Lateral Modes
+
+### ½ BANK — Half Bank
+
+Limits the commanded bank angle to a maximum of **12.5°**.
+
+### HDG — Heading Select Mode
+
+The flight director generates commands to fly and maintain the heading selected on the EHSI with the heading bug. Commanded bank angle will not exceed **27°**.
+
+### NAV — Navigation Mode
+
+- Arms when selected, and the flight director operates in **HDG** mode until capture.
+- On capture, the flight director generates commands to intercept and maintain the selected course of the displayed nav system.
+- If the nav data source on the EHSI is changed after capture, the flight director automatically clears NAV mode, synchronizes the heading bug, and reverts to **HDG** mode.
+
+<Note>
+GPS approaches should be flown in **NAV** mode.
+</Note>
+
+### APPR — Approach Mode
+
+As with NAV mode, APPR arms when selected and the flight director operates in **HDG** mode until capture. On capture, it generates commands to intercept and maintain the selected course of the displayed nav system. If the nav data source on the EHSI is changed after capture, the flight director clears APPR, synchronizes the heading bug, and reverts to **HDG** mode.
+
+When ILS data is in use, the flight director arms for **glideslope (GS)** capture after **localizer (LOC)** capture. At GS capture, the currently active vertical mode is cleared automatically and the flight director generates commands to intercept and maintain the glideslope.
+
+<Note>
+VOR, LOC, and ILS approaches should be flown in **APPR** mode.
+</Note>
+
+## Vertical Modes
+
+### ALT — Altitude Mode
+
+Generates commands to maintain the altitude existing at the time of selection.
+
+### CLIMB — Climb Mode
+
+The flight director flies and maintains one of two speed profiles:
+
+| Profile | Schedule |
+|---------|----------|
+| **Normal** | 250 KIAS to 10,000 ft, then 260 KIAS to 0.72 Mach, to max altitude |
+| **High** | 250 KIAS to 10,000 ft, then 300 KIAS to 0.80 Mach, to max altitude |
+
+When CLIMB is first selected, the **Normal** profile is chosen automatically. Pressing the CLIMB switch a second time selects the **High** profile; a third press de-selects the mode and returns the flight director to basic **PITCH** mode.
+
+CLIMB is indicated on the EADI as **CLM** (or **CLM H** for the High profile), along with the commanded IAS or Mach. The IAS reference bug on the side the autopilot is transferred to follows the commanded IAS.
+
+### DESCEND — Descend Mode
+
+As with CLIMB, the flight director flies and maintains one of two speed profiles:
+
+| Profile | Schedule |
+|---------|----------|
+| **Normal** | 0.80 Mach to 300 KIAS to ≈13,500 ft, decreasing to 250 KIAS at 10,500 ft, then 250 KIAS to sea level |
+| **High** | 0.83 Mach to 330 KIAS to ≈14,000 ft, decreasing to 250 KIAS at 10,500 ft, then 250 KIAS to sea level |
+
+- DESCEND maintains a minimum descent rate of **100 fpm** until the desired speed is achieved. Power may need to be adjusted to fly the intended profile.
+- When selected **below 5,000 ft**, a **1,000 fpm** descent is commanded.
+- When selected **above 5,000 ft**, the **Normal** profile is chosen automatically. Pressing the DESCEND switch a second time selects the **High** profile; a third press de-selects the mode and returns to basic **PITCH** mode.
+
+DESCEND is indicated on the EADI as **DES** (or **DES H** for the High profile), along with the commanded IAS, Mach, or vertical speed. When following a speed profile, the IAS reference bug on the side the autopilot is transferred to follows the commanded IAS.
+
+### SPEED — Airspeed/Mach Hold Mode
+
+- Generates commands to maintain the speed existing at the time of selection.
+- The commanded IAS or Mach is shown on the EADI and on the airspeed indicator via the airspeed bug.
+- The commanded speed can be changed with the pitch wheel, or — for IAS — with the airspeed bug on the airspeed indicator.
+- When selected above approximately **32,000 ft**, the mode defaults to **Mach** hold; pressing the SPEED switch a second time toggles the active mode.
+
+<Warning>
+Large changes in commanded IAS or Mach can reverse a climb or descent as the system works to attain the selected speed.
+</Warning>
+
+### VS — Vertical Speed Mode
+
+- Generates commands to maintain the vertical speed existing at the time of selection.
+- The commanded vertical speed, with an up or down direction arrow, is displayed on the EADI.
+- The commanded VS can be changed with the pitch wheel.
+- Maximum vertical speed in this mode is **6,000 fpm**.
+
+Overspeed protection is available: when the overspeed warning horn sounds, **SPEED** mode is selected automatically and the flight director commands V<sub>MO</sub>/M<sub>MO</sub> − 2 kts.
+
+### VNAV — Vertical Nav Mode
+
+Arms the system to capture the vertical navigation signal while the current vertical mode remains active until capture. On capture, the flight director flies and maintains the VNAV signal from the system selected for display on the EFIS. If **LOC** is selected on the EFIS after VNAV capture, the system automatically reverts to basic **PITCH** mode.
+
+VNAV vertical deviation is displayed on the right side of both the EADI and the EHSI.
+
+Overspeed protection is available: when the overspeed warning horn sounds, **SPEED** mode is selected automatically and the flight director commands V<sub>MO</sub>/M<sub>MO</sub> − 2 kts.
