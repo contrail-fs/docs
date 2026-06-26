@@ -1,0 +1,65 @@
+---
+title: "Paint Kit"
+description: "Download the Falcon 50 layered PSD paint kit and learn how to set up a custom livery with chocks support and texture fallbacks."
+---
+
+The layered PSD paint kit can be downloaded via the **Contrail App → FA50 product page → Media tab**.
+
+## Chocks support
+
+A custom paint should contain an `attached_objects.cfg` file in the folder `SimObjects\Airplanes\{livery-name}` with the following content:
+
+```ini attached_objects.cfg
+[VERSION]
+major = 1
+minor = 0
+
+[SIM_ATTACHMENT.0]
+attachment_root = "simattachments\aircraft_objects\asobo_chocks_02_l250_w270_h85"
+attachment_file = "model/chocks_02_l250_w270_h85.xml"
+attach_to_model = "exterior"
+attach_to_model_minsize = 1
+attach_to_node = "MAIN_LG_F_2.001"
+alias = "Chocks_FRONT"
+attach_offset = 0,-0.57,-0.08
+attach_pbh = 0,0,0
+
+[SIM_ATTACHMENT.1]
+attachment_root = "simattachments\aircraft_objects\asobo_chocks_02_l520_w370_h120"
+attachment_file = "model/chocks_02_l520_w370_h120.xml"
+attach_to_model = "exterior"
+attach_to_model_minsize = 1
+attach_to_node = "MAIN_LG_L_1.004"
+attach_offset = 0.01,-0.55,-0.01
+attach_pbh = 0,0,0
+alias = "Chocks_LEFT"
+
+[SIM_ATTACHMENT.2]
+attachment_root = "simattachments\aircraft_objects\asobo_chocks_02_l520_w370_h120"
+attachment_file = "model/chocks_02_l520_w370_h120.xml"
+attach_to_model = "exterior"
+attach_to_model_minsize = 1
+attach_to_node = "MAIN_LG_L_1.009"
+attach_offset = 0.01,-0.55,-0.01
+attach_pbh = 0,0,0
+alias = "Chocks_RIGHT"
+```
+
+This enables support of chocks for the aircraft with your livery.
+
+<Tip>
+  To be sure it has the latest version, copy the `attached_objects.cfg` over from the current install of the FA50 and distribute that with the livery.
+</Tip>
+
+## Texture fallbacks
+
+The `texture.cfg` in the `texture` folder of your livery should contain:
+
+```ini texture.cfg
+[fltsim]
+fallback.1=..\..\CTL_FA50\texture
+fallback.2=..\..\CTL_FA50\texture.exterior
+fallback.3=..\..\CTL_FA50\texture.cabin
+fallback.4=..\..\CTL_FA50\texture.cockpit
+fallback.5=..\..\CTL_FA50_Common\texture
+```
