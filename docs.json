@@ -195,6 +195,7 @@
                   {
                     "group": "Cruise",
                     "pages": [
+                      "aircraft/falcon-50/performance/cruise/max-cruise-altitude-by-weight",
                       "aircraft/falcon-50/performance/cruise/long-range-cruise",
                       "aircraft/falcon-50/performance/cruise/mach-0-75",
                       "aircraft/falcon-50/performance/cruise/mach-0-80",
