@@ -1,0 +1,112 @@
+---
+title: "GNS-XLS VNAV"
+---
+
+The VNAV functionality provided by the GNS-XLS is rather basic compared to modern flight management computers. It can only be actively used as a descent mode in the FA50. The VNAV descent will follow a glide path angle ensuring that you reach the altitude constraints; by default, this angle is 3.0°. You can also use it as an advisory for understanding the time required to reach Top of Climb at your current climb rate.
+
+## Setting up VNAV
+
+The default state of the VNAV mode is `INACTIVE`. To get started, first cursor select `INACTIVE` with the L1 key, then press the `BACK` key. Assuming that you are on the ground when setting up, the field text will now change to `CLIMB` showing that the mode is now active.
+
+<Frame>
+  ![vnav_inactive_select](/images/vnav_inactive_select.jpg)
+</Frame>
+
+<Note>
+If you would like to turn off the VNAV mode, you can reselect `CLIMB` with the L1 key and then press the `BACK` key. The VNAV mode will return to `INACTIVE`.
+</Note>
+
+Next, the VNAV data must be checked and adjusted where necessary. On the main VNAV page, press the L5 key two times to cursor select `DATA` and press the `ENTER` key. A VNAV DATA page will open displaying Cruise Altitude, Transition Level, and Default Flight Path Angle. To adjust cruise altitude, press the R1 key twice to cursor select. To adjust transition level, press the R2 key once to cursor select. Altitudes must be written in ft, for example FL380 shall be written as 38000. Once written, press the `ENTER` key to store the revised value. You can also adjust the flight path angle if required for steeper descents. To return to the main VNAV page, press the `VNAV` key.
+
+<Frame>
+  ![vnav_data](/images/vnav_data.jpg)
+</Frame>
+
+## Editing altitude restrictions
+
+Altitude restrictions can be added, removed, or modified within the VNAV pages. To do so, use the left keys to first cursor select the intended waypoint that you wish to modify then press the `ENTER` key. A VNAV waypoint page will open up showing the altitude restriction and the current altitude that the VNAV path plans to actually cross this waypoint at.
+
+<Frame>
+  ![vnav_edit](/images/vnav_edit.jpg)
+</Frame>
+
+To modify the altitude restriction, press the R2 key once to cursor select the field. Then:
+* To add or change a restriction, enter an altitude in ft. As with more common FMS systems,
+	* No suffix, e.g. 2500, means to cross that waypoint “at 2500ft”
+	* An “A” suffix, e.g. 2500A, means to cross that waypoint “at or above 2500ft”
+	* A “B” suffix, e.g. 2500B, means to cross that waypoint “at or below 2500ft”
+* To remove the restriction, press the `BACK` key, and when prompted to delete, press the `ENTER` key.
+
+<Frame>
+  ![vnav_waypoint](/images/vnav_waypoint.jpg)
+</Frame>
+
+<Frame>
+  ![vnav_post_edit](/images/vnav_post_edit.jpg)
+</Frame>
+
+## Climb with VNAV
+
+As previously mentioned, the GNS-XLS does not provide a VNAV climb mode. However, you can still use the VNAV page to understand how many nautical miles and time to reach the Top of Climb. From this example, the VNAV page is telling us that we are currently at FL137 and climbing to FL380. We are currently climbing with a vertical speed of 2350fpm. At this vertical climb rate, we will reach TOC in 112.4nm and in 16.3 minutes.
+
+<Frame>
+  ![vnav_climb](/images/vnav_climb.jpg)
+</Frame>
+
+## Preparing for descent with VNAV
+
+When at cruise, the GNS-XLS, the VNAV page will state that it is in Cruise with the assigned cruise altitude. The second row of the screen describes that it is calculating a Top of Descent (TOD) on the left, and the planned crossing altitude of the next waypoint. It further describes the distance to go until TOD and the time remaining to reach TOD.
+
+<Frame>
+  ![vnav_cruise](/images/vnav_cruise.jpg)
+</Frame>
+
+When reaching the TOD, and when cleared to do so by ATC, arm the VNAV descent mode by pressing the VNAV button on the Collins autopilot. On the EADI, you will see that VNAV is armed by the `VNV` text displayed in white.
+
+<Frame>
+  ![vnav_armed](/images/vnav_armed.jpg)
+</Frame>
+
+<Warning>
+Do not use the altitude preselector to set an altitude. This will engage `PSA` mode which takes precedence and stops VNAV from engaging. In other words, the autopilot is expecting to capture the preselected altitude before it engages VNAV mode. If you are only cleared to descend to a specific altitude, first let the VNAV mode engage (`VNV` text turns green on the EADI) and then use the altitude selector to dial to the required altitude.
+</Warning>
+
+## At TOD
+
+At TOD, the FA50 will automatically start the descent when armed. As there is no autothrottle for the descent, the aircraft’s engines will continue at the same power as you had set for cruise. To avoid overspeed, there are two approaches that you could take.
+
+<Frame>
+  ![vnav_tod](/images/vnav_tod.jpg)
+</Frame>
+
+When VNAV descent mode is active, the `VNV` text on the EADI changes to green.
+
+<Frame>
+  ![vnav_active](/images/vnav_active.jpg)
+</Frame>
+
+### Reduce power before TOD
+
+When less than 5NM range to TOD, begin to reduce power to descent power N1. The IAS will begin to reduce more speed range to ensure you don’t overspeed the aircraft. Make sure you adjust the throttles accordingly to not overspeed. 
+
+### Start descent in V/S mode
+
+For a more gradual change in descent path, you should engage the V/S mode around 5-10NM range to the TOD and start a descent at a shallow rate, for example -1000fpm. The FA50 will descend at this rate until it meets the VNAV path. With `VNV` armed, `VNV` mode will engage at the path intersection and start a steeper descent. Make sure you adjust the throttles accordingly to not overspeed.
+
+## The descent
+
+Now that you are descending in VNAV descent mode, the VNAV page will have updated again to show its status. The top row now states `PATH DESCENT` beside the current altitude. The second row states the next waypoint in the flight plan against the calculated crossing altitude of that waypoint. The third row shows what altitude the aircraft will actually cross the waypoint with the current descent rate.
+
+<Frame>
+  ![vnav_descent](/images/vnav_descent.jpg)
+</Frame>
+
+The bottom section of the page tells you what the required descent rate and actual descent rate are. To be on the VNAV path, these values should be similar +/- 100ft. Finally, the bottom row describes your current position in relation to the calculated VNAV path with `VERT DEV LOW` and `VERT DEV HIGH` when you are below or above the path. The autopilot will automatically adjust the descent rate to remove any vertical deviation.
+
+<Warning>
+Without any further intervention of the VNAV or other descent modes, the aircraft will continue descending to the lowest VNAV restriction altitude, most likely the Initial Fix of the programmed approach. To stop descent earlier when in VNAV descent, use the altitude preselector to capture an altitude.
+</Warning>
+
+<Frame>
+  ![vnav_at_if](/images/vnav_at_if.jpg)
+</Frame>

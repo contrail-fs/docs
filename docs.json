@@ -185,7 +185,8 @@
                 "group": "Avionics",
                 "expanded": false,
                 "pages": [
-                  "aircraft/falcon-50/avionics/autopilot"
+                  "aircraft/falcon-50/avionics/autopilot",
+                  "aircraft/falcon-50/avionics/gnsxls/vnav"
                 ]
               },
               {
