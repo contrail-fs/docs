@@ -1,0 +1,107 @@
+---
+title: "Route Management"
+description: "Entering and editing SIDs, STARs, and airways on the GNS-XLS."
+---
+
+The GNS-XLS retrieves SIDs (Standard Instrument Departures), STARs (Standard Terminal Arrivals), approaches, and airways from the database to reduce flight crew workload. Approaches can be flown autopilot/flight-director coupled until the missed approach point; the missed approach procedure must then be flown manually. The GNS-XLS only provides meaningful HSI input when on a track between two waypoints or when Pseudo VORTAC (selected course) procedures are used.
+
+<Warning>
+Review the published procedure and compare it to the procedure contained in the database. The published charts are the governing authority and the chart procedures must be followed. Any differences between the chart and the database must be resolved before commencing the procedure.
+</Warning>
+
+## SIDs
+
+### Entering a SID
+
+1. Press the `FPL` key to display the active **FPL** page.
+2. Press the line select key to position the cursor over the **DEPART?** field.
+3. Press the `ENTER` key to display the **DEPARTURE** page.
+4. Verify or insert a valid departure airport identifier.
+5. Press the line select key to position the cursor over the desired **SID**, if required.
+6. Press the `ENTER` key to select the SID.
+7. Press the line select key to position the cursor over the desired **TRANSITION**, if required.
+8. Press the `ENTER` key to select the transition.
+9. Press the line select key to position the cursor over the desired runway.
+10. Press the `ENTER` key to select the runway.
+11. Review the SID waypoints, then press the `ENTER` key to select the SID and insert it into the active flight plan. The display automatically returns to the **ACTIVE FLIGHT PLAN** page.
+
+### Erasing a SID
+
+1. Press the line select key to position the cursor over the **DEPART** field on the flight plan page.
+2. Press the `ENTER` key.
+3. Press the line select key to position the cursor over **ERASE?**.
+4. Press the `ENTER` key to erase the SID and return to the flight plan page.
+
+### Modifying SID waypoints
+
+**To add a waypoint:**
+
+1. Press the line select key to position the cursor over the SID waypoint identifier that will follow the new entry on the flight plan page.
+2. Insert the waypoint identifier.
+3. Press the `ENTER` key twice.
+
+**To delete a waypoint:**
+
+1. Press the line select key to position the cursor over the waypoint to be deleted on the flight plan page.
+2. Press the `BACK` key. A **DELETE?** prompt appears adjacent to the waypoint.
+3. Press the `ENTER` key. The waypoint is deleted and the remaining SID waypoints are treated as non-procedure waypoints in the flight plan.
+
+## Airways
+
+1. Press the line select key to position the cursor directly below the starting waypoint of the desired airway on the flight plan page.
+2. Insert the airway identifier using one of the two options below:
+   - **Option 1** — if the destination waypoint is unknown.
+   - **Option 2** — to enter the known destination waypoint.
+
+### Option 1
+
+1. Press the `#` key, then enter the airway identifier.
+2. Press the `ENTER` key.
+3. Press the line select key to position the cursor over the desired destination waypoint. If applicable, use the `PRV` and `NXT` keys to access all airway waypoint pages.
+4. After selecting the ending **(TO)** waypoint on the airway, press the `ENTER` key to merge the airway waypoints into the flight plan and return to the **FPL** page.
+
+### Option 2
+
+1. Press the `#` key, then enter the airway identifier.
+2. Press the `+/-` key and type the destination waypoint.
+3. Press the `ENTER` key.
+4. To change the ending waypoint, use the line select key to position the cursor over a different destination waypoint. If applicable, use the `PRV` and `NXT` keys to access all airway waypoint pages.
+5. Press the `ENTER` key to merge the airway waypoints into the flight plan and return to the flight plan page.
+6. If applicable, enter additional airway identifiers to chain several airways together.
+
+## STARs
+
+### Entering a STAR
+
+1. Press the `FPL` key to display the active **FPL** page.
+2. Press the line select key to position the cursor over the **ARRIVE?** field.
+3. Press the `ENTER` key to display the **ARRIVAL** page.
+4. Verify or insert a valid arrival airport identifier.
+5. Press the line select key to position the cursor over the desired **TRANSITION**, if required.
+6. Press the `ENTER` key to select the transition.
+7. Press the line select key to position the cursor over the desired **STAR**.
+8. Press the `ENTER` key to select the STAR.
+9. Press the line select key to position the cursor over the desired runway.
+10. Press the `ENTER` key to select the runway.
+11. Review the STAR waypoints, then press the `ENTER` key to select the STAR and insert it into the active flight plan. The display automatically returns to the **ACTIVE FLIGHT PLAN** page.
+
+### Erasing a STAR
+
+1. Press the line select key to position the cursor over the **ARRIVE** field on the flight plan page.
+2. Press the `ENTER` key.
+3. Press the line select key to position the cursor over **ERASE?**.
+4. Press the `ENTER` key to erase the STAR and return to the flight plan page.
+
+### Modifying STAR waypoints
+
+**To add a waypoint:**
+
+1. Press the line select key to position the cursor over the STAR waypoint identifier that will follow the new entry on the flight plan page.
+2. Insert the waypoint identifier.
+3. Press the `ENTER` key twice.
+
+**To delete a waypoint:**
+
+1. Press the line select key to position the cursor over the waypoint to be deleted on the flight plan page.
+2. Press the `BACK` key. A **DELETE?** prompt appears adjacent to the waypoint.
+3. Press the `ENTER` key. The waypoint is deleted and the remaining STAR waypoints are treated as non-procedure waypoints in the flight plan.

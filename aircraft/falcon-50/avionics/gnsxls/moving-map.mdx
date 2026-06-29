@@ -1,0 +1,33 @@
+---
+title: "Moving Map"
+description: "Using the AFIS moving map on the GNS-XLS, including track-up, north-up, and aircraft position options."
+---
+
+In addition to displaying graphical weather, the AFIS graphical weather system provides an auxiliary moving map function that plots and updates the own-ship position. The moving map is available on all scales, although **track up** is only available at scales of 200 nm and below.
+
+<Note>
+AFIS provides aviation-oriented graphical weather products that supplement the AFIS textual weather. These specific weather features are not simulated; the moving map function is.
+</Note>
+
+Access the **WX GRAPHICS** functions by pressing the `AFIS` key and selecting option 1 (LSK 1L) from the AFIS menu.
+
+## Display menu
+
+The display menu is accessed via LSK 4R. It lets you choose how the map is oriented and where the aircraft icon sits on the screen.
+
+### Track up
+
+In track-up mode the aircraft icon is fixed (centered on the map or at the bottom edge) and the map rotates relative to the aircraft. When the FMS is tracking an active flight plan, the aircraft icon remains stationary relative to the display while the map moves beneath it. You can view the aircraft icon in either the center or edge position.
+
+### North up
+
+In north-up mode the aircraft icon moves across the display while the map image stays relatively fixed. As the aircraft icon nears the edge, the map redraws with the icon at the opposite edge or in the center. Choosing **A/C EDGE** in north-up mode gives the longest period before the map redraws.
+
+### A/C edge / center
+
+The **A/C EDGE** or **CENTER** option places the aircraft on the bottom edge or in the center of the screen:
+
+- **A/C EDGE** — The aircraft icon sits at the edge of the map page, leaving most of the screen to display information ahead of the aircraft. In track-up, this places the aircraft on the bottom edge. In north-up, it places the aircraft on the edge based on the aircraft's current true course.
+- **CENTER** — The aircraft icon sits in the center of the map page.
+
+Both settings are located on the display menu.

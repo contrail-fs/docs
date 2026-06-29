@@ -45,6 +45,19 @@ To modify the altitude restriction, press the R2 key once to cursor select the f
   ![vnav_post_edit](/images/vnav_post_edit.jpg)
 </Frame>
 
+## VNAV waypoint offset
+
+In addition to an altitude constraint, each VNAV waypoint can carry an **offset**, which moves the vertical constraint a set distance before or after the lateral waypoint. This is useful for meeting a "cross 10 NM before WPT at FL100" type restriction without having to create an extra waypoint.
+
+On the VNAV waypoint page, after entering the altitude constraint and pressing `ENTER`, the cursor moves to the **OFFSET** field. Then:
+
+* To offset **before** the waypoint, enter the distance in nautical miles. A `-` prefills as the default, e.g. `-10` for 10 NM prior to the waypoint.
+* To offset **after** the waypoint, press the `+/-` key to enter a `+`, then enter the distance, e.g. `+10` for 10 NM beyond the waypoint.
+* The valid range is `-99` to `+99` nautical miles.
+* To remove an offset, enter `0` and press the `ENTER` key. The field changes to dashes, indicating no offset is programmed.
+
+Press the `ENTER` key to store the offset and continue to the `FPA` field.
+
 ## Climb with VNAV
 
 As previously mentioned, the GNS-XLS does not provide a VNAV climb mode. However, you can still use the VNAV page to understand how many nautical miles and time to reach the Top of Climb. From this example, the VNAV page is telling us that we are currently at FL137 and climbing to FL380. We are currently climbing with a vertical speed of 2350fpm. At this vertical climb rate, we will reach TOC in 112.4nm and in 16.3 minutes.
@@ -110,3 +123,19 @@ Without any further intervention of the VNAV or other descent modes, the aircraf
 <Frame>
   ![vnav_at_if](/images/vnav_at_if.jpg)
 </Frame>
+
+## VNAV Direct To
+
+The VNAV Direct To function lets you program a Direct To on the vertical flight plan while continuing to fly the lateral waypoints on the active flight plan. It automatically deletes any intermediate altitude constraints and sets up a path descent to the vertical TO waypoint using the direct flight path angle.
+
+1. Press the `D→` (Direct To) key. A Direct To page appears with the cursor over the current TO waypoint.
+2. Press the line select key to position the cursor over the desired waypoint.
+3. Press the `VNAV` key. The VNAV waypoint page appears. If an altitude constraint is already programmed, the cursor appears over the `FPA` value field — skip to step 6. Otherwise, cursor select the `ALT` field.
+4. Insert or verify the altitude constraint, then press the `ENTER` key. The cursor moves to the `OFFSET` field.
+5. Enter an offset if applicable (see [VNAV waypoint offset](#vnav-waypoint-offset)), then press the `ENTER` key. The cursor moves to the `FPA` field.
+6. Verify or insert the flight path angle (valid range 0.1° to 6.0°). The direct flight path angle prefills if it is within the valid range and an altitude is programmed.
+7. Press the `ENTER` key to accept the entries and return to the VNAV page.
+
+<Note>
+To proceed Direct To a waypoint both laterally and vertically, first perform a lateral Direct To from the navigation or Direct To page, then program the VNAV waypoint as described above for the new TO waypoint.
+</Note>

@@ -189,7 +189,15 @@
                   {
                     "group": "GNS-XLS",
                     "pages": [
-                      "aircraft/falcon-50/avionics/gnsxls/vnav"
+                      "aircraft/falcon-50/avionics/gnsxls/overview",
+                      "aircraft/falcon-50/avionics/gnsxls/flight-plans",
+                      "aircraft/falcon-50/avionics/gnsxls/route-management",
+                      "aircraft/falcon-50/avionics/gnsxls/direct-to",
+                      "aircraft/falcon-50/avionics/gnsxls/holding-patterns",
+                      "aircraft/falcon-50/avionics/gnsxls/parallel-course",
+                      "aircraft/falcon-50/avionics/gnsxls/vnav",
+                      "aircraft/falcon-50/avionics/gnsxls/rnav-approach",
+                      "aircraft/falcon-50/avionics/gnsxls/moving-map"
                     ]
                   }
                 ]

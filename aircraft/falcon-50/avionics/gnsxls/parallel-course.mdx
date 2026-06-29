@@ -1,0 +1,42 @@
+---
+title: "Parallel Course"
+description: "Establishing and canceling a parallel offset course (SXTK) on the GNS-XLS."
+---
+
+The Parallel Course function establishes an offset steering reference parallel to the current leg, using the selected crosstrack (**SXTK**) field. This is useful for flying a fixed distance left or right of the programmed track.
+
+<Warning>
+The Parallel Course field is inactive when in **APPROACH ARMED** mode (within 30 nm of the destination airport).
+</Warning>
+
+## Setting up a parallel course
+
+1. Press the `NAV` key to display the **NAVIGATION 2/4** page containing the **SXTK** field.
+2. Press the line select key to position the cursor over the **SXTK** field.
+3. Press the `L` or `R` key to select the offset direction (left or right of track).
+4. Insert the offset distance in nautical miles and tenths. The maximum value is **99.9 nm**.
+5. Press the `ENTER` key.
+
+Once captured:
+
+- **XTK** deviation remains referenced to the original track, but the HSI displays a centered needle when the SXTK has been captured.
+- **BRG**, **DIS**, and **ETE** remain referenced to the current **TO** waypoint.
+
+<Note>
+If the system is coupled to the autopilot, the roll command turns the aircraft to intercept the parallel course at the selected SXTK distance.
+</Note>
+
+<Warning>
+If XTK is greater than 12.5 nm, VNAV becomes invalid and no vertical deviation information is displayed.
+</Warning>
+
+## Canceling a parallel course
+
+1. Press the `NAV` key to display the page containing the **SXTK** field.
+2. Press the line select key to position the cursor over the **SXTK** field.
+3. Press the `BACK` key. The cursor field displays **CANCEL?** to inform you of the pending change.
+4. Press the `ENTER` key. The steering reference returns to the original desired track.
+
+<Note>
+Any leg change — manual or automatic, including a Direct To — also cancels the selected crosstrack (SXTK).
+</Note>

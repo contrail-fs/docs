@@ -1,0 +1,30 @@
+---
+title: "Overview"
+description: "Introduction to the GNS-XLS FMC in the Falcon 50 — autopilot coupling, power on/off, and initialization."
+---
+
+The GNS-XLS is the flight management computer (FMC) fitted to the Falcon 50. It provides lateral and vertical navigation, flight plan management, SID/STAR/approach retrieval from the database, holding patterns, and a moving map. The pages in this section walk through operating the unit in the simulator.
+
+<Note>
+To couple the autopilot to the GNS-XLS:
+
+1. Set the HSI input source to **GPS** on the corresponding main panel switch.
+2. Engage the **NAV/LOC** autopilot mode.
+</Note>
+
+## Power on / off
+
+Use the `ON` and `BRT` keys to control power and display brightness.
+
+- **`ON` key** — Press momentarily to power up. The **SELF TEST** page is displayed for approximately 30 seconds while the system runs its internal self tests. If the system was last turned off by removal of aircraft power, it will power up automatically the next time aircraft power is applied.
+- **`BRT` key** — Adjust as required. The display initially comes on at 75% brightness. Press and hold the `BRT` key to dim, then release. Press and hold again to brighten. To reach 100% brightness, press and hold the `BRT` key again until the display no longer gets brighter.
+
+To turn the system off, press and hold the `ON` key for three seconds.
+
+## Initialization page
+
+The **Initialization** page gives you access to the required initialization data: date, GMT, and position. Once this data is confirmed or entered, the page disappears and cannot be retrieved again unless system power is removed and then restored.
+
+<Warning>
+It is important that the initialization position and the first waypoint of the active flight plan are the same, so that the TO/FROM leg distance displays the correct information. The Direct To function to the first waypoint of the flight plan can also be used to ensure distance accuracy.
+</Warning>

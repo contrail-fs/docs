@@ -1,0 +1,63 @@
+---
+title: "Flight Plans"
+description: "Loading, creating, and activating flight plans on the GNS-XLS, plus initial leg selection."
+---
+
+Flight plans on the GNS-XLS are accessed with the `FPL` key. Stored flight plans are transferred to active status, and an initial leg must be defined before the system can provide guidance.
+
+## Loading a flight plan
+
+This procedure transfers a stored flight plan to active status.
+
+1. Press the `FPL` key until the desired **FLIGHT PLAN LIST** page appears.
+
+<Note>
+All flight plans are ordered alphabetically by their departure ICAO.
+
+The current **SimBrief** flight plan is displayed if your credentials are set up correctly in the clipboard. To re-fetch it, restart the GNS-XLS.
+
+The GNS-XLS supports the MSFS `.pln` format and shows all flight plans stored in `work\gnsxls\flpln`. The folder is accessible via:
+
+```text
+MSFS 2020 Store Version:
+%USERPROFILE%\AppData\Local\Packages\Microsoft.FlightSimulator_8wekyb3d8bbwe\LocalState\packages\ctl-aircraft-fa50\work\gnsxls\flpln
+
+MSFS 2020 Steam Version:
+%USERPROFILE%\AppData\Roaming\Microsoft Flight Simulator\Packages\ctl-aircraft-fa50\work\gnsxls\flpln
+
+MSFS 2024 Store Version:
+%USERPROFILE%\AppData\Local\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalState\WASM\MSFS2024\ctl-aircraft-fa50\work\gnsxls\flpln
+
+MSFS 2024 Steam Version:
+%USERPROFILE%\AppData\Roaming\Microsoft Flight Simulator 2024\WASM\MSFS2024\ctl-aircraft-fa50\work\gnsxls\flpln
+```
+</Note>
+
+2. Press the line select key next to the desired flight plan number to position the cursor over it.
+3. Press the `ENTER` key.
+4. On the **FLIGHT PLAN** page, verify the flight plan. Review the routing by pressing the `PRV` or `NXT` keys to page through multiple flight plan pages.
+5. Press the line select key to position the cursor over **SELECT?**.
+6. Press the `ENTER` key.
+7. Confirm that the stored flight plan has transferred to the **ACTIVE FPL** page as selected.
+
+## Initial leg selection
+
+An initial From/To leg or Direct To leg must be established before the system can provide guidance along the flight plan. From the **ACTIVE FPL** page:
+
+1. Press the `NAV` key.
+2. Verify the **FR** waypoint. The first waypoint on the active flight plan appears in the **FR** field. To change it, insert the desired identifier.
+3. Press the `ENTER` key. The next waypoint in the sequence appears in the **TO** field.
+4. Verify the **TO** waypoint. To change it, insert the desired identifier.
+5. Press the `ENTER` key.
+6. Check **DIS** and **DTK** for reasonableness.
+
+## Creating a flight plan
+
+1. Press the `FPL` key to display the (stored) **FLIGHT PLAN LIST** page, if required.
+2. Press the line select key on a blank line to position the cursor there and display the next flight plan number.
+3. Press the `ENTER` key to display the **FLIGHT PLAN** page.
+4. Type the appropriate departure airport or waypoint identifier in the cursor field.
+5. Press the `ENTER` key.
+6. Verify the waypoint coordinates and data. If a specific runway is desired, press the appropriate line select key to place the cursor over the desired runway.
+7. Press the `ENTER` key to add the waypoint to the flight plan.
+8. Repeat steps 4 through 7 for the remaining waypoints. The destination airport identifier should be the last waypoint on the flight plan.
