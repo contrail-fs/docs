@@ -1,39 +1,99 @@
 ---
-title: "Debugging potentional conflicts"
+title: "Debugging Conflicts"
+description: "Quickly isolate whether unexpected Falcon 50 behavior is caused by another add-on, your hardware, or a corrupted cache."
 ---
 
-## Delete WASM files
+Unexpected behavior in the Falcon 50 is usually caused by **another add-on**, a **hardware / keybinding conflict**, or a **corrupted cache** — not the aircraft itself. Common symptoms: the aircraft is missing from the menu, displays are blank or frozen, controls or the autopilot act up, or the aircraft crashes on load.
 
-If you find that the aircraft does not load correctly or performs unexpectedly, first try to delete the WASM files.
+Work through the steps below in order and stop as soon as the issue is fixed.
 
-You can find the WASM files at:
-- Microsoft Store installs: `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalState\WASM\ctl-aircraft-fa50`
-- Steam installs: `%AppData%\Microsoft Flight Simulator 2024\WASM\ctl-aircraft-fa50`
+## 1. Clear the caches
 
-Delete all files inside this folder (do not delete the Work folder or anything within that)
+<Steps>
+  <Step title="WASM cache">
+    The Contrail App clears this automatically, but clearing it manually doesn't hurt. **If you bought the aircraft from a third-party store, this step is mandatory.**
 
-<Frame>
-  ![ctl_wasm_folder](/images/ctl_wasm_folder.jpg)
-</Frame>
+    Delete everything inside the folder for your version and store (leave any `Work` subfolder alone):
 
-The files within this folder will be recompiled fresh next time you select "Fly Now" with the FA50.
+    **MSFS 2024**
+    - **Microsoft Store:** `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalState\WASM\ctl-aircraft-fa50`
+    - **Steam:** `%AppData%\Microsoft Flight Simulator 2024\WASM\ctl-aircraft-fa50`
 
-## MSFS 2024 Cache
+    **MSFS 2020**
+    - **Microsoft Store:** `%LocalAppData%\Packages\Microsoft.FlightSimulator_8wekyb3d8bbwe\LocalState\packages\ctl-aircraft-fa50\work`
+    - **Steam:** `%AppData%\Microsoft Flight Simulator\Packages\ctl-aircraft-fa50\work`
+  </Step>
+  <Step title="JavaScript cache">
+    Start MSFS, load a flight with a **default aircraft**, then close the sim. This clears the cached JavaScript for our aircraft.
+  </Step>
+</Steps>
 
-Over time, the MSFS cache may contain corrupted cache files that prevent products from loading correctly. This can happen as a result of sim & world updates, but also by adding/removing packages from the Community folder. Deleting the cache files can resolve some issues related to corrupted files.
+## 2. Rule out other add-ons
 
-<Note>
-Deleting the cache files is safe to do. The next time that you launch the simulator, the sim will automatically create new cache files that it requires.
-</Note>
+Run the Falcon 50 completely on its own for one session:
 
-Microsoft Store installs:
-- `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalCache` - delete the `ROLLINGCACHE.CCC` file
-- `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalCache\ModelLibCache` - delete all files within this folder if any
-- `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalCache\SceneryIndexes` - delete all files within this folder
-- `%LocalAppData%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalState\cache` - delete any/all folders within this cache folder
+- **Community folder:** rename it (e.g. `Community` → `Community_OFF`), create a fresh empty `Community`, and move **only** the `ctl-aircraft-fa50` folder into it. Repeat for each sim if you run both MSFS 2020 and 2024.
+- **Marketplace content:** disable it from the in-sim **Content Manager** (it doesn't live in the Community folder).
+- **External tools:** fully quit MobiFlight, SPAD.neXt, ActiveSky, FSRealistic, and similar.
 
-Steam installs:
-- `%AppData%\Microsoft Flight Simulator 2024` - delete the `ROLLINGCACHE.CCC` file
-- `%AppData%\Microsoft Flight Simulator 2024\ModelLibCache` - delete all files within this folder if any
-- `%AppData%\Microsoft Flight Simulator 2024\SceneryIndexes` - delete all files within this folder
-- `%AppData%\Microsoft Flight Simulator 2024\cache` - delete any/all folders within this cache folder
+Then start a flight with the Falcon 50:
+
+- **Issue gone?** An add-on caused it. Re-enable add-ons one at a time (restarting the sim each round) until it returns — the last one is the culprit.
+- **Issue remains?** Move on to hardware.
+
+<Tip>
+  A free add-on linker like [MSFS Addons Linker](https://de.flightsim.to/file/1572/msfs-addons-linker) lets you toggle packages without moving folders — and run just one aircraft per session, which prevents most conflicts.
+</Tip>
+
+## 3. Rule out hardware
+
+Especially for flight-control, trim, or autopilot issues:
+
+- Unplug any hardware not essential for flying, or switch to a different controller.
+- In the MSFS **Controls** settings, remove **duplicate or conflicting bindings** (the same axis/button assigned twice).
+
+## Known incompatible add-ons
+
+Some third-party add-ons overwrite standard MSFS functions or displays and break our aircraft. Run **one aircraft add-on per session** to avoid this.
+
+<Accordion title="Add-ons reported as problematic by the community">
+  No guarantee is given for correctness or completeness.
+
+  - RLTS Ultimate Traffic
+  - [Bishop Rock Lighthouse (Helipad)](https://de.flightsim.to/file/15955/bishop-rock-lighthouse-helipad)
+  - [BGAA – Aasiaat Greenland](https://de.flightsim.to/file/4467/bgaa-aasiaat-greenland)
+  - [BGBW Narsarsuaq Greenland](https://de.flightsim.to/file/734/bgbw-narsarsuaq-greenland)
+  - [BGCO – Nerlerit Greenland](https://de.flightsim.to/file/3614/bgco-nerlerit)
+  - [BGJN – Ilulissat](https://flightsim.to/file/4833/bgjn-ilulissat)
+  - [BGKK – Kulusuk Greenland](https://de.flightsim.to/file/3662/bgkk-kulusuk)
+  - [BGMQ – Maniitsoq Airport, Greenland (SimMarket)](https://secure.simmarket.com/pearl-simulations-2-bgmq-maniitsoq-airport-greenland-msfs-\(de_15562\).phtml)
+  - [BGMQ – Maniitsoq Greenland (flightsim.to)](https://de.flightsim.to/file/4384/bgmq-maniitsoq-greenland)
+  - [BGSS – Sisimiut Greenland](https://de.flightsim.to/file/4433/bgss-sisimiut-greenland)
+  - [BGUQ Qaarsut Greenland](https://de.flightsim.to/file/3856/bguq-qaarsut-airport)
+  - [BIKF Keflavik Airport](https://orbxdirect.com/product/mkstudios-bikf-msfs)
+  - [Iqaluit Airport (CYFB) Enhancement for Asobo's CYFB](https://de.flightsim.to/file/57466/iqaluit-airport-cyfb-enhancement-for-asobo-s-cyfb)
+  - [TL Creation Greenland Enhancement Pack](https://de.flightsim.to/file/45487/tl-creation-greenland-enhancement-pack)
+  - Cera Sim Mil-17
+  - [CowanSim Bell 222](https://cowansim.com/product/222b-for-msfs/)
+  - [CowanSim MD 500](https://secure.simmarket.com/cowan-simulation-cowansim-500e-msfs-\(de_17540\).phtml)
+  - [Carenado PC-12](https://www.carenado.com/sitecarenado/product/pc12-msfs/)
+  - [Cockspur C510 Mustang](https://cockspur.eu/product/cockspur-c510-mustang)
+  - [Shift+Z Stats](https://de.flightsim.to/file/16358/shift-z-stats)
+  - [SimportTeam – Canakkale Airport LTBH](https://flightsim.to/file/9300/simportteam-canakkale-airport-ltbh-turkey)
+  - [MSFS Map Enhancement](https://de.flightsim.to/file/19345/msfs-2020-google-map-replacement)
+
+  Technical background: [this developer thread](https://devsupport.flightsimulator.com/t/vfs-we-need-to-find-a-way-to-stop-this-madness/7273).
+</Accordion>
+
+## Still stuck?
+
+[Collect debug logs](/aircraft/falcon-50/troubleshooting/debug-logs) and reach out with your findings.
+
+<CardGroup cols={2}>
+  <Card title="Email Support" icon="envelope" href="mailto:support@contrail.shop">
+    Reach our team directly at **support@contrail.shop**.
+  </Card>
+  <Card title="Discord Community" icon="discord" href="https://getcontrail.com/discord">
+    Join our Discord for community support and real Falcon 50 pilots.
+  </Card>
+</CardGroup>
