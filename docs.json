@@ -247,6 +247,7 @@
               {
                 "group": "Troubleshooting",
                 "pages": [
+                  "aircraft/falcon-50/troubleshooting/performance",
                   "aircraft/falcon-50/troubleshooting/debug-logs",
                   "aircraft/falcon-50/troubleshooting/debugging-conflicts"
                 ]

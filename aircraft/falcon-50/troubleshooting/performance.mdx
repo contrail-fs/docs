@@ -1,0 +1,77 @@
+---
+title: "Performance"
+description: "Fix stutters, low frame rates, and performance that degrades over a longer flight in the Falcon 50."
+---
+
+If you experience stutters, low frame rates, or performance that slowly degrades over a longer flight, work through the steps below. Start with the quick win — it resolves the issue for most people — then move on to the deeper diagnostics only if you still need to hunt down the cause.
+
+## Quick win: lower the Glass Cockpit Refresh Rate
+
+The single most effective setting for glass-cockpit aircraft like the Falcon 50 is the **Glass Cockpit Refresh Rate**.
+
+In the MSFS **Options → General → Graphics** (2020) or **Options → Graphics** (2024) menu, set **Glass Cockpit Refresh Rate** to **Medium** or **Low**.
+
+<Tip>
+  There's no meaningful visual difference between High and Medium/Low in normal flying — the displays still update smoothly — but the performance gain can be significant.
+</Tip>
+
+## Rule out AI traffic
+
+Before digging deeper, fly once with **AI traffic turned off**.
+
+In **Options → General → Traffic**, set the AI and live traffic sliders to **0**, then repeat a flight where you normally see the problem.
+
+- **Performance improves?** A traffic-driven system is the likely cause — for example TCAS, which continuously reacts to surrounding aircraft. Leave traffic low, or reduce the traffic density rather than disabling it entirely.
+- **No difference?** Traffic isn't the culprit. Move on to narrowing down the responsible system.
+
+## Narrow down the responsible system
+
+The Falcon 50's displays run on JavaScript inside the sim's Coherent GT engine. If a specific system is causing stutters, you can profile it with the **Coherent GT Debugger** and pinpoint the offender.
+
+<Steps>
+  <Step title="Get the Coherent GT Debugger">
+    Download the Coherent GT Debugger below and unzip it somewhere convenient.
+
+    <Card title="Download Coherent GT Debugger" icon="download" href="REPLACE_WITH_DOWNLOAD_URL">
+      Standalone build of the debugger — no MSFS SDK installation required.
+    </Card>
+  </Step>
+  <Step title="Fly until the stutters appear">
+    Start a normal flight and fly until the performance problem shows up.
+  </Step>
+  <Step title="Open the debugger and pick a web view">
+    With the sim still running, launch the debugger, click **GO**, then open each entry in the list and click **Timeline**.
+  </Step>
+  <Step title="Record 10 seconds">
+    Click the red dot in the upper-left corner to start recording. Let it run for **10 seconds**, then click the dot again to stop.
+  </Step>
+  <Step title="Sort by Total Time">
+    Open the **JavaScript & Events** tab and sort the list by **Total Time**.
+  </Step>
+</Steps>
+
+### What to look for
+
+A **normal** capture looks like the reference below. Anything that stands out is worth reporting:
+
+- High **milliseconds** values in the **Total Time** column.
+- A timeline bar that looks noticeably more **cluttered / solid** than the reference.
+
+When you spot something unusual, **take a screenshot** and note which system it belonged to.
+
+<Frame caption="A normal Coherent GT Debugger capture for comparison.">
+  ![Coherent GT Debugger — normal capture](/images/Debugger_tArCk8Vo8j.jpg)
+</Frame>
+
+## Still seeing issues?
+
+Send us your findings — the screenshots and the name of the system that stood out — and we'll take it from there.
+
+<CardGroup cols={2}>
+  <Card title="Email Support" icon="envelope" href="mailto:support@contrail.shop">
+    Reach our team directly at **support@contrail.shop**.
+  </Card>
+  <Card title="Discord Community" icon="discord" href="https://getcontrail.com/discord">
+    Join our Discord for community support and real Falcon 50 pilots.
+  </Card>
+</CardGroup>
