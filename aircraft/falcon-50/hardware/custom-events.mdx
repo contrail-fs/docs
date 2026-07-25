@@ -1,0 +1,530 @@
+---
+title: "Custom Events"
+description: "Map physical hardware to the Falcon 50's custom system logic using MobiFlight, custom B-events, simvars, K-events, and GNS-XLS H-events."
+---
+
+Our aircraft uses complex custom system logic. If you want to map your hardware properly, follow this guide.
+
+## Ready to use profiles
+
+We provide ready-made [MobiFlight](https://www.mobiflight.com/) projects that already contain every custom event, so you only need to assign your own controllers and devices.
+
+<CardGroup cols={2}>
+  <Card title="All Events profile" icon="download" href="/assets/mobiflight/CTL_FA50_All.mfproj">
+    Single tab containing every event (`_All.mfproj`).
+  </Card>
+  <Card title="Panels profile" icon="download" href="/assets/mobiflight/CTL_FA50_Panels.mfproj">
+    Events organized into tabs by cockpit area (`_Panels.mfproj`).
+  </Card>
+</CardGroup>
+
+<Card title="Event reference (CSV)" icon="table" href="/assets/mobiflight/CTL_FA50_Events_All.csv">
+  Full list of every custom event as a CSV, handy for building your own profile.
+</Card>
+
+### MobiFlight
+
+<Steps>
+  <Step title="Install MobiFlight Connector 11+">
+    Download and install [MobiFlight Connector](https://www.mobiflight.com/) version **11 or newer**.
+  </Step>
+  <Step title="Open a profile">
+    In MobiFlight, go to **File → Open…** and select one of the profiles above:
+
+    - `_All.mfproj` — a single tab with all events.
+    - `_Panels.mfproj` — tabs grouped by cockpit area.
+  </Step>
+  <Step title="Assign your hardware">
+    For each config, assign a **Controller** and **Device**, then set it to **Active**.
+  </Step>
+  <Step title="Save the project">
+    Save the project so your assignments are kept for next time.
+  </Step>
+</Steps>
+
+## Custom B-events
+
+### Yoke / flight controls (`HANDLING_…`)
+
+| Event | Description |
+| --- | --- |
+| `HANDLING_BUTTON_COPILOT_AP_DISC` | Set AP Disengage |
+| `HANDLING_BUTTON_PILOT_AP_DISC` | Set AP Disengage |
+| `HANDLING_ElevTrim` | Elevator trim switch (pilot yoke) |
+| `HANDLING_ElevTrimCP` | Elevator trim switch (copilot yoke) |
+| `HANDLING_YOKE_COPILOT_GA_BTN` | Go Around |
+| `HANDLING_YOKE_COPILOT_SYNC_BTN` | Sync button (copilot yoke) |
+| `HANDLING_YOKE_PILOT_GA_BTN` | Go Around |
+| `HANDLING_YOKE_PILOT_SYNC_BTN` | Sync button (pilot yoke) |
+
+### Pilot side panel (`PP_…`)
+
+| Event | Description |
+| --- | --- |
+| `PP_AUDIO_VOL_KNOB` | Set Audio Volume |
+| `PP_CTL_PP` | Ctl Pp |
+| `PP_IRS_MODE_KNOB` | Set Mode Selector |
+| `PP_PILOT_AIRSPEED_KNOB` | TARGET SPEED BUG |
+| `PP_PILOT_ALT_DECAL` | Pilot Alt Decal |
+| `PP_PILOT_AOA_KNOB` | Pilot Aoa Knob |
+| `PP_PILOT_ATT_HDG_BTN` | ATT HDG |
+| `PP_PILOT_AUDIO_CPIT_BTN` | Pilot Audio Cpit Btn |
+| `PP_PILOT_AUDIO_EMG_BTN` | Pilot Audio Emg Btn |
+| `PP_PILOT_AUDIO_FILTR_BTN` | Pilot Audio Filtr Btn |
+| `PP_PILOT_AUDIO_FILT_BTN` | Pilot Audio Filt Btn |
+| `PP_PILOT_AUDIO_FM_BTN` | Pilot Audio Fm Btn |
+| `PP_PILOT_AUDIO_HF1_BTN` | Pilot Audio Hf1 Btn |
+| `PP_PILOT_AUDIO_HF2_BTN` | Pilot Audio Hf2 Btn |
+| `PP_PILOT_AUDIO_MASK_BTN` | Pilot Audio Mask Btn |
+| `PP_PILOT_AUDIO_MIC_CABIN_BTN` | Pilot Audio Mic Cabin Btn |
+| `PP_PILOT_AUDIO_MIC_FM_BTN` | Pilot Audio Mic Fm Btn |
+| `PP_PILOT_AUDIO_MIC_HF1_BTN` | Pilot Audio Mic Hf1 Btn |
+| `PP_PILOT_AUDIO_MIC_HF2_BTN` | Pilot Audio Mic Hf2 Btn |
+| `PP_PILOT_AUDIO_MIC_PAGE_BTN` | Pilot Audio Mic Page Btn |
+| `PP_PILOT_AUDIO_MKR2_BTN` | Pilot Audio Mkr2 Btn |
+| `PP_PILOT_AUDIO_SKP_BTN` | Pilot Audio Skp Btn |
+| `PP_PILOT_AUDIO_ST_BTN` | Pilot Audio St Btn |
+| `PP_PILOT_BELOW_GS_BTN` | Pilot Below Gs Btn |
+| `PP_PILOT_CVR_TEST_BTN` | CVR test button |
+| `PP_PILOT_DAVTRON_DIM_SW` | BRIGHT-DIM SWITCH |
+| `PP_PILOT_DAVTRON_SET_SW` | MIN-SEC SET SWITCH |
+| `PP_PILOT_DAVTRON_TIME_SW` | TIME SET SWITCH |
+| `PP_PILOT_DAVTRON_ZERO_SW` | ZERO SET SWITCH |
+| `PP_PILOT_EFIS_TEST_BTN` | EFIS TEST |
+| `PP_PILOT_FAKE_DECALS` | Pilot Fake Decals |
+| `PP_PILOT_FAKE_KNOBS` | Yaw Damper Master |
+| `PP_PILOT_FLOOR_SW` | Floor Switch |
+| `PP_PILOT_HDG_DECAL` | Pilot Hdg Decal |
+| `PP_PILOT_OXY_MASK_TEST` | Oxygen mask test button |
+| `PP_PILOT_PFD_SCREW_2` | Autopilot Master |
+| `PP_PILOT_PITOT_KNOB` | Static Source Selector |
+| `PP_PILOT_PULL_UP_BTN` | Pilot Pull Up Btn |
+| `PP_PILOT_SIDE_IRS_TEST_BTN` | IRS Test Button |
+| `PP_PILOT_VSI_AB_BTN` | Above/Below Selector |
+| `PP_PILOT_VSI_R_BTN` | Range Selector |
+| `PP_PILOT_VS_IAS_DECAL` | Pilot Vs Ias Decal |
+
+### Copilot side panel (`CP_…`)
+
+| Event | Description |
+| --- | --- |
+| `CP_AUDIO_VOL_KNOB` | Set Audio Volume |
+| `CP_COPILOT_AIRSPEED_KNOB` | TARGET SPEED BUG |
+| `CP_COPILOT_ATT_HDG_BTN` | ATT HDG |
+| `CP_COPILOT_AUDIO_CPIT_BTN` | Copilot Audio Cpit Btn |
+| `CP_COPILOT_AUDIO_EMG_BTN` | Copilot Audio Emg Btn |
+| `CP_COPILOT_AUDIO_FILTR_BTN` | Copilot Audio Filtr Btn |
+| `CP_COPILOT_AUDIO_FILT_BTN` | Copilot Audio Filt Btn |
+| `CP_COPILOT_AUDIO_FM_BTN` | Copilot Audio Fm Btn |
+| `CP_COPILOT_AUDIO_HF1_BTN` | Copilot Audio Hf1 Btn |
+| `CP_COPILOT_AUDIO_HF2_BTN` | Copilot Audio Hf2 Btn |
+| `CP_COPILOT_AUDIO_MASK_BTN` | Copilot Audio Mask Btn |
+| `CP_COPILOT_AUDIO_MIC_CABIN_BTN` | Copilot Audio Mic Cabin Btn |
+| `CP_COPILOT_AUDIO_MIC_FM_BTN` | Copilot Audio Mic Fm Btn |
+| `CP_COPILOT_AUDIO_MIC_HF1_BTN` | Copilot Audio Mic Hf1 Btn |
+| `CP_COPILOT_AUDIO_MIC_HF2_BTN` | Copilot Audio Mic Hf2 Btn |
+| `CP_COPILOT_AUDIO_MIC_PAGE_BTN` | Copilot Audio Mic Page Btn |
+| `CP_COPILOT_AUDIO_MKR2_BTN` | Copilot Audio Mkr2 Btn |
+| `CP_COPILOT_AUDIO_SKP_BTN` | Copilot Audio Skp Btn |
+| `CP_COPILOT_AUDIO_ST_BTN` | Copilot Audio St Btn |
+| `CP_COPILOT_BELOW_GS_BTN` | Copilot Below Gs Btn |
+| `CP_COPILOT_DAVTRON_DIM_SW` | BRIGHT-DIM SWITCH |
+| `CP_COPILOT_DAVTRON_SET_SW` | MIN-SEC SET SWITCH |
+| `CP_COPILOT_DAVTRON_TIME_SW` | TIME SET SWITCH |
+| `CP_COPILOT_DAVTRON_ZERO_SW` | ZERO SET SW |
+| `CP_COPILOT_EBATT_BTN` | Electronic battery switch |
+| `CP_COPILOT_EFIS_TEST_BTN` | EFIS TEST |
+| `CP_COPILOT_ELT_SW` | Copilot Elt Sw |
+| `CP_COPILOT_FLOOR_SW` | Copilot Floor Sw |
+| `CP_COPILOT_GALLEY_BTN` | Galley Power |
+| `CP_COPILOT_OXY_MASK_TEST` | Oxygen mask test button |
+| `CP_COPILOT_PITOT_KNOB` | Static Source Selector |
+| `CP_COPILOT_PULL_UP_BTN` | Copilot Pull Up Btn |
+| `CP_COPILOT_SIDE_IRS_TEST_BTN` | IRS Test Button |
+| `CP_COPILOT_TAS_BACK_BTN` | DISPLAY AMBIENT TEMP |
+| `CP_COPILOT_TAS_DIM_KNOB` | DIM KNOB |
+| `CP_COPILOT_VSI_AB_BTN` | Above/Below Selector |
+| `CP_COPILOT_VSI_R_BTN` | Range Selector |
+| `CP_COSIDE_SYS_APU_BUTTON_BLEEDAIR` | APU Bleed Air Switch |
+| `CP_COSIDE_SYS_APU_BUTTON_GEN` | APU GEN Switch |
+| `CP_COSIDE_SYS_APU_BUTTON_MASTER` | APU Master Switch |
+| `CP_COSIDE_SYS_APU_BUTTON_START` | APU Start Switch |
+| `CP_COSIDE_SYS_APU_BUTTON_STOP` | APU Stop Switch |
+| `CP_CTL_CP` | Ctl Cp |
+| `CP_IRS_MODE_KNOB` | Set Mode Selector |
+| `CP_OXY_MODE_KNOB` | Set OXY Mode Selector |
+| `CP_OXY_RESET_BUTTON` | Oxygen reset button |
+
+### Center panel (`CNP_…`)
+
+| Event | Description |
+| --- | --- |
+| `CNP_CENTER_ALT_SET_BTN` | CANCEL ALTITUDE WARNING |
+| `CNP_CENTER_ANNUN_LT_SW` | Annunciator Light |
+| `CNP_CENTER_ANNUN_TEST_BTN` | Annunciator Test |
+| `CNP_CENTER_AUTO_PRESS_CTRL_BARO_KNOB` | BARO KNOB |
+| `CNP_CENTER_AUTO_PRESS_CTRL_RATE_KNOB` | RATE KNOB |
+| `CNP_CENTER_BRAKE_SW` | BRAKE SELECTOR |
+| `CNP_CENTER_COPILOT_ADI_HSI_SW` | Center Copilot Adi Hsi Sw |
+| `CNP_CENTER_DCP_XFER_SW` | Center Dcp Xfer Sw |
+| `CNP_CENTER_FIRE_ENG_1_SW_1` | Fire Bottle 2 |
+| `CNP_CENTER_FIRE_ENG_1_SW_2` | Fire Bottle 2 |
+| `CNP_CENTER_FIRE_ENG_2_SW_1` | Fire Bottle 2 |
+| `CNP_CENTER_FIRE_ENG_2_SW_2` | Fire Bottle 2 |
+| `CNP_CENTER_FIRE_ENG_3_SW_1` | Fire Bottle 2 |
+| `CNP_CENTER_FIRE_ENG_3_SW_2` | Fire Bottle 2 |
+| `CNP_CENTER_FIRE_PULL_1` | Fire Shutoff 1 |
+| `CNP_CENTER_FIRE_PULL_2` | Fire Shutoff 2 |
+| `CNP_CENTER_FIRE_PULL_3` | Fire Shutoff 3 |
+| `CNP_CENTER_FUEL_QTY_SW` | Fuel Qty Switch |
+| `CNP_CENTER_GEAR_EMERG_HANDLE` | Emergency Gear Handle |
+| `CNP_CENTER_GEAR_EMERG_HANDLE_LOCK` | Emergency Gear Handle Lock |
+| `CNP_CENTER_GEAR_TEST_BTN` | GEAR TEST |
+| `CNP_CENTER_HYD_TEST_BTN` | BRAKE TEST |
+| `CNP_CENTER_MPU_DRV_SW` | Center Mpu Drv Sw |
+| `CNP_CENTER_PARKING_BRAKE_LEVER` | Parking Brake |
+| `CNP_CENTER_PARKING_BRAKE_LEVER_RED` | Emergency Brake |
+| `CNP_CENTER_PILOT_ADI_HSI_SW` | Center Pilot Adi Hsi Sw |
+| `CNP_CENTER_PRESS_KNOB` | PRESS KNOB |
+| `CNP_CENTER_PRESS_MODE_BTN` | Set Pressure Mode |
+| `CNP_CENTER_STBY_PUMP_SW` | Standby Pump |
+| `CNP_CENTER_TEMP_CREW_AM_SW` | Temp Mode Crew |
+| `CNP_CENTER_TEMP_CREW_CH_SW` | Manual Temp Mixer Crew |
+| `CNP_CENTER_TEMP_CREW_KNOB` | Cockpit Temp Selector |
+| `CNP_CENTER_TEMP_PASS_AM_SW` | Temp Mode Cabin |
+| `CNP_CENTER_TEMP_PASS_CH_SW` | Manual Temp Mixer Cabin |
+| `CNP_CENTER_TEMP_PASS_KNOB` | Cabin Temp Selector |
+| `CNP_CENTER_TEST_BTN` | FIRE TEST |
+| `CNP_GROSSWEIGHT_KNOB` | Reset Used Fuel Counter |
+| `CNP_KNOB_ALT_SEL` | Pilot Pfd Screw 4 |
+| `CNP_KNOB_STBY_ADI_ROT` | Set Caging |
+| `CNP_PILOT_STBY_ADI_KNOB` | KNOB_ROTATION |
+| `CNP_PPH_ENG1_KNOB` | Reset Used Fuel Counter |
+| `CNP_PPH_ENG2_KNOB` | Reset Used Fuel Counter |
+| `CNP_PPH_ENG3_KNOB` | Reset Used Fuel Counter |
+| `CNP_RESET_USED_FUEL_BUTTON` | Reset Used Fuel Counter |
+| `CNP_SWITCH_ALT_SEL_INC` | Set Increment |
+| `CNP_SWITCH_STBY_ADI_PUSH` | Set Caging |
+| `CNP_THRUST_REVERSER_SW` | Emergency Reverser Stow |
+| `CNP_THRUST_REVERSER_SW_COVER` | Thrust Reverser Sw Cover |
+
+### Pedestal (`PDSTL_…`)
+
+| Event | Description |
+| --- | --- |
+| `PDSTL_ADC_12_BTN` | ADC 1/2 |
+| `PDSTL_AILERON_RSW` | Aileron Switch |
+| `PDSTL_COPILOT_AP_2NDCRS_BTN` | PDSTL_COPILOT_AP_2NDCRS_BTN |
+| `PDSTL_COPILOT_AP_BRG_BTN` | PDSTL_COPILOT_AP_BRG_BTN |
+| `PDSTL_COPILOT_AP_COURSE_BTN` | PDSTL_COPILOT_AP_COURSE_BTN |
+| `PDSTL_COPILOT_AP_HSI_BTN` | PDSTL_COPILOT_AP_HSI_BTN |
+| `PDSTL_COPILOT_AP_RATEST_BTN` | PDSTL_COPILOT_AP_RATEST_BTN |
+| `PDSTL_COPILOT_AP_RDR_BTN` | PDSTL_COPILOT_AP_RDR_BTN |
+| `PDSTL_CRZ_SPD_ASSIST_TOGGLE` | Cruise speed assist toggle (hidden clickspot) |
+| `PDSTL_CUTOFF_ENG1` | ENG1 STOP/IDLE |
+| `PDSTL_CUTOFF_ENG2` | ENG2 STOP/IDLE |
+| `PDSTL_CUTOFF_ENG3` | ENG3 STOP/IDLE |
+| `PDSTL_EFIS_LEFT_BTN_BRG` | BRG Mode Left |
+| `PDSTL_EFIS_LEFT_BTN_ET` | Left Btn Et |
+| `PDSTL_EFIS_LEFT_BTN_HSIMODE` | HSI Mode Left |
+| `PDSTL_EFIS_LEFT_BTN_NAVDTA` | Left Btn Navdta |
+| `PDSTL_EFIS_LEFT_BTN_RADAR` | WX Radar Left |
+| `PDSTL_EFIS_LEFT_BTN_RATEST` | RA Test Left |
+| `PDSTL_EFIS_RIGHT_BTN_BRG` | BRG Mode Right |
+| `PDSTL_EFIS_RIGHT_BTN_ET` | Right Btn Et |
+| `PDSTL_EFIS_RIGHT_BTN_HSIMODE` | HSI Mode Right |
+| `PDSTL_EFIS_RIGHT_BTN_NAVDTA` | Right Btn Navdta |
+| `PDSTL_EFIS_RIGHT_BTN_RADAR` | WX Radar Right |
+| `PDSTL_EFIS_RIGHT_BTN_RATEST` | RA Test Right |
+| `PDSTL_EHSI_ET_1_BTN` | Elapsed Time |
+| `PDSTL_EHSI_ET_2_BTN` | Elapsed Time |
+| `PDSTL_EHSI_NAV_DATA_1_BTN` | Nav Data |
+| `PDSTL_EHSI_NAV_DATA_2_BTN` | Nav Data |
+| `PDSTL_MACH_TRIM_SW` | Mach Trim Sw |
+| `PDSTL_MAG_TRUE_1_BTN` | MAG/TRUE |
+| `PDSTL_MAG_TRUE_2_BTN` | MAG/TRUE |
+| `PDSTL_PILOT_AP_2NDCRS_BTN` | PDSTL_PILOT_AP_2NDCRS_BTN |
+| `PDSTL_PILOT_AP_BRG_BTN` | PDSTL_PILOT_AP_BRG_BTN |
+| `PDSTL_PILOT_AP_COURSE_BTN` | PDSTL_PILOT_AP_COURSE_BTN |
+| `PDSTL_PILOT_AP_HSI_BTN` | PDSTL_PILOT_AP_HSI_BTN |
+| `PDSTL_PILOT_AP_RATEST_BTN` | PDSTL_PILOT_AP_RATEST_BTN |
+| `PDSTL_PILOT_AP_RDR_BTN` | PDSTL_PILOT_AP_RDR_BTN |
+| `PDSTL_RUDDER_RSW` | RUDDER Switch |
+| `PDSTL_SOUND_WARN_HORN_SILENCE` | Horn Silence |
+| `PDSTL_SYS_TEST_BUTTON_ADC_1` | ADC 1 Test |
+| `PDSTL_SYS_TEST_BUTTON_ADC_2` | ADC 2 Test |
+| `PDSTL_SYS_TEST_BUTTON_CABIN` | Cabin Test |
+| `PDSTL_SYS_TEST_BUTTON_STALL_1` | Stall Test 1 |
+| `PDSTL_SYS_TEST_BUTTON_STALL_2` | Stall Test 2 |
+| `PDSTL_TAIL_PLANE_SW_10` | EMRG TRIM CB |
+
+### Overhead (`OVHD_…`)
+
+| Event | Description |
+| --- | --- |
+| `OVHD_ANTI_ICE_AIR_FRAME_SW` | AI Airframe |
+| `OVHD_ANTI_ICE_ENG_1_SW` | AI Eng1 |
+| `OVHD_ANTI_ICE_ENG_2_SW` | AI Eng2 |
+| `OVHD_ANTI_ICE_ENG_3_SW` | AI Eng3 |
+| `OVHD_BLEED_AIR_BAG_SW` | Bleed Air Baggage Comp |
+| `OVHD_BLEED_AIR_CABIN_SW` | Bleed Air Cabin |
+| `OVHD_BLEED_AIR_CREW_SW` | Bleed Air Cockpit |
+| `OVHD_BLEED_AIR_HP_1_SW` | Bleed Air HP1 |
+| `OVHD_BLEED_AIR_HP_2_SW` | Bleed Air HP2 |
+| `OVHD_BLEED_AIR_HP_3_SW` | Bleed Air HP3 |
+| `OVHD_BLEED_AIR_ISOLATION_SW` | Bleed Air Isolation |
+| `OVHD_BLEED_AIR_PRV_SW` | Bleed Air Pressure Relief Valve |
+| `OVHD_COPILOT_CTRSD_KNOB` | Side Center Light |
+| `OVHD_COPILOT_DIGITS_KNOB` | Copilot Digits Light |
+| `OVHD_COPILOT_INST_KNOB` | Copilot Instrument Light |
+| `OVHD_COPILOT_MAP` | Adjust COPILOT Reading Light Brightness |
+| `OVHD_COPILOT_OVHD_KNOB` | Copilot Overhead Light |
+| `OVHD_COPILOT_WIPER_SW` | Wiper Right |
+| `OVHD_DC_SYS_BAT_1_BTN` | BAT 1 Selector |
+| `OVHD_DC_SYS_BAT_2_BTN` | BAT 2 Selector |
+| `OVHD_DC_SYS_FLIGHT_KNOB` | BUS TIE |
+| `OVHD_DC_SYS_GEN_1_BTN` | GEN 1 Selector |
+| `OVHD_DC_SYS_GEN_1_SW` | GENERATOR 1 |
+| `OVHD_DC_SYS_GEN_2_BTN` | GEN 2 Selector |
+| `OVHD_DC_SYS_GEN_2_SW` | GENERATOR 2 |
+| `OVHD_DC_SYS_GEN_3_BTN` | GEN 3 Selector |
+| `OVHD_DC_SYS_GEN_3_SW` | GENERATOR 3 |
+| `OVHD_ENG_AIR_START_1_SW` | ENG1 Ignition Mode |
+| `OVHD_ENG_AIR_START_2_SW` | ENG2 Ignition Mode |
+| `OVHD_ENG_AIR_START_3_SW` | ENG3 Ignition Mode |
+| `OVHD_ENG_CMPTR_1_SW` | ENG1 Computer |
+| `OVHD_ENG_CMPTR_2_SW` | ENG2 Computer |
+| `OVHD_ENG_CMPTR_3_SW` | ENG3 Computer |
+| `OVHD_ENG_EXT_PRW_SW` | DC Power Selector |
+| `OVHD_ENG_SPR_1_LT` | ENG1 Spr |
+| `OVHD_ENG_SPR_2_LT` | ENG2 Spr |
+| `OVHD_ENG_SPR_3_LT` | ENG3 Spr |
+| `OVHD_ENG_START_1_BTN` | ENG1 Starter |
+| `OVHD_ENG_START_2_BTN` | ENG2 Starter |
+| `OVHD_ENG_START_3_BTN` | ENG3 Starter |
+| `OVHD_EXT_LT_ANTICOL_SW` | ANTICOL LIGHT SWITCH |
+| `OVHD_EXT_LT_NAV_SW` | Logo & Nav Lights |
+| `OVHD_EXT_LT_TAXI_SW` | Ext Lt Taxi Sw |
+| `OVHD_FUEL_XFR_PUMP_1_SW` | Transfer Pump 1 |
+| `OVHD_FUEL_XFR_PUMP_2_SW` | Transfer Pump 2 |
+| `OVHD_FUEL_XFR_PUMP_3_SW` | Transfer Pump 3 |
+| `OVHD_INT_LT_BELTS` | Seatbelts Light |
+| `OVHD_INT_LT_EMRG_SW` | Emergency Light Selector |
+| `OVHD_INT_LT_SMOKING` | No Smoking Sign |
+| `OVHD_INT_LT_SMOKING_SW` | Smoking Sign Light |
+| `OVHD_INVERTERS_ACBUS_1_LT_EMIS` | AC Bus 1 Voltmeter |
+| `OVHD_INVERTERS_ACVUS_2_LT_EMIS` | AC Bus 2 Voltmeter |
+| `OVHD_INVERTERS_AC_1_SW` | AC Inverter 1 |
+| `OVHD_INVERTERS_AC_2_SW` | AC Inverter 2 |
+| `OVHD_INVERTERS_STBY_SW` | AC Standby Inverter |
+| `OVHD_PILOT_CTRSD_KNOB` | Center Side Light |
+| `OVHD_PILOT_DIGITS_KNOB` | Pilot Digits Light |
+| `OVHD_PILOT_INST_KNOB` | Pilot Instrument Light |
+| `OVHD_PILOT_MAP` | Adjust Pilot Reading Light Brightness |
+| `OVHD_PILOT_OVHD_KNOB` | Glareshield Light |
+| `OVHD_PILOT_WIPER_SW` | Wiper Left |
+| `OVHD_PITOT_COPILOT_SW` | PITOT HEAT RIGHT |
+| `OVHD_PITOT_PILOT_SW` | PITOT HEAT LEFT |
+| `OVHD_SYS_ELEC_BUTTON_EFIS1` | EFIS 1 Master Switch |
+| `OVHD_SYS_ELEC_BUTTON_EFIS2` | EFIS 2 Master Switch |
+| `OVHD_SYS_ELEC_BUTTON_RADIO` | Radio Master Switch |
+| `OVHD_WINDSHIELD_COPILOT_SW` | Windshield Heat Copilot Side |
+| `OVHD_WINDSHIELD_PILOT_SW` | Windshield Heat Pilot Side |
+| `OVHD_WINDSHIELD_SIDE_SW` | Windshield Heat Side Windows |
+
+## Direct: simvar bindings
+
+Controls wired **directly** to an MSFS simulation variable (no custom B-event). Map hardware by **setting the simvar**.
+
+| SimVar | Cockpit control | Notes |
+| --- | --- | --- |
+| `A:ADF SOUND:1, Bool` | ADF1 ident monitor | Toggled via `K:RADIO_ADF_IDENT_SET`. |
+| `A:ADF SOUND:2, Bool` | ADF2 ident monitor | Toggled via `K:RADIO_ADF2_IDENT_SET`. |
+| `A:BUS CONNECTION ON:20, Bool` | Battery 1 master | OVHD battery switch. Hardware: set simvar to `1` (on) or `0` (off). MobiFlight example: `1 (>A:BUS CONNECTION ON:20, Bool)` |
+| `A:BUS CONNECTION ON:21, Bool` | Battery 2 master | OVHD battery switch. Example: `1 (>A:BUS CONNECTION ON:21, Bool)` |
+| `A:BUS CONNECTION ON:5, Bool` | Bus D tie | OVHD Bus D knob. Example: `1 (>A:BUS CONNECTION ON:5, Bool)` |
+| `A:BUS CONNECTION ON:7, Bool` | Bus C tie | OVHD Bus C knob. Example: `1 (>A:BUS CONNECTION ON:7, Bool)` |
+| `A:COM RECEIVE:1, Bool` | COM1 receive active | Toggled via `K:COM1_RECEIVE_SELECT`. |
+| `A:COM RECEIVE:2, Bool` | COM2 receive active | Toggled via `K:COM2_RECEIVE_SELECT`. |
+| `A:COM RECEIVE:3, Bool` | COM3 receive active | Toggled via `K:COM3_RECEIVE_SELECT`. |
+| `A:COM TRANSMIT:1, Bool` | VHF1 TX selected | Set via `K:PILOT_TRANSMITTER_SET` with value `0`. |
+| `A:COM TRANSMIT:2, Bool` | VHF2 TX selected | Set via `K:PILOT_TRANSMITTER_SET` with value `1`. |
+| `A:COM TRANSMIT:3, Bool` | HF TX selected | Set via `K:PILOT_TRANSMITTER_SET` with value `2`. |
+| `A:DME SOUND:1, Bool` | DME1 ident monitor | Toggled via `K:RADIO_DME1_IDENT_SET`. |
+| `A:DME SOUND:2, Bool` | DME2 ident monitor | Toggled via `K:RADIO_DME2_IDENT_SET`. |
+| `A:MARKER SOUND:1, Bool` | Marker ident monitor state | Written via `K:MARKER_SOUND_TOGGLE` from audio panel. |
+| `A:NAV SOUND:1, Bool` | NAV1 ident monitor | Toggled via `K:RADIO_VOR1_IDENT_SET`. |
+| `A:NAV SOUND:2, Bool` | NAV2 ident monitor | Toggled via `K:RADIO_VOR2_IDENT_SET`. |
+
+## K-events
+
+Simulator **Key Events** invoked from cockpit logic.
+
+| K-Event | Function | RPN | Notes |
+| --- | --- | --- | --- |
+| `K:2:LIGHT_POTENTIOMETER_SET` | Panel/instrument light dimming | `(>K:2:LIGHT_POTENTIOMETER_SET)` | Overhead & pedestal lighting knobs. Format: `brightness potentiometerIndex (>K:2:LIGHT_POTENTIOMETER_SET)`. Index is aircraft-specific (see light templates). |
+| `K:AUDIO_PANEL_VOLUME_SET` | Audio panel volume | `(>K:AUDIO_PANEL_VOLUME_SET)` | Pilot/copilot volume knobs write L-var then `(L:…KNOB) (>K:AUDIO_PANEL_VOLUME_SET)`. Prefer B-event `PP_AUDIO_VOL_KNOB` / `CP_AUDIO_VOL_KNOB` for hardware. |
+| `K:AXIS_RUDDER_SET` | Rudder axis (torque-link off) | `(>K:AXIS_RUDDER_SET)` | Intercepted when rudder torque link allows. |
+| `K:COM1_RECEIVE_SELECT` | COM1 monitor (receive) | `(>K:COM1_RECEIVE_SELECT)` | Uses `A:COM RECEIVE:1`. |
+| `K:COM2_RECEIVE_SELECT` | COM2 monitor (receive) | `(>K:COM2_RECEIVE_SELECT)` | Uses `A:COM RECEIVE:2`. |
+| `K:COM3_RECEIVE_SELECT` | COM3 monitor (receive) | `(>K:COM3_RECEIVE_SELECT)` | Uses `A:COM RECEIVE:3`. |
+| `K:KOHLSMAN_DEC` | Barometric setting — decrease | `(>K:KOHLSMAN_DEC)` | Same index convention as `KOHLSMAN_INC`. |
+| `K:KOHLSMAN_INC` | Barometric setting — increase | `(>K:KOHLSMAN_INC)` | Pilot/copilot baro knobs. Prefix with alt index: `1` = ALT1, `2` = ALT2, `3` = copilot ALT. Example RPN: `1 (>K:KOHLSMAN_INC)` |
+| `K:MARKER_SOUND_TOGGLE` | Marker beacon ident audio | `(>K:MARKER_SOUND_TOGGLE)` | Audio panel MKR button (pilot & copilot). Example: `1 (>K:MARKER_SOUND_TOGGLE)` |
+| `K:PILOT_TRANSMITTER_SET` | Audio TX selector | `(>K:PILOT_TRANSMITTER_SET)` | Values: `0` = VHF1, `1` = VHF2, `2` = HF (see pilot/copilot audio MIC switches). Example: `1 (>K:PILOT_TRANSMITTER_SET)` |
+| `K:RADIO_ADF2_IDENT_SET` | ADF2 ident audio | `(>K:RADIO_ADF2_IDENT_SET)` | Uses `A:ADF SOUND:2`. |
+| `K:RADIO_ADF_IDENT_SET` | ADF1 ident audio | `(>K:RADIO_ADF_IDENT_SET)` | Uses `A:ADF SOUND:1`. |
+| `K:RADIO_DME1_IDENT_SET` | DME1 ident audio | `(>K:RADIO_DME1_IDENT_SET)` | Uses `A:DME SOUND:1`. |
+| `K:RADIO_DME2_IDENT_SET` | DME2 ident audio | `(>K:RADIO_DME2_IDENT_SET)` | Uses `A:DME SOUND:2`. |
+| `K:RADIO_VOR1_IDENT_SET` | NAV1 ident audio | `(>K:RADIO_VOR1_IDENT_SET)` | Toggles ident monitor; cockpit uses `(A:NAV SOUND:1, Bool) ! (>K:RADIO_VOR1_IDENT_SET)`. |
+| `K:RADIO_VOR2_IDENT_SET` | NAV2 ident audio | `(>K:RADIO_VOR2_IDENT_SET)` | Same pattern with `A:NAV SOUND:2`. |
+| `K:RUDDER_CENTER` | Rudder centre | `(>K:RUDDER_CENTER)` | Pedal/rudder trim assist when torque link off. |
+| `K:RUDDER_LEFT` | Rudder left (button/axis) | `(>K:RUDDER_LEFT)` | Pedal/rudder trim assist when torque link off. |
+| `K:RUDDER_RIGHT` | Rudder right (button/axis) | `(>K:RUDDER_RIGHT)` | Pedal/rudder trim assist when torque link off. |
+| `K:RUDDER_SET` | Rudder position set | `(>K:RUDDER_SET)` | Used with torque-link logic in `Events.xml`. |
+
+## GNS-XLS H-events
+
+The GNS keyboard uses **HTML/JS H-events** (`>H:…`). Unit **1** = pilot, unit **2** = copilot.
+
+### Pilot (`CTL_GNSXLS_1_…`)
+
+| Key | Event name | RPN |
+| --- | --- | --- |
+| Power on | `CTL_GNSXLS_1_BUTTON_ON` | `(>H:CTL_GNSXLS_1_BUTTON_ON)` |
+| Power off (long press in UI) | `CTL_GNSXLS_1_BUTTON_OFF` | `(>H:CTL_GNSXLS_1_BUTTON_OFF)` |
+| Brightness hold | `CTL_GNSXLS_1_BUTTON_BRT_PUSHED` | `(>H:CTL_GNSXLS_1_BUTTON_BRT_PUSHED)` |
+| Brightness release | `CTL_GNSXLS_1_BUTTON_BRT_RELEASED` | `(>H:CTL_GNSXLS_1_BUTTON_BRT_RELEASED)` |
+| FPL | `CTL_GNSXLS_1_KEY_FPL` | `(>H:CTL_GNSXLS_1_KEY_FPL)` |
+| NAV | `CTL_GNSXLS_1_KEY_NAV` | `(>H:CTL_GNSXLS_1_KEY_NAV)` |
+| Direct-to | `CTL_GNSXLS_1_KEY_DIRECTTO` | `(>H:CTL_GNSXLS_1_KEY_DIRECTTO)` |
+| Plan | `CTL_GNSXLS_1_KEY_PLAN` | `(>H:CTL_GNSXLS_1_KEY_PLAN)` |
+| Hold / POS fix | `CTL_GNSXLS_1_KEY_HOLD` | `(>H:CTL_GNSXLS_1_KEY_HOLD)` |
+| AFIS | `CTL_GNSXLS_1_KEY_AFIS` | `(>H:CTL_GNSXLS_1_KEY_AFIS)` |
+| VNAV | `CTL_GNSXLS_1_KEY_VNAV` | `(>H:CTL_GNSXLS_1_KEY_VNAV)` |
+| MSG | `CTL_GNSXLS_1_KEY_MSG` | `(>H:CTL_GNSXLS_1_KEY_MSG)` |
+| Page prev | `CTL_GNSXLS_1_KEY_PRV` | `(>H:CTL_GNSXLS_1_KEY_PRV)` |
+| Page next | `CTL_GNSXLS_1_KEY_NXT` | `(>H:CTL_GNSXLS_1_KEY_NXT)` |
+| Enter | `CTL_GNSXLS_1_KEY_ENTER` | `(>H:CTL_GNSXLS_1_KEY_ENTER)` |
+| Back (CLR) | `CTL_GNSXLS_1_KEY_BACK` | `(>H:CTL_GNSXLS_1_KEY_BACK)` |
+| L1 | `CTL_GNSXLS_1_KEY_L1` | `(>H:CTL_GNSXLS_1_KEY_L1)` |
+| L2 | `CTL_GNSXLS_1_KEY_L2` | `(>H:CTL_GNSXLS_1_KEY_L2)` |
+| L3 | `CTL_GNSXLS_1_KEY_L3` | `(>H:CTL_GNSXLS_1_KEY_L3)` |
+| L4 | `CTL_GNSXLS_1_KEY_L4` | `(>H:CTL_GNSXLS_1_KEY_L4)` |
+| L5 | `CTL_GNSXLS_1_KEY_L5` | `(>H:CTL_GNSXLS_1_KEY_L5)` |
+| R1 | `CTL_GNSXLS_1_KEY_R1` | `(>H:CTL_GNSXLS_1_KEY_R1)` |
+| R2 | `CTL_GNSXLS_1_KEY_R2` | `(>H:CTL_GNSXLS_1_KEY_R2)` |
+| R3 | `CTL_GNSXLS_1_KEY_R3` | `(>H:CTL_GNSXLS_1_KEY_R3)` |
+| R4 | `CTL_GNSXLS_1_KEY_R4` | `(>H:CTL_GNSXLS_1_KEY_R4)` |
+| R5 | `CTL_GNSXLS_1_KEY_R5` | `(>H:CTL_GNSXLS_1_KEY_R5)` |
+| Digit 0 | `CTL_GNSXLS_1_KEY_0` | `(>H:CTL_GNSXLS_1_KEY_0)` |
+| Digit 1 | `CTL_GNSXLS_1_KEY_1` | `(>H:CTL_GNSXLS_1_KEY_1)` |
+| Digit 2 | `CTL_GNSXLS_1_KEY_2` | `(>H:CTL_GNSXLS_1_KEY_2)` |
+| Digit 3 | `CTL_GNSXLS_1_KEY_3` | `(>H:CTL_GNSXLS_1_KEY_3)` |
+| Digit 4 | `CTL_GNSXLS_1_KEY_4` | `(>H:CTL_GNSXLS_1_KEY_4)` |
+| Digit 5 | `CTL_GNSXLS_1_KEY_5` | `(>H:CTL_GNSXLS_1_KEY_5)` |
+| Digit 6 | `CTL_GNSXLS_1_KEY_6` | `(>H:CTL_GNSXLS_1_KEY_6)` |
+| Digit 7 | `CTL_GNSXLS_1_KEY_7` | `(>H:CTL_GNSXLS_1_KEY_7)` |
+| Digit 8 | `CTL_GNSXLS_1_KEY_8` | `(>H:CTL_GNSXLS_1_KEY_8)` |
+| Digit 9 | `CTL_GNSXLS_1_KEY_9` | `(>H:CTL_GNSXLS_1_KEY_9)` |
+| A | `CTL_GNSXLS_1_KEY_A` | `(>H:CTL_GNSXLS_1_KEY_A)` |
+| B | `CTL_GNSXLS_1_KEY_B` | `(>H:CTL_GNSXLS_1_KEY_B)` |
+| C | `CTL_GNSXLS_1_KEY_C` | `(>H:CTL_GNSXLS_1_KEY_C)` |
+| D | `CTL_GNSXLS_1_KEY_D` | `(>H:CTL_GNSXLS_1_KEY_D)` |
+| E | `CTL_GNSXLS_1_KEY_E` | `(>H:CTL_GNSXLS_1_KEY_E)` |
+| F | `CTL_GNSXLS_1_KEY_F` | `(>H:CTL_GNSXLS_1_KEY_F)` |
+| G | `CTL_GNSXLS_1_KEY_G` | `(>H:CTL_GNSXLS_1_KEY_G)` |
+| H | `CTL_GNSXLS_1_KEY_H` | `(>H:CTL_GNSXLS_1_KEY_H)` |
+| I | `CTL_GNSXLS_1_KEY_I` | `(>H:CTL_GNSXLS_1_KEY_I)` |
+| J | `CTL_GNSXLS_1_KEY_J` | `(>H:CTL_GNSXLS_1_KEY_J)` |
+| K | `CTL_GNSXLS_1_KEY_K` | `(>H:CTL_GNSXLS_1_KEY_K)` |
+| L | `CTL_GNSXLS_1_KEY_L` | `(>H:CTL_GNSXLS_1_KEY_L)` |
+| M | `CTL_GNSXLS_1_KEY_M` | `(>H:CTL_GNSXLS_1_KEY_M)` |
+| N | `CTL_GNSXLS_1_KEY_N` | `(>H:CTL_GNSXLS_1_KEY_N)` |
+| O | `CTL_GNSXLS_1_KEY_O` | `(>H:CTL_GNSXLS_1_KEY_O)` |
+| P | `CTL_GNSXLS_1_KEY_P` | `(>H:CTL_GNSXLS_1_KEY_P)` |
+| Q | `CTL_GNSXLS_1_KEY_Q` | `(>H:CTL_GNSXLS_1_KEY_Q)` |
+| R | `CTL_GNSXLS_1_KEY_R` | `(>H:CTL_GNSXLS_1_KEY_R)` |
+| S | `CTL_GNSXLS_1_KEY_S` | `(>H:CTL_GNSXLS_1_KEY_S)` |
+| T | `CTL_GNSXLS_1_KEY_T` | `(>H:CTL_GNSXLS_1_KEY_T)` |
+| U | `CTL_GNSXLS_1_KEY_U` | `(>H:CTL_GNSXLS_1_KEY_U)` |
+| V | `CTL_GNSXLS_1_KEY_V` | `(>H:CTL_GNSXLS_1_KEY_V)` |
+| W | `CTL_GNSXLS_1_KEY_W` | `(>H:CTL_GNSXLS_1_KEY_W)` |
+| X | `CTL_GNSXLS_1_KEY_X` | `(>H:CTL_GNSXLS_1_KEY_X)` |
+| Y | `CTL_GNSXLS_1_KEY_Y` | `(>H:CTL_GNSXLS_1_KEY_Y)` |
+| Z | `CTL_GNSXLS_1_KEY_Z` | `(>H:CTL_GNSXLS_1_KEY_Z)` |
+| Space | `CTL_GNSXLS_1_KEY_SP` | `(>H:CTL_GNSXLS_1_KEY_SP)` |
+| # | `CTL_GNSXLS_1_KEY_HSTG` | `(>H:CTL_GNSXLS_1_KEY_HSTG)` |
+| +/- | `CTL_GNSXLS_1_KEY_PLUSMIN` | `(>H:CTL_GNSXLS_1_KEY_PLUSMIN)` |
+| * | `CTL_GNSXLS_1_KEY_ASTERISK` | `(>H:CTL_GNSXLS_1_KEY_ASTERISK)` |
+
+### Copilot (`CTL_GNSXLS_2_…`)
+
+| Key | Event name | RPN |
+| --- | --- | --- |
+| Power on | `CTL_GNSXLS_2_BUTTON_ON` | `(>H:CTL_GNSXLS_2_BUTTON_ON)` |
+| Power off (long press in UI) | `CTL_GNSXLS_2_BUTTON_OFF` | `(>H:CTL_GNSXLS_2_BUTTON_OFF)` |
+| Brightness hold | `CTL_GNSXLS_2_BUTTON_BRT_PUSHED` | `(>H:CTL_GNSXLS_2_BUTTON_BRT_PUSHED)` |
+| Brightness release | `CTL_GNSXLS_2_BUTTON_BRT_RELEASED` | `(>H:CTL_GNSXLS_2_BUTTON_BRT_RELEASED)` |
+| FPL | `CTL_GNSXLS_2_KEY_FPL` | `(>H:CTL_GNSXLS_2_KEY_FPL)` |
+| NAV | `CTL_GNSXLS_2_KEY_NAV` | `(>H:CTL_GNSXLS_2_KEY_NAV)` |
+| Direct-to | `CTL_GNSXLS_2_KEY_DIRECTTO` | `(>H:CTL_GNSXLS_2_KEY_DIRECTTO)` |
+| Plan | `CTL_GNSXLS_2_KEY_PLAN` | `(>H:CTL_GNSXLS_2_KEY_PLAN)` |
+| Hold / POS fix | `CTL_GNSXLS_2_KEY_HOLD` | `(>H:CTL_GNSXLS_2_KEY_HOLD)` |
+| AFIS | `CTL_GNSXLS_2_KEY_AFIS` | `(>H:CTL_GNSXLS_2_KEY_AFIS)` |
+| VNAV | `CTL_GNSXLS_2_KEY_VNAV` | `(>H:CTL_GNSXLS_2_KEY_VNAV)` |
+| MSG | `CTL_GNSXLS_2_KEY_MSG` | `(>H:CTL_GNSXLS_2_KEY_MSG)` |
+| Page prev | `CTL_GNSXLS_2_KEY_PRV` | `(>H:CTL_GNSXLS_2_KEY_PRV)` |
+| Page next | `CTL_GNSXLS_2_KEY_NXT` | `(>H:CTL_GNSXLS_2_KEY_NXT)` |
+| Enter | `CTL_GNSXLS_2_KEY_ENTER` | `(>H:CTL_GNSXLS_2_KEY_ENTER)` |
+| Back (CLR) | `CTL_GNSXLS_2_KEY_BACK` | `(>H:CTL_GNSXLS_2_KEY_BACK)` |
+| L1 | `CTL_GNSXLS_2_KEY_L1` | `(>H:CTL_GNSXLS_2_KEY_L1)` |
+| L2 | `CTL_GNSXLS_2_KEY_L2` | `(>H:CTL_GNSXLS_2_KEY_L2)` |
+| L3 | `CTL_GNSXLS_2_KEY_L3` | `(>H:CTL_GNSXLS_2_KEY_L3)` |
+| L4 | `CTL_GNSXLS_2_KEY_L4` | `(>H:CTL_GNSXLS_2_KEY_L4)` |
+| L5 | `CTL_GNSXLS_2_KEY_L5` | `(>H:CTL_GNSXLS_2_KEY_L5)` |
+| R1 | `CTL_GNSXLS_2_KEY_R1` | `(>H:CTL_GNSXLS_2_KEY_R1)` |
+| R2 | `CTL_GNSXLS_2_KEY_R2` | `(>H:CTL_GNSXLS_2_KEY_R2)` |
+| R3 | `CTL_GNSXLS_2_KEY_R3` | `(>H:CTL_GNSXLS_2_KEY_R3)` |
+| R4 | `CTL_GNSXLS_2_KEY_R4` | `(>H:CTL_GNSXLS_2_KEY_R4)` |
+| R5 | `CTL_GNSXLS_2_KEY_R5` | `(>H:CTL_GNSXLS_2_KEY_R5)` |
+| Digit 0 | `CTL_GNSXLS_2_KEY_0` | `(>H:CTL_GNSXLS_2_KEY_0)` |
+| Digit 1 | `CTL_GNSXLS_2_KEY_1` | `(>H:CTL_GNSXLS_2_KEY_1)` |
+| Digit 2 | `CTL_GNSXLS_2_KEY_2` | `(>H:CTL_GNSXLS_2_KEY_2)` |
+| Digit 3 | `CTL_GNSXLS_2_KEY_3` | `(>H:CTL_GNSXLS_2_KEY_3)` |
+| Digit 4 | `CTL_GNSXLS_2_KEY_4` | `(>H:CTL_GNSXLS_2_KEY_4)` |
+| Digit 5 | `CTL_GNSXLS_2_KEY_5` | `(>H:CTL_GNSXLS_2_KEY_5)` |
+| Digit 6 | `CTL_GNSXLS_2_KEY_6` | `(>H:CTL_GNSXLS_2_KEY_6)` |
+| Digit 7 | `CTL_GNSXLS_2_KEY_7` | `(>H:CTL_GNSXLS_2_KEY_7)` |
+| Digit 8 | `CTL_GNSXLS_2_KEY_8` | `(>H:CTL_GNSXLS_2_KEY_8)` |
+| Digit 9 | `CTL_GNSXLS_2_KEY_9` | `(>H:CTL_GNSXLS_2_KEY_9)` |
+| A | `CTL_GNSXLS_2_KEY_A` | `(>H:CTL_GNSXLS_2_KEY_A)` |
+| B | `CTL_GNSXLS_2_KEY_B` | `(>H:CTL_GNSXLS_2_KEY_B)` |
+| C | `CTL_GNSXLS_2_KEY_C` | `(>H:CTL_GNSXLS_2_KEY_C)` |
+| D | `CTL_GNSXLS_2_KEY_D` | `(>H:CTL_GNSXLS_2_KEY_D)` |
+| E | `CTL_GNSXLS_2_KEY_E` | `(>H:CTL_GNSXLS_2_KEY_E)` |
+| F | `CTL_GNSXLS_2_KEY_F` | `(>H:CTL_GNSXLS_2_KEY_F)` |
+| G | `CTL_GNSXLS_2_KEY_G` | `(>H:CTL_GNSXLS_2_KEY_G)` |
+| H | `CTL_GNSXLS_2_KEY_H` | `(>H:CTL_GNSXLS_2_KEY_H)` |
+| I | `CTL_GNSXLS_2_KEY_I` | `(>H:CTL_GNSXLS_2_KEY_I)` |
+| J | `CTL_GNSXLS_2_KEY_J` | `(>H:CTL_GNSXLS_2_KEY_J)` |
+| K | `CTL_GNSXLS_2_KEY_K` | `(>H:CTL_GNSXLS_2_KEY_K)` |
+| L | `CTL_GNSXLS_2_KEY_L` | `(>H:CTL_GNSXLS_2_KEY_L)` |
+| M | `CTL_GNSXLS_2_KEY_M` | `(>H:CTL_GNSXLS_2_KEY_M)` |
+| N | `CTL_GNSXLS_2_KEY_N` | `(>H:CTL_GNSXLS_2_KEY_N)` |
+| O | `CTL_GNSXLS_2_KEY_O` | `(>H:CTL_GNSXLS_2_KEY_O)` |
+| P | `CTL_GNSXLS_2_KEY_P` | `(>H:CTL_GNSXLS_2_KEY_P)` |
+| Q | `CTL_GNSXLS_2_KEY_Q` | `(>H:CTL_GNSXLS_2_KEY_Q)` |
+| R | `CTL_GNSXLS_2_KEY_R` | `(>H:CTL_GNSXLS_2_KEY_R)` |
+| S | `CTL_GNSXLS_2_KEY_S` | `(>H:CTL_GNSXLS_2_KEY_S)` |
+| T | `CTL_GNSXLS_2_KEY_T` | `(>H:CTL_GNSXLS_2_KEY_T)` |
+| U | `CTL_GNSXLS_2_KEY_U` | `(>H:CTL_GNSXLS_2_KEY_U)` |
+| V | `CTL_GNSXLS_2_KEY_V` | `(>H:CTL_GNSXLS_2_KEY_V)` |
+| W | `CTL_GNSXLS_2_KEY_W` | `(>H:CTL_GNSXLS_2_KEY_W)` |
+| X | `CTL_GNSXLS_2_KEY_X` | `(>H:CTL_GNSXLS_2_KEY_X)` |
+| Y | `CTL_GNSXLS_2_KEY_Y` | `(>H:CTL_GNSXLS_2_KEY_Y)` |
+| Z | `CTL_GNSXLS_2_KEY_Z` | `(>H:CTL_GNSXLS_2_KEY_Z)` |
+| Space | `CTL_GNSXLS_2_KEY_SP` | `(>H:CTL_GNSXLS_2_KEY_SP)` |
+| # | `CTL_GNSXLS_2_KEY_HSTG` | `(>H:CTL_GNSXLS_2_KEY_HSTG)` |
+| +/- | `CTL_GNSXLS_2_KEY_PLUSMIN` | `(>H:CTL_GNSXLS_2_KEY_PLUSMIN)` |
+| * | `CTL_GNSXLS_2_KEY_ASTERISK` | `(>H:CTL_GNSXLS_2_KEY_ASTERISK)` |

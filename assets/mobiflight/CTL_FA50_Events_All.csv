@@ -1,0 +1,402 @@
+B,CHECKLIST_BUTTON_SHOW,Checklist switch,Paper checklist
+B,CNP_CENTER_ALT_SET_BTN,Cancel altitude warning button,Center panel
+B,CNP_CENTER_ANNUN_LT_SW,Annunciator light switch,Center panel
+B,CNP_CENTER_ANNUN_TEST_BTN,Annunciator test button,Center panel
+B,CNP_CENTER_AUTO_PRESS_CTRL_BARO_KNOB,Center automatic pressurization control barometric knob,Center panel
+B,CNP_CENTER_AUTO_PRESS_CTRL_RATE_KNOB,Center automatic pressurization control rate knob,Center panel
+B,CNP_CENTER_BRAKE_SW,Brake knob,Center panel
+B,CNP_CENTER_COPILOT_ADI_HSI_SW,Center copilot ADI HSI switch,Center panel
+B,CNP_CENTER_DCP_XFER_SW,Center DCP transfer switch,Center panel
+B,CNP_CENTER_FIRE_ENG_1_SW_1,Fire bottle 2 knob (center panel),Center panel
+B,CNP_CENTER_FIRE_ENG_1_SW_2,Fire bottle 2 switch (center panel),Center panel
+B,CNP_CENTER_FIRE_ENG_2_SW_1,Fire bottle 2 knob (center panel),Center panel
+B,CNP_CENTER_FIRE_ENG_2_SW_2,Fire bottle 2 switch (center panel),Center panel
+B,CNP_CENTER_FIRE_ENG_3_SW_1,Fire bottle 2 knob (center panel),Center panel
+B,CNP_CENTER_FIRE_ENG_3_SW_2,Fire bottle 2 switch (center panel),Center panel
+B,CNP_CENTER_FIRE_PULL_1,Fire shutoff 1 switch,Center panel
+B,CNP_CENTER_FIRE_PULL_2,Fire shutoff 2 switch,Center panel
+B,CNP_CENTER_FIRE_PULL_3,Fire shutoff 3 switch,Center panel
+B,CNP_CENTER_FUEL_QTY_SW,Fuel quantity switch,Center panel
+B,CNP_CENTER_GEAR_EMERG_HANDLE,Emergency gear handle switch,Center panel
+B,CNP_CENTER_GEAR_EMERG_HANDLE_LOCK,Emergency gear handle lock switch,Center panel
+B,CNP_CENTER_GEAR_TEST_BTN,Gear test button,Center panel
+B,CNP_CENTER_HYD_TEST_BTN,Brake test button,Center panel
+B,CNP_CENTER_MPU_DRV_SW,Center MPU drive switch,Center panel
+B,CNP_CENTER_PARKING_BRAKE_LEVER,Parking brake switch,Center panel
+B,CNP_CENTER_PARKING_BRAKE_LEVER_RED,Emergency brake button,Center panel
+B,CNP_CENTER_PILOT_ADI_HSI_SW,Center pilot ADI HSI switch,Center panel
+B,CNP_CENTER_PRESS_KNOB,Center pressurization knob,Center panel
+B,CNP_CENTER_PRESS_MODE_BTN,Pressure mode knob,Center panel
+B,CNP_CENTER_STBY_PUMP_SW,Standby pump knob,Center panel
+B,CNP_CENTER_TEMP_CREW_AM_SW,Temperature mode crew switch,Center panel
+B,CNP_CENTER_TEMP_CREW_CH_SW,Manual temperature mixer crew knob,Center panel
+B,CNP_CENTER_TEMP_CREW_KNOB,Cockpit temperature knob,Center panel
+B,CNP_CENTER_TEMP_PASS_AM_SW,Temperature mode cabin switch,Center panel
+B,CNP_CENTER_TEMP_PASS_CH_SW,Manual temperature mixer cabin knob,Center panel
+B,CNP_CENTER_TEMP_PASS_KNOB,Cabin temperature knob,Center panel
+B,CNP_CENTER_TEST_BTN,Fire test button,Center panel
+B,CNP_GROSSWEIGHT_KNOB,Reset used fuel counter knob (center panel),Center panel
+B,CNP_KNOB_ALT_SEL,Pilot pfd screw 4 knob,Center panel
+B,CNP_KNOB_STBY_ADI_ROT,Caging button (center panel),Center panel
+B,CNP_PILOT_STBY_ADI_KNOB,Pilot stby ADI button,Center panel
+B,CNP_PPH_ENG1_KNOB,Reset used fuel counter knob (center panel),Center panel
+B,CNP_PPH_ENG2_KNOB,Reset used fuel counter knob (center panel),Center panel
+B,CNP_PPH_ENG3_KNOB,Reset used fuel counter knob (center panel),Center panel
+B,CNP_RESET_USED_FUEL_BUTTON,Reset used fuel counter knob (center panel),Center panel
+B,CNP_SWITCH_ALT_SEL_INC,Increment knob,Center panel
+B,CNP_SWITCH_STBY_ADI_PUSH,Caging button (center panel),Center panel
+B,CNP_THRUST_REVERSER_SW,Emergency reverser stow switch,Center panel
+B,CNP_THRUST_REVERSER_SW_COVER,Thrust reverser switch cover switch,Center panel
+B,CP_AUDIO_VOL_KNOB,Volume knob (copilot side),Copilot side panel
+B,CP_COPILOT_AIRSPEED_KNOB,Copilot target speed bug knob,Copilot side panel
+B,CP_COPILOT_ATT_HDG_BTN,Copilot ATT heading button,Copilot side panel
+B,CP_COPILOT_AUDIO_CPIT_BTN,Copilot cockpit switch,Copilot side panel
+B,CP_COPILOT_AUDIO_EMG_BTN,Copilot emergency switch,Copilot side panel
+B,CP_COPILOT_AUDIO_FILTR_BTN,Copilot filter switch (copilot side),Copilot side panel
+B,CP_COPILOT_AUDIO_FILT_BTN,Copilot filter switch (copilot side),Copilot side panel
+B,CP_COPILOT_AUDIO_FM_BTN,Copilot FM switch,Copilot side panel
+B,CP_COPILOT_AUDIO_HF1_BTN,Copilot HF1 switch,Copilot side panel
+B,CP_COPILOT_AUDIO_HF2_BTN,Copilot HF2 switch,Copilot side panel
+B,CP_COPILOT_AUDIO_MASK_BTN,Copilot mask switch,Copilot side panel
+B,CP_COPILOT_AUDIO_MIC_CABIN_BTN,Copilot mic cabin switch,Copilot side panel
+B,CP_COPILOT_AUDIO_MIC_FM_BTN,Copilot mic FM switch,Copilot side panel
+B,CP_COPILOT_AUDIO_MIC_HF1_BTN,Copilot mic HF1 switch,Copilot side panel
+B,CP_COPILOT_AUDIO_MIC_HF2_BTN,Copilot mic HF2 switch,Copilot side panel
+B,CP_COPILOT_AUDIO_MIC_PAGE_BTN,Copilot mic page switch,Copilot side panel
+B,CP_COPILOT_AUDIO_MKR2_BTN,Copilot marker 2 switch,Copilot side panel
+B,CP_COPILOT_AUDIO_SKP_BTN,Copilot skip switch,Copilot side panel
+B,CP_COPILOT_AUDIO_ST_BTN,Copilot ST switch,Copilot side panel
+B,CP_COPILOT_BELOW_GS_BTN,Copilot below glideslope button,Copilot side panel
+B,CP_COPILOT_DAVTRON_DIM_SW,Copilot bright-dim knob,Copilot side panel
+B,CP_COPILOT_DAVTRON_SET_SW,Copilot min-sec set knob,Copilot side panel
+B,CP_COPILOT_DAVTRON_TIME_SW,Copilot time set knob,Copilot side panel
+B,CP_COPILOT_DAVTRON_ZERO_SW,Copilot zero set knob,Copilot side panel
+B,CP_COPILOT_EBATT_BTN,Copilot electronic battery switch,Copilot side panel
+B,CP_COPILOT_EFIS_TEST_BTN,Copilot EFIS test button,Copilot side panel
+B,CP_COPILOT_ELT_SW,Copilot ELT switch,Copilot side panel
+B,CP_COPILOT_FLOOR_SW,Copilot floor knob,Copilot side panel
+B,CP_COPILOT_GALLEY_BTN,Copilot galley power switch,Copilot side panel
+B,CP_COPILOT_OXY_MASK_TEST,Copilot oxygen mask test button,Copilot side panel
+B,CP_COPILOT_PITOT_KNOB,Copilot static source switch,Copilot side panel
+B,CP_COPILOT_PULL_UP_BTN,Copilot pull up button,Copilot side panel
+B,CP_COPILOT_SIDE_IRS_TEST_BTN,Copilot IRS test button,Copilot side panel
+B,CP_COPILOT_TAS_BACK_BTN,Copilot display ambient temperature button,Copilot side panel
+B,CP_COPILOT_TAS_DIM_KNOB,Copilot tas dim knob,Copilot side panel
+B,CP_COPILOT_VSI_AB_BTN,Copilot above/below switch,Copilot side panel
+B,CP_COPILOT_VSI_R_BTN,Copilot range switch,Copilot side panel
+B,CP_COSIDE_SYS_APU_BUTTON_BLEEDAIR,APU bleed air button,Copilot side panel
+B,CP_COSIDE_SYS_APU_BUTTON_GEN,APU gen button,Copilot side panel
+B,CP_COSIDE_SYS_APU_BUTTON_MASTER,APU master button,Copilot side panel
+B,CP_COSIDE_SYS_APU_BUTTON_START,APU start button,Copilot side panel
+B,CP_COSIDE_SYS_APU_BUTTON_STOP,APU stop button,Copilot side panel
+B,CP_CTL_CP,CTL cp switch,Copilot side panel
+B,CP_IRS_MODE_KNOB,Mode knob (copilot side),Copilot side panel
+B,CP_OXY_MODE_KNOB,OXY mode knob,Copilot side panel
+B,CP_OXY_RESET_BUTTON,Oxygen reset button,Copilot side panel
+B,GENERAL_COCKPIT_DOOR_HANDLE,Cockpit door switch (general),Cockpit general
+B,GENERAL_COCKPIT_DOOR_HANDLE_2,Cockpit door switch (general),Cockpit general
+B,GENERAL_COPILOT_ARM_REST,Copilot armrest switch (general),Cockpit general
+B,GENERAL_COPILOT_ARM_REST_R,Copilot armrest switch (general),Cockpit general
+B,GENERAL_COPILOT_WINDOW_BLIND,Copilot window blind switch,Cockpit general
+B,GENERAL_IPHONE,Iphone switch,Cockpit general
+B,GENERAL_PILOT_ARM_REST,Pilot armrest switch (general),Cockpit general
+B,GENERAL_PILOT_ARM_REST_L,Pilot armrest switch (general),Cockpit general
+B,GENERAL_PILOT_WINDOW_BLIND,Pilot window blind switch,Cockpit general
+B,GENERAL_TOW_SIGN_SHOW,Show tow sign switch,Cockpit general
+B,GENERAL_TOW_SIGN_STOW,Stow tow sign switch,Cockpit general
+B,HANDLING_BUTTON_COPILOT_AP_DISC,Copilot AP disengage button,Yoke / flight controls
+B,HANDLING_BUTTON_PILOT_AP_DISC,Pilot AP disengage button,Yoke / flight controls
+B,HANDLING_ElevTrim,Elevator TRIM switch (pilot yoke) knob,Yoke / flight controls
+B,HANDLING_ElevTrimCP,Elevator TRIM switch (copilot yoke) knob,Yoke / flight controls
+B,HANDLING_YOKE_COPILOT_GA_BTN,Copilot go around button,Yoke / flight controls
+B,HANDLING_YOKE_COPILOT_SYNC_BTN,Sync button (copilot yoke) button,Yoke / flight controls
+B,HANDLING_YOKE_PILOT_GA_BTN,Pilot go around button,Yoke / flight controls
+B,HANDLING_YOKE_PILOT_SYNC_BTN,Sync button (pilot yoke) button,Yoke / flight controls
+B,OVHD_ANTI_ICE_AIR_FRAME_SW,AI airframe knob,Overhead
+B,OVHD_ANTI_ICE_ENG_1_SW,AI Engine 1 switch,Overhead
+B,OVHD_ANTI_ICE_ENG_2_SW,AI Engine 2 switch,Overhead
+B,OVHD_ANTI_ICE_ENG_3_SW,AI Engine 3 switch,Overhead
+B,OVHD_BLEED_AIR_BAG_SW,Bleed air baggage comp switch,Overhead
+B,OVHD_BLEED_AIR_CABIN_SW,Bleed air cabin knob,Overhead
+B,OVHD_BLEED_AIR_CREW_SW,Bleed air cockpit knob,Overhead
+B,OVHD_BLEED_AIR_HP_1_SW,Bleed air hp1 switch,Overhead
+B,OVHD_BLEED_AIR_HP_2_SW,Bleed air hp2 switch,Overhead
+B,OVHD_BLEED_AIR_HP_3_SW,Bleed air hp3 switch,Overhead
+B,OVHD_BLEED_AIR_ISOLATION_SW,Bleed air isolation switch,Overhead
+B,OVHD_BLEED_AIR_PRV_SW,Bleed air pressure relief valve switch,Overhead
+B,OVHD_COPILOT_CTRSD_KNOB,Copilot side center light knob,Overhead
+B,OVHD_COPILOT_DIGITS_KNOB,Copilot digits light knob,Overhead
+B,OVHD_COPILOT_INST_KNOB,Copilot instrument light knob,Overhead
+B,OVHD_COPILOT_MAP,Adjust copilot reading light brightness switch,Overhead
+B,OVHD_COPILOT_OVHD_KNOB,Copilot overhead light knob,Overhead
+B,OVHD_COPILOT_WIPER_SW,Copilot wiper right knob,Overhead
+B,OVHD_DC_SYS_BAT_1_BTN,Bat 1 button,Overhead
+B,OVHD_DC_SYS_BAT_2_BTN,Bat 2 button,Overhead
+B,OVHD_DC_SYS_FLIGHT_KNOB,Bus tie switch,Overhead
+B,OVHD_DC_SYS_GEN_1_BTN,Gen 1 button,Overhead
+B,OVHD_DC_SYS_GEN_1_SW,Generator 1 switch,Overhead
+B,OVHD_DC_SYS_GEN_2_BTN,Gen 2 button,Overhead
+B,OVHD_DC_SYS_GEN_2_SW,Generator 2 switch,Overhead
+B,OVHD_DC_SYS_GEN_3_BTN,Gen 3 button,Overhead
+B,OVHD_DC_SYS_GEN_3_SW,Generator 3 switch,Overhead
+B,OVHD_ENG_AIR_START_1_SW,Engine 1 ignition mode knob,Overhead
+B,OVHD_ENG_AIR_START_2_SW,Engine 2 ignition mode knob,Overhead
+B,OVHD_ENG_AIR_START_3_SW,Engine 3 ignition mode knob,Overhead
+B,OVHD_ENG_CMPTR_1_SW,Engine 1 computer switch,Overhead
+B,OVHD_ENG_CMPTR_2_SW,Engine 2 computer switch,Overhead
+B,OVHD_ENG_CMPTR_3_SW,Engine 3 computer switch,Overhead
+B,OVHD_ENG_EXT_PRW_SW,DC power knob,Overhead
+B,OVHD_ENG_SPR_1_LT,Engine 1 SPR button,Overhead
+B,OVHD_ENG_SPR_2_LT,Engine 2 SPR button,Overhead
+B,OVHD_ENG_SPR_3_LT,Engine 3 SPR button,Overhead
+B,OVHD_ENG_START_1_BTN,Engine 1 starter button,Overhead
+B,OVHD_ENG_START_2_BTN,Engine 2 starter button,Overhead
+B,OVHD_ENG_START_3_BTN,Engine 3 starter button,Overhead
+B,OVHD_EXT_LT_ANTICOL_SW,Anti-collision light knob,Overhead
+B,OVHD_EXT_LT_NAV_SW,Logo & NAV lights knob,Overhead
+B,OVHD_EXT_LT_TAXI_SW,EXT light taxi switch,Overhead
+B,OVHD_FUEL_XFR_PUMP_1_SW,Transfer pump 1 switch,Overhead
+B,OVHD_FUEL_XFR_PUMP_2_SW,Transfer pump 2 switch,Overhead
+B,OVHD_FUEL_XFR_PUMP_3_SW,Transfer pump 3 switch,Overhead
+B,OVHD_INT_LT_BELTS,Seatbelts light switch,Overhead
+B,OVHD_INT_LT_EMRG_SW,Emergency light knob,Overhead
+B,OVHD_INT_LT_SMOKING,No smoking sign switch,Overhead
+B,OVHD_INT_LT_SMOKING_SW,Smoking sign light switch,Overhead
+B,OVHD_INVERTERS_ACBUS_1_LT_EMIS,AC bus 1 voltmeter button,Overhead
+B,OVHD_INVERTERS_ACVUS_2_LT_EMIS,AC bus 2 voltmeter button,Overhead
+B,OVHD_INVERTERS_AC_1_SW,AC inverter 1 switch,Overhead
+B,OVHD_INVERTERS_AC_2_SW,AC inverter 2 switch,Overhead
+B,OVHD_INVERTERS_STBY_SW,AC standby inverter knob,Overhead
+B,OVHD_PILOT_CTRSD_KNOB,Pilot center side light knob,Overhead
+B,OVHD_PILOT_DIGITS_KNOB,Pilot digits light knob,Overhead
+B,OVHD_PILOT_INST_KNOB,Pilot instrument light knob,Overhead
+B,OVHD_PILOT_MAP,Adjust pilot reading light brightness switch,Overhead
+B,OVHD_PILOT_OVHD_KNOB,Pilot glareshield light knob,Overhead
+B,OVHD_PILOT_WIPER_SW,Pilot wiper left knob,Overhead
+B,OVHD_PITOT_COPILOT_SW,Copilot pitot heat right switch,Overhead
+B,OVHD_PITOT_PILOT_SW,Pilot pitot heat left switch,Overhead
+B,OVHD_SYS_ELEC_BUTTON_EFIS1,EFIS 1 master switch,Overhead
+B,OVHD_SYS_ELEC_BUTTON_EFIS2,EFIS 2 master switch,Overhead
+B,OVHD_SYS_ELEC_BUTTON_RADIO,Radio master switch,Overhead
+B,OVHD_WINDSHIELD_COPILOT_SW,Windshield heat copilot side knob,Overhead
+B,OVHD_WINDSHIELD_PILOT_SW,Windshield heat pilot side knob,Overhead
+B,OVHD_WINDSHIELD_SIDE_SW,Windshield heat side windows switch,Overhead
+B,PDSTL_ADC_12_BTN,ADC 1/2 switch,Pedestal
+B,PDSTL_AILERON_RSW,Aileron knob,Pedestal
+B,PDSTL_COPILOT_AP_2NDCRS_BTN,Copilot EFIS 2nd course button,Pedestal
+B,PDSTL_COPILOT_AP_BRG_BTN,Copilot EFIS bearing button (pedestal),Pedestal
+B,PDSTL_COPILOT_AP_COURSE_BTN,Copilot EFIS course button,Pedestal
+B,PDSTL_COPILOT_AP_HSI_BTN,Copilot EFIS HSI mode button (pedestal),Pedestal
+B,PDSTL_COPILOT_AP_RATEST_BTN,Copilot EFIS rate test button (pedestal),Pedestal
+B,PDSTL_COPILOT_AP_RDR_BTN,Copilot EFIS radar button (pedestal),Pedestal
+B,PDSTL_CRZ_SPD_ASSIST_TOGGLE,Cruise speed assist toggle (hidden clickspot) button,Pedestal
+B,PDSTL_CUTOFF_ENG1,Engine 1 stop/idle switch,Pedestal
+B,PDSTL_CUTOFF_ENG2,Engine 2 stop/idle switch,Pedestal
+B,PDSTL_CUTOFF_ENG3,Engine 3 stop/idle switch,Pedestal
+B,PDSTL_EFIS_LEFT_BTN_BRG,Pilot EFIS bearing button (pedestal),Pedestal
+B,PDSTL_EFIS_LEFT_BTN_ET,Pilot EFIS elapsed time button,Pedestal
+B,PDSTL_EFIS_LEFT_BTN_HSIMODE,Pilot EFIS HSI mode button (pedestal),Pedestal
+B,PDSTL_EFIS_LEFT_BTN_NAVDTA,Pilot EFIS nav data button,Pedestal
+B,PDSTL_EFIS_LEFT_BTN_RADAR,Pilot EFIS radar button (pedestal),Pedestal
+B,PDSTL_EFIS_LEFT_BTN_RATEST,Pilot EFIS rate test button (pedestal),Pedestal
+B,PDSTL_EFIS_RIGHT_BTN_BRG,Copilot EFIS bearing button (pedestal),Pedestal
+B,PDSTL_EFIS_RIGHT_BTN_ET,Copilot EFIS elapsed time button,Pedestal
+B,PDSTL_EFIS_RIGHT_BTN_HSIMODE,Copilot EFIS HSI mode button (pedestal),Pedestal
+B,PDSTL_EFIS_RIGHT_BTN_NAVDTA,Copilot EFIS nav data button,Pedestal
+B,PDSTL_EFIS_RIGHT_BTN_RADAR,Copilot EFIS radar button (pedestal),Pedestal
+B,PDSTL_EFIS_RIGHT_BTN_RATEST,Copilot EFIS rate test button (pedestal),Pedestal
+B,PDSTL_EHSI_ET_1_BTN,Elapsed time button (pedestal),Pedestal
+B,PDSTL_EHSI_ET_2_BTN,Elapsed time button (pedestal),Pedestal
+B,PDSTL_EHSI_NAV_DATA_1_BTN,NAV data button (pedestal),Pedestal
+B,PDSTL_EHSI_NAV_DATA_2_BTN,NAV data button (pedestal),Pedestal
+B,PDSTL_MACH_TRIM_SW,Mach TRIM switch,Pedestal
+B,PDSTL_MAG_TRUE_1_BTN,Pilot EFIS mag/true switch,Pedestal
+B,PDSTL_MAG_TRUE_2_BTN,Copilot EFIS mag/true switch,Pedestal
+B,PDSTL_PILOT_AP_2NDCRS_BTN,Pilot EFIS 2nd course button,Pedestal
+B,PDSTL_PILOT_AP_BRG_BTN,Pilot EFIS bearing button (pedestal),Pedestal
+B,PDSTL_PILOT_AP_COURSE_BTN,Pilot EFIS course button,Pedestal
+B,PDSTL_PILOT_AP_HSI_BTN,Pilot EFIS HSI mode button (pedestal),Pedestal
+B,PDSTL_PILOT_AP_RATEST_BTN,Pilot EFIS rate test button (pedestal),Pedestal
+B,PDSTL_PILOT_AP_RDR_BTN,Pilot EFIS radar button (pedestal),Pedestal
+B,PDSTL_RUDDER_RSW,Rudder knob,Pedestal
+B,PDSTL_SOUND_WARN_HORN_SILENCE,Sound warning horn silence button,Pedestal
+B,PDSTL_SYS_TEST_BUTTON_ADC_1,ADC 1 test button,Pedestal
+B,PDSTL_SYS_TEST_BUTTON_ADC_2,ADC 2 test button,Pedestal
+B,PDSTL_SYS_TEST_BUTTON_CABIN,Cabin test button,Pedestal
+B,PDSTL_SYS_TEST_BUTTON_STALL_1,Stall test 1 button,Pedestal
+B,PDSTL_SYS_TEST_BUTTON_STALL_2,Stall test 2 button,Pedestal
+B,PDSTL_TAIL_PLANE_SW_10,Emergency TRIM CB switch,Pedestal
+B,PP_AUDIO_VOL_KNOB,Volume knob (pilot side),Pilot side panel
+B,PP_CTL_PP,CTL pp switch,Pilot side panel
+B,PP_IRS_MODE_KNOB,Mode knob (pilot side),Pilot side panel
+B,PP_PILOT_AIRSPEED_KNOB,Pilot target speed bug knob,Pilot side panel
+B,PP_PILOT_ALT_DECAL,Pilot ALT decal switch,Pilot side panel
+B,PP_PILOT_AOA_KNOB,Pilot AOA knob,Pilot side panel
+B,PP_PILOT_ATT_HDG_BTN,Pilot ATT heading button,Pilot side panel
+B,PP_PILOT_AUDIO_CPIT_BTN,Pilot cockpit switch,Pilot side panel
+B,PP_PILOT_AUDIO_EMG_BTN,Pilot emergency switch,Pilot side panel
+B,PP_PILOT_AUDIO_FILTR_BTN,Pilot filter switch (pilot side),Pilot side panel
+B,PP_PILOT_AUDIO_FILT_BTN,Pilot filter switch (pilot side),Pilot side panel
+B,PP_PILOT_AUDIO_FM_BTN,Pilot FM switch,Pilot side panel
+B,PP_PILOT_AUDIO_HF1_BTN,Pilot HF1 switch,Pilot side panel
+B,PP_PILOT_AUDIO_HF2_BTN,Pilot HF2 switch,Pilot side panel
+B,PP_PILOT_AUDIO_MASK_BTN,Pilot mask switch,Pilot side panel
+B,PP_PILOT_AUDIO_MIC_CABIN_BTN,Pilot mic cabin switch,Pilot side panel
+B,PP_PILOT_AUDIO_MIC_FM_BTN,Pilot mic FM switch,Pilot side panel
+B,PP_PILOT_AUDIO_MIC_HF1_BTN,Pilot mic HF1 switch,Pilot side panel
+B,PP_PILOT_AUDIO_MIC_HF2_BTN,Pilot mic HF2 switch,Pilot side panel
+B,PP_PILOT_AUDIO_MIC_PAGE_BTN,Pilot mic page switch,Pilot side panel
+B,PP_PILOT_AUDIO_MKR2_BTN,Pilot marker 2 switch,Pilot side panel
+B,PP_PILOT_AUDIO_SKP_BTN,Pilot skip switch,Pilot side panel
+B,PP_PILOT_AUDIO_ST_BTN,Pilot ST switch,Pilot side panel
+B,PP_PILOT_BELOW_GS_BTN,Pilot below glideslope button,Pilot side panel
+B,PP_PILOT_CVR_TEST_BTN,Pilot CVR test button,Pilot side panel
+B,PP_PILOT_DAVTRON_DIM_SW,Pilot bright-dim knob,Pilot side panel
+B,PP_PILOT_DAVTRON_SET_SW,Pilot min-sec set knob,Pilot side panel
+B,PP_PILOT_DAVTRON_TIME_SW,Pilot time set knob,Pilot side panel
+B,PP_PILOT_DAVTRON_ZERO_SW,Pilot zero set knob,Pilot side panel
+B,PP_PILOT_EFIS_TEST_BTN,Pilot EFIS test button,Pilot side panel
+B,PP_PILOT_FAKE_DECALS,Pilot fake decals switch,Pilot side panel
+B,PP_PILOT_FAKE_KNOBS,Pilot yaw damper master switch,Pilot side panel
+B,PP_PILOT_FLOOR_SW,Pilot floor switch,Pilot side panel
+B,PP_PILOT_HDG_DECAL,Pilot heading decal switch,Pilot side panel
+B,PP_PILOT_OXY_MASK_TEST,Pilot oxygen mask test button,Pilot side panel
+B,PP_PILOT_PFD_SCREW_2,Pilot autopilot master switch,Pilot side panel
+B,PP_PILOT_PITOT_KNOB,Pilot static source switch,Pilot side panel
+B,PP_PILOT_PULL_UP_BTN,Pilot pull up button,Pilot side panel
+B,PP_PILOT_SIDE_IRS_TEST_BTN,Pilot IRS test button,Pilot side panel
+B,PP_PILOT_VSI_AB_BTN,Pilot above/below button,Pilot side panel
+B,PP_PILOT_VSI_R_BTN,Pilot range button,Pilot side panel
+B,PP_PILOT_VS_IAS_DECAL,Pilot VS IAS decal switch,Pilot side panel
+H,CTL_GNSXLS_1_BUTTON_ON,Number,GNS pilot — power on,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_BUTTON_OFF,Number,GNS pilot — power off (long press),CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_BUTTON_BRT_PUSHED,Number,GNS pilot — brightness hold,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_BUTTON_BRT_RELEASED,Number,GNS pilot — brightness release,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_FPL,Number,GNS pilot — FPL button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_NAV,Number,GNS pilot — NAV button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_DIRECTTO,Number,GNS pilot — Direct-to button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_PLAN,Number,GNS pilot — Plan button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_HOLD,Number,GNS pilot — Hold / POS fix button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_AFIS,Number,GNS pilot — AFIS button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_VNAV,Number,GNS pilot — VNAV button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_MSG,Number,GNS pilot — MSG button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_PRV,Number,GNS pilot — Page prev button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_NXT,Number,GNS pilot — Page next button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_ENTER,Number,GNS pilot — Enter button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_BACK,Number,GNS pilot — Back (CLR) button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_L1,Number,GNS pilot — L1 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_L2,Number,GNS pilot — L2 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_L3,Number,GNS pilot — L3 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_L4,Number,GNS pilot — L4 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_L5,Number,GNS pilot — L5 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_R1,Number,GNS pilot — R1 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_R2,Number,GNS pilot — R2 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_R3,Number,GNS pilot — R3 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_R4,Number,GNS pilot — R4 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_R5,Number,GNS pilot — R5 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_0,Number,GNS pilot — Digit 0 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_1,Number,GNS pilot — Digit 1 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_2,Number,GNS pilot — Digit 2 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_3,Number,GNS pilot — Digit 3 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_4,Number,GNS pilot — Digit 4 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_5,Number,GNS pilot — Digit 5 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_6,Number,GNS pilot — Digit 6 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_7,Number,GNS pilot — Digit 7 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_8,Number,GNS pilot — Digit 8 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_9,Number,GNS pilot — Digit 9 button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_A,Number,GNS pilot — A button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_B,Number,GNS pilot — B button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_C,Number,GNS pilot — C button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_D,Number,GNS pilot — D button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_E,Number,GNS pilot — E button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_F,Number,GNS pilot — F button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_G,Number,GNS pilot — G button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_H,Number,GNS pilot — H button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_I,Number,GNS pilot — I button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_J,Number,GNS pilot — J button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_K,Number,GNS pilot — K button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_L,Number,GNS pilot — L button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_M,Number,GNS pilot — M button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_N,Number,GNS pilot — N button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_O,Number,GNS pilot — O button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_P,Number,GNS pilot — P button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_Q,Number,GNS pilot — Q button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_R,Number,GNS pilot — R button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_S,Number,GNS pilot — S button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_T,Number,GNS pilot — T button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_U,Number,GNS pilot — U button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_V,Number,GNS pilot — V button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_W,Number,GNS pilot — W button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_X,Number,GNS pilot — X button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_Y,Number,GNS pilot — Y button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_Z,Number,GNS pilot — Z button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_SP,Number,GNS pilot — Space button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_HSTG,Number,GNS pilot — # button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_PLUSMIN,Number,GNS pilot — +/- button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_1_KEY_ASTERISK,Number,GNS pilot — * button,CTL Falcon 50 GNS — GNS pilot
+H,CTL_GNSXLS_2_BUTTON_ON,Number,GNS copilot — power on,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_BUTTON_OFF,Number,GNS copilot — power off (long press),CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_BUTTON_BRT_PUSHED,Number,GNS copilot — brightness hold,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_BUTTON_BRT_RELEASED,Number,GNS copilot — brightness release,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_FPL,Number,GNS copilot — FPL button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_NAV,Number,GNS copilot — NAV button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_DIRECTTO,Number,GNS copilot — Direct-to button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_PLAN,Number,GNS copilot — Plan button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_HOLD,Number,GNS copilot — Hold / POS fix button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_AFIS,Number,GNS copilot — AFIS button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_VNAV,Number,GNS copilot — VNAV button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_MSG,Number,GNS copilot — MSG button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_PRV,Number,GNS copilot — Page prev button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_NXT,Number,GNS copilot — Page next button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_ENTER,Number,GNS copilot — Enter button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_BACK,Number,GNS copilot — Back (CLR) button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_L1,Number,GNS copilot — L1 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_L2,Number,GNS copilot — L2 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_L3,Number,GNS copilot — L3 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_L4,Number,GNS copilot — L4 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_L5,Number,GNS copilot — L5 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_R1,Number,GNS copilot — R1 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_R2,Number,GNS copilot — R2 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_R3,Number,GNS copilot — R3 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_R4,Number,GNS copilot — R4 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_R5,Number,GNS copilot — R5 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_0,Number,GNS copilot — Digit 0 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_1,Number,GNS copilot — Digit 1 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_2,Number,GNS copilot — Digit 2 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_3,Number,GNS copilot — Digit 3 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_4,Number,GNS copilot — Digit 4 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_5,Number,GNS copilot — Digit 5 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_6,Number,GNS copilot — Digit 6 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_7,Number,GNS copilot — Digit 7 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_8,Number,GNS copilot — Digit 8 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_9,Number,GNS copilot — Digit 9 button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_A,Number,GNS copilot — A button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_B,Number,GNS copilot — B button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_C,Number,GNS copilot — C button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_D,Number,GNS copilot — D button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_E,Number,GNS copilot — E button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_F,Number,GNS copilot — F button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_G,Number,GNS copilot — G button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_H,Number,GNS copilot — H button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_I,Number,GNS copilot — I button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_J,Number,GNS copilot — J button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_K,Number,GNS copilot — K button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_L,Number,GNS copilot — L button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_M,Number,GNS copilot — M button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_N,Number,GNS copilot — N button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_O,Number,GNS copilot — O button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_P,Number,GNS copilot — P button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_Q,Number,GNS copilot — Q button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_R,Number,GNS copilot — R button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_S,Number,GNS copilot — S button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_T,Number,GNS copilot — T button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_U,Number,GNS copilot — U button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_V,Number,GNS copilot — V button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_W,Number,GNS copilot — W button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_X,Number,GNS copilot — X button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_Y,Number,GNS copilot — Y button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_Z,Number,GNS copilot — Z button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_SP,Number,GNS copilot — Space button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_HSTG,Number,GNS copilot — # button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_PLUSMIN,Number,GNS copilot — +/- button,CTL Falcon 50 GNS — GNS copilot
+H,CTL_GNSXLS_2_KEY_ASTERISK,Number,GNS copilot — * button,CTL Falcon 50 GNS — GNS copilot

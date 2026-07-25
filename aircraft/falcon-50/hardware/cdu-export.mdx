@@ -1,0 +1,65 @@
+---
+title: "CDU Display Export"
+description: "Read the GNS-XLS CDU display contents out of the simulator to drive hardware CDUs such as WinCtrl units."
+---
+
+The contents of the GNS-XLS displays can be read from outside the simulator. This lets you mirror the on-screen CDU pages onto physical hardware such as WinCtrl CDUs.
+
+The display content is written into two SimConnect Data Areas:
+
+| Data Area | Display |
+| --- | --- |
+| `FA50_CDU_LEFT` | Left GNS-XLS display |
+| `FA50_CDU_RIGHT` | Right GNS-XLS display |
+
+<Note>
+  The Data Areas are only populated once the GNS-XLS units have been turned on and are powered in the simulator.
+</Note>
+
+## Data layout
+
+**Total size**: 670 bytes
+
+Each Data Area starts with 10 **rows**, followed by the **arrows area**. There is no padding between them.
+
+To read a specific `x`, `y` coordinate from the display:
+
+- `y` selects the row. Each row is `22 * 3` bytes long (22 cells of 3 bytes each), so multiply `y` by `22 * 3`.
+- Add `x * 3` for the in-row offset.
+
+For example, to read the cell at `y = 3`, `x = 6`:
+
+```python
+byte_offset = (y * (22 * 3)) + (x * 3)
+symbol, color, selected = data_area[byte_offset], data_area[byte_offset + 1], data_area[byte_offset + 2]
+```
+
+### Row
+
+A row is a data range containing exactly 22 **cells**.
+
+### Cell
+
+A cell contains 3 bytes describing a single character:
+
+| Byte | Contents |
+| --- | --- |
+| 1 | The ASCII character to display, or a `0` byte denoting a space. |
+| 2 | A `uint8` color value for the character (see [Colors](#colors)). |
+| 3 | A boolean indicating whether the character is part of an active selection (yellow background). |
+
+#### Colors
+
+| Value | Color |
+| --- | --- |
+| `0` | White |
+| `1` | Red |
+| `2` | Blue |
+| `3` | Green |
+| `4` | Yellow |
+
+### Arrows area
+
+This is a 10-byte area of booleans indicating whether each of the 10 GNS-XLS select-key arrows (`<` or `>`) is shown.
+
+The bytes alternate left, right, left, right, and so on — so byte `0` = LSK1, byte `1` = RSK1, byte `2` = LSK2, byte `3` = RSK2, and so on. This gives 10 booleans for the 5 rows.

@@ -241,7 +241,9 @@
                 "group": "Hardware",
                 "pages": [
                   "aircraft/falcon-50/hardware/key-bindings",
-                  "aircraft/falcon-50/hardware/throttle-setup"
+                  "aircraft/falcon-50/hardware/throttle-setup",
+                  "aircraft/falcon-50/hardware/custom-events",
+                  "aircraft/falcon-50/hardware/cdu-export"
                 ]
               },
               {
