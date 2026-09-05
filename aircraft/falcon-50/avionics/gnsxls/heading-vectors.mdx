@@ -1,0 +1,112 @@
+---
+title: "Heading Vectors"
+description: "Flying assigned headings and automatically intercepting a course using the HDG key on the GNS-XLS while staying coupled in NAV."
+---
+
+The Heading Vector function is accessed with the `HDG` key. It lets the FMS fly an assigned **heading** for you and, when you want, automatically roll onto and track a **course** — all while the autopilot stays coupled in **NAV (FMS)**. Use it for ATC radar vectors, joining a leg between two waypoints, or intercepting a final approach course.
+
+<Note>
+You do **not** switch between the autopilot's HDG and NAV modes to use this. You stay coupled in **NAV (FMS)** the whole time — the FMS flies the heading, then transitions to the course by itself. This mirrors the real aircraft.
+</Note>
+
+## Heading modes
+
+The **HEADING MODE** line is cycled with the `BACK` key and offers three modes:
+
+| Mode | Function |
+|------|----------|
+| **HDG SELECT** | Fly a heading and keep flying it (no automatic course join). Good for open-ended vectors. |
+| **INTERCEPT** | Fly a heading until it intercepts a chosen course, then automatically join and track it. |
+| **CANCEL** | Turn heading mode off and return to the flight plan. |
+
+<Note>
+A **?** after a mode word means it is not active yet. Press the `ENTER` key to activate it.
+</Note>
+
+## Flying a heading (ATC vectors)
+
+1. Confirm the autopilot is coupled in **NAV**.
+2. Press the `HDG` key. The cursor is positioned over the heading field.
+3. Insert the assigned heading (e.g. `250`).
+
+<Note>
+Use an `R` or `L` prefix only for a turn of more than 180° (e.g. `L250`) to force the correct turn direction. Otherwise leave it off.
+</Note>
+
+4. Press the `ENTER` key. The cursor moves to the mode line, which displays **HDG SELECT?**.
+5. Press the `ENTER` key again. The aircraft turns to and holds the heading, and **HDG SELECT** is displayed on the **NAV** page.
+
+To change the heading later, press the `HDG` key, insert the new heading, and press the `ENTER` key. It takes effect immediately.
+
+## Intercepting a course between two waypoints
+
+1. Confirm the autopilot is coupled in **NAV**, flying (or about to fly) an assigned heading.
+2. Press the `HDG` key, insert the heading, and press the `ENTER` key.
+3. Press the `BACK` key to display **INTERCEPT?**, then press the `ENTER` key. The cursor moves to the **TO** field.
+4. Press the `BACK` key to step through your flight plan to the waypoint you want to fly toward (or type its name), then press the `ENTER` key.
+5. **DTK** shows the course. Leave it for the leg's own course, or insert a different course to intercept, then press the `ENTER` key.
+6. An **OK? ENTER** prompt appears — press the `ENTER` key.
+
+The aircraft flies the heading, and when it reaches the course it rolls on and tracks it, then continues the flight plan.
+
+<Note>
+If the geometry will not work, an intercept message is displayed. See [Intercept messages](#intercept-messages) below.
+</Note>
+
+## Intercepting a final approach course
+
+The procedure is the same as intercepting a course, using the **FAF** as the target.
+
+1. Confirm the autopilot is coupled in **NAV** on the ATC-assigned heading.
+2. Press the `HDG` key, insert the heading, and press the `ENTER` key.
+3. Press the `BACK` key to display **INTERCEPT?**, then press the `ENTER` key.
+4. Press the `BACK` key until the **FAF** waypoint is shown in the **TO** field, then press the `ENTER` key.
+5. In **DTK**, insert the published final approach course if it differs from the shown value, then press the `ENTER` key.
+6. An **OK? ENTER** prompt appears — press the `ENTER` key.
+
+The aircraft intercepts the final approach course and sequences toward the missed approach point.
+
+<Tip>
+Have the approach loaded in the flight plan first so the **FAF** is available to select.
+</Tip>
+
+## Canceling heading mode
+
+Use either method:
+
+- Press the `HDG` key, position the cursor over the mode line, press the `BACK` key to display **CANCEL?**, then press the `ENTER` key.
+- Perform a [Direct To](/aircraft/falcon-50/avionics/gnsxls/direct-to) with the `D→` key — this cancels heading mode automatically.
+
+## Intercept messages
+
+| Message | Meaning |
+|---------|---------|
+| *(no message)* | The course will be intercepted before the fix. |
+| **INTERCEPT BEYOND FIX** | On this heading you would cross the course past the fix. Pick a heading that turns you toward the course sooner. |
+| **NO COURSE INTERCEPT** | This heading takes you away from the course. Turn toward it. |
+| **NO ARC INTERCEPT** | (DME arc targets) The heading will not reach the arc. |
+
+## Known limitation
+
+You can intercept a course to a **waypoint that is in your flight plan** (or an airport via Direct To). You currently **cannot** enter a random off-plan fix or an arbitrary course to a point that is not in the plan.
+
+<Note>
+Workaround: add the fix to the flight plan first, then intercept it.
+</Note>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Do I need to touch the autopilot HDG button?">
+    No. Stay in **NAV**. The FMS flies the heading for you through the HDG page.
+  </Accordion>
+  <Accordion title="What's the difference between this and the autopilot's own HDG mode?">
+    The autopilot HDG mode flies the heading bug and ignores the FMS. The HDG page keeps you coupled to the FMS so it can automatically join the course afterwards. For a clean automatic intercept, use the HDG page in **NAV**.
+  </Accordion>
+  <Accordion title="R or L — when do I need it?">
+    Only when the turn is more than 180° from your current heading, to force the correct turn direction. Otherwise leave it off.
+  </Accordion>
+  <Accordion title="Nothing happened when I entered a heading.">
+    Make sure the autopilot is coupled in **NAV** and that you pressed the `ENTER` key on the mode line (a **?** means the mode is not active yet).
+  </Accordion>
+</AccordionGroup>
