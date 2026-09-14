@@ -198,6 +198,7 @@
                       "aircraft/falcon-50/avionics/gnsxls/parallel-course",
                       "aircraft/falcon-50/avionics/gnsxls/vnav",
                       "aircraft/falcon-50/avionics/gnsxls/rnav-approach",
+                      "aircraft/falcon-50/avionics/gnsxls/missed-approach",
                       "aircraft/falcon-50/avionics/gnsxls/moving-map"
                     ]
                   }

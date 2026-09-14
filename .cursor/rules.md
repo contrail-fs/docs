@@ -103,7 +103,13 @@ Fix these before committing — Mintlify's deploy will fail the whole build on t
 
 ### Callout components
 
-Use callouts only when necessary. The docs shouldn't be cluttered with them — reserve callouts for information that genuinely needs to stand out from the surrounding prose. Prefer `<Note>` over `<Info>` for general supplementary information.
+Keep the layout as clean as possible — callouts break the reading flow and quickly clutter a page. Use them only when necessary:
+
+- Aim for **at most one or two callouts per page**. If a page needs more, most of them belong in plain prose, a table, or a list.
+- Reserve `<Warning>` for things that can break the flight plan, cancel a mode, or damage the aircraft if the reader gets them wrong.
+- Reserve `<Note>` / `<Tip>` for information the reader must not miss and that cannot be folded into the surrounding paragraph or step. Supplementary details, background, and "how it works" explanations go in normal prose.
+- Never wrap every clarification or side remark in a callout. A short sentence at the end of a step or paragraph reads better than a boxed note.
+- Prefer `<Note>` over `<Info>` for general supplementary information.
 
 #### Note - Additional helpful information
 

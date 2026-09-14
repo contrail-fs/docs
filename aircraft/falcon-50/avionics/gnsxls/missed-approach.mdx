@@ -1,0 +1,145 @@
+---
+title: "Missed Approach"
+description: "What the GNS-XLS does at the missed approach point, how to fly the published missed approach, and how to set up for another approach afterwards."
+---
+
+At the **MAP** (Missed Approach Point) the FMS stops sequencing and keeps flying the final approach course straight ahead until you tell it where to go. This page covers how to fly the published missed approach and how to set up for another approach afterwards. Procedures follow the GNS-XLS Pilot's Guide (Section 3, Approach Operations).
+
+## The short version
+
+- At the **MAP** the FMS suspends sequencing. Get to the missed approach with a `D→` (Direct To) to the first missed approach waypoint, or with the `HDG` page.
+- The approach is **not** removed when you go around. Its waypoints stay in the active flight plan, behind the aircraft.
+- Same approach again: `D→` to the **IAF** or **FAF**. The approach reappears on the **ACTIVE FPL** page and re-arms automatically.
+- Different approach, same airport: edit **RUNWAY** / **TYPE** / **TRANSITION** on the **APPROACH** page, then **SELECT**. No erase needed.
+- Approach at a different airport: **ERASE** the approach first, then select the new airport and approach.
+
+<Warning>
+Never perform a Direct To the **MAP** itself. The FMS treats it as a modification of the approach, posts **APRCH CANCELED**, and drops back to 1.0 nm terminal CDI scaling with no approach mode. If that happens, reselect the approach on the **APPROACH** page.
+</Warning>
+
+## How an approach is laid out in the flight plan
+
+When you load an approach, the FMS inserts its waypoints indented under the destination. Tags identify each waypoint's role:
+
+| Tag | Meaning |
+|-----|---------|
+| **IAF** | Initial Approach Fix — where the approach procedure begins |
+| **FAF** | Final Approach Fix — where the final descent to the runway begins |
+| **MAP** | Missed Approach Point — the last point at which you must decide to land or go around |
+| **++++++** | The missed approach "fence" that follows the MAP |
+| **HP** | Holding Pattern — the holding fix at the end of the missed approach |
+
+Waypoints after the fence are the published missed approach procedure (climb-out fixes and the holding fix).
+
+The fence matters. No automatic leg change ever happens across it. When you cross the MAP, the FMS does not sequence to the missed approach waypoints by itself — you have to do that manually. This is deliberate: the aircraft may be landing, and the FMS must not start turning toward the missed approach fix on its own.
+
+## Approach modes
+
+| Mode | Condition | CDI scaling |
+|------|-----------|-------------|
+| **Approach Armed** | Within 30 nm of the destination airport | 1.0 nm full scale (from 5.0 nm) |
+| **Approach Active** | From about 2 nm before the FAF | 0.3 nm full scale |
+
+## What happens at the MAP
+
+The FMS provides guidance along the final approach course to the MAP and then **continues on that track beyond the MAP**. Sequencing is suspended and the **TO** waypoint stays on the MAP. The missed approach waypoints are listed after the fence on the **ACTIVE FPL** page, without distance or ETA data.
+
+At this point you must maneuver the aircraft toward the missed approach waypoint — manually, with the `HDG` page, or with a Direct To. When initially executing a missed approach, use the FMS heading mode or fly the procedure manually to ensure proper track and turn direction. A Direct To from the MAP turns the shortest way to the fix, which may not match the published turn direction.
+
+## Flying the published missed approach
+
+Fly the aircraft first (pitch, power, gear, flaps). Then pick one of the two FMS options.
+
+### Option 1: Direct To the missed approach waypoint
+
+1. Press the `D→` key. The **DIRECT** page opens with the cursor over the current **TO** waypoint (the MAP).
+2. Position the cursor over the first missed approach waypoint (the first waypoint after the `++++++` fence).
+3. Press the `ENTER` key.
+
+The FMS sequences to that waypoint, and normal automatic leg changes resume through the rest of the missed approach, including the holding pattern if one is published.
+
+If the published missed approach specifies a turn direction and the Direct To would turn the other way, turn the aircraft toward the fix first (manually or with **HDG SELECT**), then perform the Direct To.
+
+### Option 2: Heading, then intercept a course to the missed approach waypoint
+
+Use this when the missed approach starts with a heading or the turn direction matters. See [Heading Vectors](/aircraft/falcon-50/avionics/gnsxls/heading-vectors) for details on the `HDG` page.
+
+1. Press the `HDG` key. Insert the heading with an `L` or `R` prefix to force the turn direction (e.g. `L150`), then press the `ENTER` key.
+2. Press the `ENTER` key again on **HDG SELECT?** if you want the turn to begin right away.
+3. Press the `BACK` key until **INTERCEPT?** is displayed, then press the `ENTER` key. The cursor moves to the **TO** field.
+4. Press the `BACK` key until the missed approach waypoint is displayed, then press the `ENTER` key.
+5. Insert the desired track to intercept to that waypoint in the **DTK** field.
+6. Press the `ENTER` key twice. The **NAV** page shows **HDG** and **DTK** in yellow. Re-engage the autopilot in **NAV** if required.
+
+The FMS flies the heading, intercepts the course, and tracks to the fix.
+
+## The approach is still in the flight plan
+
+Going around does not erase anything. The IAF, FAF, MAP and missed approach waypoints all remain in the active flight plan. The **ACTIVE FPL** page only lists waypoints ahead of the **TO** waypoint, so once you are heading to the missed approach fix the approach waypoints scroll out of view. They are not gone — the **DIRECT** page still lists them, because it always shows every active flight plan waypoint, ahead of or behind the aircraft.
+
+This is what makes a second attempt easy.
+
+## Flying the same approach again
+
+From the missed approach hold (or wherever ATC sends you):
+
+1. Press the `D→` key. Page through the list to the approach waypoints.
+2. Position the cursor over the **IAF** (or the transition fix ATC cleared you to, or the **FAF** for a straight-in). Do not select the **MAP**.
+3. Press the `ENTER` key.
+
+Result:
+
+- **FR** shows **DIRECT**, **TO** shows the selected fix.
+- The **ACTIVE FPL** page lists the rest of the approach again: FAF, MAP, `++++++`, missed approach waypoints.
+- The approach re-arms as you come back within 30 nm and goes active approaching the FAF.
+- At the MAP the FMS suspends again, exactly as on the first attempt.
+
+No erase, no re-entry of the airport, no re-selection of the approach.
+
+Alternatively, use the `HDG` page with **INTERCEPT** to join the final approach course to the FAF, the same way as in Option 2 above but with the FAF as the **TO** waypoint. Either method works; use whichever fits the ATC clearance.
+
+## Flying a different approach at the same airport
+
+Use the **APPROACH** page to edit, not erase:
+
+1. On the **ACTIVE FPL** page, position the cursor over **APPROACH?** and press the `ENTER` key. The **APPROACH** page opens in review, showing the loaded approach. **SELECT** is not shown because an approach already exists.
+2. Press the line select key next to **RUNWAY**. The field turns to dashes and a list of runways appears. Pick the runway.
+3. Do the same for **TYPE** and **TRANSITION**.
+4. **SELECT** now appears. Press the `ENTER` key to insert the new approach.
+
+The FMS replaces the old approach with the new one. Your current **TO** waypoint is kept, so the aircraft keeps flying toward the missed approach fix (or wherever it was going) until you perform a Direct To a fix on the new approach.
+
+The same edit path also works for reselecting the **same** approach if you ever need to, for example after an accidental Direct To the MAP cancelled it.
+
+## Flying an approach at a different airport
+
+An approach carries the destination airport with it. To go somewhere else:
+
+1. On the **ACTIVE FPL** page, position the cursor over **APPROACH?** and press the `ENTER` key.
+2. Position the cursor over **ERASE?** and press the `ENTER` key. The approach and the destination airport identifier are removed.
+3. Open **APPROACH?** again, insert the new airport identifier, select runway, type and transition, then **SELECT**.
+4. Perform a Direct To the first fix you have been cleared to.
+
+Erasing first keeps the waypoint sequencing on the active flight plan clean. Selecting a new airport on top of an existing approach can leave orphaned waypoints.
+
+## Holding at the missed approach fix
+
+If the published missed approach ends in a hold, the holding fix carries an **HP** tag and the FMS flies the hold automatically once it sequences to that fix. When you are cleared for another approach, a Direct To the IAF exits the hold and heads for the approach. If you want to leave the hold without a new clearance yet, open the **HOLDING PATTERN** page from the **DIRECT** page and use **CANCEL** (see [Holding Patterns](/aircraft/falcon-50/avionics/gnsxls/holding-patterns#canceling-a-holding-pattern)).
+
+## Quick reference
+
+| Situation | Action |
+|-----------|--------|
+| Crossing the MAP, going around | Fly the aircraft. Then `D→` to the first missed approach waypoint, or use the `HDG` page. |
+| Missed approach needs a specific turn direction | `HDG` page with `L`/`R` prefix, then **INTERCEPT** to the fix. Or turn manually first, then `D→`. |
+| Cleared for the same approach again | `D→` to the **IAF** (or **FAF**). |
+| Cleared for a different runway/approach, same airport | **APPROACH** page: edit **RUNWAY** / **TYPE** / **TRANSITION**, then **SELECT**. |
+| Diverting to another airport | **APPROACH** page: **ERASE**, then select new airport and approach. |
+| **APRCH CANCELED** is displayed | You went Direct To the MAP or edited an approach waypoint. Reselect the approach on the **APPROACH** page. |
+
+## Common mistakes
+
+- **Erasing the flight plan to reload the approach.** Not needed. The approach is still there — perform a Direct To the **IAF**.
+- **Direct To the MAP.** Cancels the approach. Use the **IAF** or **FAF** instead.
+- **Expecting the FMS to fly the missed approach by itself.** It will not sequence past the fence. You must perform a Direct To or use the `HDG` page.
+- **Deleting or adding waypoints inside the approach.** The FMS no longer recognises the sequence as an approach and will not enter approach mode. Reselect the approach to restore it.
